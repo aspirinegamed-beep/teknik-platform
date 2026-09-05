@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>AI Nova</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/</link>
+<description>Practical AI tools, Android guides and useful digital insights.</description>
+<language>en</language>
+<atom:link href="https://aspirinegamed-beep.github.io/teknik-platform/feed.xml" rel="self" type="application/rss+xml"
+xmlns:atom="http://www.w3.org/2005/Atom"/>
+<item>
+<title>How to choose an AI tool for a real task</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/choose-ai-tool/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/choose-ai-tool/</guid>
+<description>A practical framework for comparing AI tools by outcome, privacy, limits and cost.</description>
+</item>
+<item>
+<title>Android productivity setup: a simple starting point</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/</guid>
+<description>A clean workflow for files, notes, automation and everyday digital work.</description>
+</item>
+<item>
+<title>Free digital tools: what to check before signing up</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/free-digital-tools/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/free-digital-tools/</guid>
+<description>A checklist for hidden limits, privacy, export options and account requirements.</description>
+</item>
+<item>
+<title>AI workflows that save time without expensive software</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-free-workflows/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-free-workflows/</guid>
+<description>Simple workflows that can start with free tools and scale later.</description>
+</item>
+<item>
+<title>Five privacy checks for any new Android app</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-privacy/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-privacy/</guid>
+<description>Permissions, data collection, updates and account access explained.</description>
+</item>
+<item>
+<title>How to build a useful online resource from zero</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/build-resource/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/build-resource/</guid>
+<description>A practical roadmap from the first page to a sustainable content system.</description>
+</item>
+<item>
+<title>Understanding AI hallucinations and how to reduce them</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/</guid>
+<description>Why AI models sometimes generate confident but incorrect answers, and practical ways to catch it.</description>
+</item>
+<item>
+<title>Prompt engineering basics for better AI results</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/prompt-engineering-basics/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/prompt-engineering-basics/</guid>
+<description>Simple techniques to get clearer, more accurate answers from any AI model.</description>
+</item>
+<item>
+<title>Choosing between cloud AI and on-device AI</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/cloud-vs-ondevice-ai/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/cloud-vs-ondevice-ai/</guid>
+<description>What to consider when deciding where an AI feature should actually run.</description>
+</item>
+<item>
+<title>Battery optimization myths and facts on Android</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-battery-myths/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-battery-myths/</guid>
+<description>Separating real battery-saving habits from common misconceptions.</description>
+</item>
+<item>
+<title>Setting up secure app permissions on Android</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-app-permissions/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-app-permissions/</guid>
+<description>A practical approach to reviewing and managing what apps can access.</description>
+</item>
+<item>
+<title>Best practices for organizing Android home screens</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/</guid>
+<description>A cleaner layout that reduces distraction and speeds up daily use.</description>
+</item>
+<item>
+<title>How to write clear documentation for any project</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/clear-documentation-guide/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/clear-documentation-guide/</guid>
+<description>A structure that makes technical and non-technical writing easier to follow.</description>
+</item>
+<item>
+<title>A simple content calendar system for consistent publishing</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/content-calendar-system/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/content-calendar-system/</guid>
+<description>A lightweight planning method that keeps publishing steady without burnout.</description>
+</item>
+<item>
+<title>How to evaluate any online tool before adopting it</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/</guid>
+<description>A short checklist to avoid switching tools every few months.</description>
+</item>
+<item>
+<title>Two-factor authentication: why it matters and how to set it up</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/two-factor-authentication/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/two-factor-authentication/</guid>
+<description>An extra layer of protection that stops most account takeovers.</description>
+</item>
+<item>
+<title>Recognizing phishing attempts in emails and messages</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/recognizing-phishing/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/recognizing-phishing/</guid>
+<description>Common warning signs that reveal a fraudulent message before it&#x27;s too late.</description>
+</item>
+<item>
+<title>Password manager basics: what to look for</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/</guid>
+<description>Why reusing passwords is risky and how a password manager solves it.</description>
+</item>
+<item>
+<title>Understanding AI hallucinations and how to reduce them</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/</guid>
+<description>Why AI models sometimes generate confident but incorrect answers, and practical ways to catch it.</description>
+</item>
+<item>
+<title>Prompt engineering basics for better AI results</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/prompt-engineering-basics/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/prompt-engineering-basics/</guid>
+<description>Simple techniques to get clearer, more accurate answers from any AI model.</description>
+</item>
+<item>
+<title>Choosing between cloud AI and on-device AI</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/cloud-vs-ondevice-ai/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/cloud-vs-ondevice-ai/</guid>
+<description>What to consider when deciding where an AI feature should actually run.</description>
+</item>
+<item>
+<title>Battery optimization myths and facts on Android</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-battery-myths/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-battery-myths/</guid>
+<description>Separating real battery-saving habits from common misconceptions.</description>
+</item>
+<item>
+<title>Setting up secure app permissions on Android</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-app-permissions/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-app-permissions/</guid>
+<description>A practical approach to reviewing and managing what apps can access.</description>
+</item>
+<item>
+<title>Best practices for organizing Android home screens</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/</guid>
+<description>A cleaner layout that reduces distraction and speeds up daily use.</description>
+</item>
+<item>
+<title>How to write clear documentation for any project</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/clear-documentation-guide/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/clear-documentation-guide/</guid>
+<description>A structure that makes technical and non-technical writing easier to follow.</description>
+</item>
+<item>
+<title>A simple content calendar system for consistent publishing</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/content-calendar-system/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/content-calendar-system/</guid>
+<description>A lightweight planning method that keeps publishing steady without burnout.</description>
+</item>
+<item>
+<title>How to evaluate any online tool before adopting it</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/</guid>
+<description>A short checklist to avoid switching tools every few months.</description>
+</item>
+<item>
+<title>Two-factor authentication: why it matters and how to set it up</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/two-factor-authentication/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/two-factor-authentication/</guid>
+<description>An extra layer of protection that stops most account takeovers.</description>
+</item>
+<item>
+<title>Recognizing phishing attempts in emails and messages</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/recognizing-phishing/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/recognizing-phishing/</guid>
+<description>Common warning signs that reveal a fraudulent message before it&#x27;s too late.</description>
+</item>
+<item>
+<title>Password manager basics: what to look for</title>
+<link>https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/</link>
+<guid>https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/</guid>
+<description>Why reusing passwords is risky and how a password manager solves it.</description>
+</item>
+</channel>
+</rss>

@@ -425,7 +425,11 @@ let currentLang="en";
 let currentFilter="";
 
 function escapeHTML(str){
-return String(str).replace(/[&<>"']/g,m=>({\n"&":"&amp;",\n"<":"&lt;",\n">":"&gt;",\n'"':"&quot;",
+return String(str).replace(/[&<>"']/g,m=>({
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
 "'":"&#039;"
 }[m]));
 }
@@ -472,7 +476,7 @@ return `
 <span class="tag">${escapeHTML(a.tag)}</span>
 <h3>${escapeHTML(c.title)}</h3>
 <p>${escapeHTML(c.text)}</p>
-<a href="articles/${encodeURIComponent(a.id)}/" class="read-article" data-id="${escapeHTML(a.id)}">
+<a href="?article=${encodeURIComponent(a.id)}" class="read-article" data-id="${escapeHTML(a.id)}">
 ${t.readMore}
 </a>
 </article>`;

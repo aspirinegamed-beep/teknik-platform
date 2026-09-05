@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to evaluate any online tool before adopting it — AI Nova</title>
+<meta name="description" content="A short checklist to avoid switching tools every few months.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/">
+<link rel="alternate" hreflang="en" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/">
+<link rel="alternate" hreflang="ar" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/ar/">
+<link rel="alternate" hreflang="fr" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/fr/">
+<link rel="alternate" hreflang="es" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/es/">
+<link rel="alternate" hreflang="x-default" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to evaluate any online tool before adopting it">
+<meta property="og:description" content="A short checklist to avoid switching tools every few months.">
+<meta property="og:url" content="https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/">
+<meta property="og:image" content="https://aspirinegamed-beep.github.io/teknik-platform/assets/img-guide.svg">
+<meta property="og:site_name" content="AI Nova">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/icon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to evaluate any online tool before adopting it", "description": "A short checklist to avoid switching tools every few months.", "url": "https://aspirinegamed-beep.github.io/teknik-platform/articles/evaluate-online-tools/", "image": "https://aspirinegamed-beep.github.io/teknik-platform/assets/img-guide.svg", "publisher": {"@type": "Organization", "name": "AI Nova", "url": "https://aspirinegamed-beep.github.io/teknik-platform"}}</script>
+<style>
+.article-static {
+max-width:900px;
+margin:auto;
+}
+.article-static .article-body {
+font-size:1.12rem;
+line-height:1.9;
+}
+.article-static .article-body p {
+margin:0 0 24px;
+}
+.article-lang {
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+.article-meta {
+display:flex;
+gap:12px;
+align-items:center;
+flex-wrap:wrap;
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="../../">
+<span class="brand-mark">N</span>
+<span>AI Nova</span>
+</a>
+
+<nav class="nav">
+<a href="../../">Home</a>
+<a href="../../about.html">About</a>
+<a href="../../privacy.html">Privacy</a>
+<a href="../../feed.xml">RSS</a>
+</nav>
+</header>
+
+<main class="section article-static">
+
+<a class="back-link" href="../../">← AI Nova</a>
+
+<img class="article-hero"
+src="../../assets/img-guide.svg"
+alt="GUIDE"
+loading="eager">
+
+<div class="article-meta">
+<span class="tag">GUIDE</span>
+</div>
+
+<h1>How to evaluate any online tool before adopting it</h1>
+
+<p class="article-lead">A short checklist to avoid switching tools every few months.</p>
+
+<div class="article-body">
+<p>Before adopting a new tool, define the specific problem it needs to solve and check whether it actually solves that problem better than your current process — not just whether it looks appealing.</p>
+<p>Check data export options, pricing changes over time, and how actively the tool is maintained. A tool that is hard to leave later is a bigger risk than one that simply lacks a feature today.</p>
+</div>
+
+<div class="article-lang">
+<a class="btn ghost" href="../../articles/evaluate-online-tools/">English</a><a class="btn ghost" href="../../articles/evaluate-online-tools/ar/">العربية</a><a class="btn ghost" href="../../articles/evaluate-online-tools/fr/">Français</a><a class="btn ghost" href="../../articles/evaluate-online-tools/es/">Español</a>
+</div>
+
+<div class="share-row">
+<button class="btn primary" id="copyLink">Copy link</button>
+<a class="btn ghost" href="../../">Latest articles</a>
+</div>
+
+</main>
+
+<footer>
+<p>© <span id="year"></span> AI Nova</p>
+<div class="site-links">
+<a href="../../about.html">About</a>
+<a href="../../privacy.html">Privacy</a>
+<a href="../../feed.xml">RSS</a>
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("copyLink")?.addEventListener("click", async () => {
+    const btn = document.getElementById("copyLink");
+    try {
+        await navigator.clipboard.writeText(location.href);
+        btn.textContent = "Link copied!";
+        setTimeout(() => btn.textContent = "Copy link", 1800);
+    } catch(e) {}
+});
+
+if(localStorage.getItem("aiNovaTheme") === "dark") {
+    document.body.classList.add("dark");
+}
+</script>
+</body>
+</html>

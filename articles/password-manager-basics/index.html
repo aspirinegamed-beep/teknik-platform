@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Password manager basics: what to look for — AI Nova</title>
+<meta name="description" content="Why reusing passwords is risky and how a password manager solves it.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/">
+<link rel="alternate" hreflang="en" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/">
+<link rel="alternate" hreflang="ar" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/ar/">
+<link rel="alternate" hreflang="fr" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/fr/">
+<link rel="alternate" hreflang="es" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/es/">
+<link rel="alternate" hreflang="x-default" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Password manager basics: what to look for">
+<meta property="og:description" content="Why reusing passwords is risky and how a password manager solves it.">
+<meta property="og:url" content="https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/">
+<meta property="og:image" content="https://aspirinegamed-beep.github.io/teknik-platform/assets/img-security.svg">
+<meta property="og:site_name" content="AI Nova">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/icon.svg">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Password manager basics: what to look for", "description": "Why reusing passwords is risky and how a password manager solves it.", "url": "https://aspirinegamed-beep.github.io/teknik-platform/articles/password-manager-basics/", "image": "https://aspirinegamed-beep.github.io/teknik-platform/assets/img-security.svg", "publisher": {"@type": "Organization", "name": "AI Nova", "url": "https://aspirinegamed-beep.github.io/teknik-platform"}}</script>
+<style>
+.article-static {
+max-width:900px;
+margin:auto;
+}
+.article-static .article-body {
+font-size:1.12rem;
+line-height:1.9;
+}
+.article-static .article-body p {
+margin:0 0 24px;
+}
+.article-lang {
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+.article-meta {
+display:flex;
+gap:12px;
+align-items:center;
+flex-wrap:wrap;
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="../../">
+<span class="brand-mark">N</span>
+<span>AI Nova</span>
+</a>
+
+<nav class="nav">
+<a href="../../">Home</a>
+<a href="../../about.html">About</a>
+<a href="../../privacy.html">Privacy</a>
+<a href="../../feed.xml">RSS</a>
+</nav>
+</header>
+
+<main class="section article-static">
+
+<a class="back-link" href="../../">← AI Nova</a>
+
+<img class="article-hero"
+src="../../assets/img-security.svg"
+alt="SECURITY"
+loading="eager">
+
+<div class="article-meta">
+<span class="tag">SECURITY</span>
+</div>
+
+<h1>Password manager basics: what to look for</h1>
+
+<p class="article-lead">Why reusing passwords is risky and how a password manager solves it.</p>
+
+<div class="article-body">
+<p>Reusing the same password across multiple sites means that a single data breach can expose every account using that password. A password manager generates and stores a unique, strong password for each account automatically.</p>
+<p>When choosing a password manager, look for strong encryption, cross-device syncing, and a clear policy on what happens to your data if the company is acquired or shuts down. A local master password that only you know remains the foundation of the entire system&#x27;s security.</p>
+</div>
+
+<div class="article-lang">
+<a class="btn ghost" href="../../articles/password-manager-basics/">English</a><a class="btn ghost" href="../../articles/password-manager-basics/ar/">العربية</a><a class="btn ghost" href="../../articles/password-manager-basics/fr/">Français</a><a class="btn ghost" href="../../articles/password-manager-basics/es/">Español</a>
+</div>
+
+<div class="share-row">
+<button class="btn primary" id="copyLink">Copy link</button>
+<a class="btn ghost" href="../../">Latest articles</a>
+</div>
+
+</main>
+
+<footer>
+<p>© <span id="year"></span> AI Nova</p>
+<div class="site-links">
+<a href="../../about.html">About</a>
+<a href="../../privacy.html">Privacy</a>
+<a href="../../feed.xml">RSS</a>
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("copyLink")?.addEventListener("click", async () => {
+    const btn = document.getElementById("copyLink");
+    try {
+        await navigator.clipboard.writeText(location.href);
+        btn.textContent = "Link copied!";
+        setTimeout(() => btn.textContent = "Copy link", 1800);
+    } catch(e) {}
+});
+
+if(localStorage.getItem("aiNovaTheme") === "dark") {
+    document.body.classList.add("dark");
+}
+</script>
+</body>
+</html>
