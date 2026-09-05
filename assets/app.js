@@ -442,6 +442,17 @@ function getArticleContent(article){
 return article.content[currentLang]||article.content.en;
 }
 
+const tagImages={
+"AI":"assets/img-ai.svg",
+"ANDROID":"assets/img-android.svg",
+"GUIDE":"assets/img-guide.svg",
+"SECURITY":"assets/img-security.svg"
+};
+
+function getArticleImage(article){
+return tagImages[article.tag]||tagImages["GUIDE"];
+}
+
 function renderArticles(){
 const box=document.querySelector("#articles");
 if(!box)return;
@@ -461,6 +472,7 @@ box.innerHTML=results.length
 const c=getArticleContent(a);
 return `
 <article class="article">
+<img class="article-thumb" src="${getArticleImage(a)}" alt="${escapeHTML(a.tag)}" loading="lazy">
 <span class="tag">${escapeHTML(a.tag)}</span>
 <h3>${escapeHTML(c.title)}</h3>
 <p>${escapeHTML(c.text)}</p>
@@ -486,6 +498,7 @@ root.innerHTML=`
 <section class="article-page section">
 <div class="article-page-inner">
 <a href="./" class="back-link">← ${t.latestTitle}</a>
+<img class="article-hero" src="${getArticleImage(article)}" alt="${escapeHTML(article.tag)}" loading="lazy">
 <span class="tag">${escapeHTML(article.tag)}</span>
 <h1>${escapeHTML(c.title)}</h1>
 <p class="article-lead">${escapeHTML(c.text)}</p>

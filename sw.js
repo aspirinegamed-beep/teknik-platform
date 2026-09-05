@@ -6,6 +6,10 @@ const FILES=[
 "./assets/app.js",
 "./assets/style.css",
 "./assets/icon.svg",
+"./assets/img-ai.svg",
+"./assets/img-android.svg",
+"./assets/img-guide.svg",
+"./assets/img-security.svg",
 "./manifest.webmanifest"
 ];
 
