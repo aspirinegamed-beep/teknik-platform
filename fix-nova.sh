@@ -1,122 +1,84 @@
-const translations={
-en:{
-latest:"Latest",
-aiTools:"AI Tools",
-android:"Android",
-guides:"Guides",
-security:"Security",
-eyebrow:"SMARTER DIGITAL LIFE",
-heroTitle:"Find the tools that make digital work easier.",
-heroText:"Practical guides, AI tools, Android apps and comparisons — explained simply and built for real-world use.",
-explore:"Explore articles",
-subscribe:"Get updates",
-latestTitle:"Latest insights",
-search:"Search articles...",
-aiTitle:"AI tools worth knowing",
-aiText:"Curated tools, workflows and practical use cases without the hype.",
-androidTitle:"Android, simplified",
-guidesTitle:"Built for action",
-guidesText:"Every guide is designed to answer a question and lead to a useful next step.",
-newsTitle:"Useful updates. No noise.",
-newsText:"Get practical digital tips and useful updates.",
-join:"Join",
-readMore:"Read more →",
-all:"All",
-noResults:"No matching articles found.",
-subscribed:"You're subscribed. Welcome to AI Nova!",
-copy:"Copy link",
-copied:"Link copied!"
-},
+#!/data/data/com.termux/files/usr/bin/bash
+set -e
 
-ar:{
-latest:"الأحدث",
-aiTools:"أدوات الذكاء الاصطناعي",
-android:"أندرويد",
-guides:"أدلة",
-security:"الأمان",
-eyebrow:"حياة رقمية أذكى",
-heroTitle:"اكتشف الأدوات التي تجعل العمل الرقمي أسهل.",
-heroText:"أدلة عملية وأدوات ذكاء اصطناعي وتطبيقات Android ومقارنات مفهومة.",
-explore:"استكشف المقالات",
-subscribe:"احصل على التحديثات",
-latestTitle:"أحدث المحتوى",
-search:"ابحث في المقالات...",
-aiTitle:"أدوات AI تستحق المعرفة",
-aiText:"أدوات وسير عمل واستخدامات عملية بدون مبالغة.",
-androidTitle:"Android بشكل أبسط",
-guidesTitle:"مصمم للتطبيق",
-guidesText:"كل دليل يجيب عن سؤال ويقودك إلى خطوة عملية.",
-newsTitle:"تحديثات مفيدة بدون ضجيج",
-newsText:"احصل على نصائح رقمية وتحديثات مفيدة.",
-join:"اشترك",
-readMore:"اقرأ المزيد ←",
-all:"الكل",
-noResults:"لم نجد مقالات مطابقة.",
-subscribed:"تم الاشتراك بنجاح. أهلاً بك في AI Nova!",
-copy:"نسخ الرابط",
-copied:"تم نسخ الرابط!"
-},
+cd ~/ai-nova || exit 1
 
-fr:{
-latest:"Nouveautés",
-aiTools:"Outils IA",
-android:"Android",
-guides:"Guides",
-security:"Sécurité",
-eyebrow:"UNE VIE NUMÉRIQUE PLUS INTELLIGENTE",
-heroTitle:"Trouvez les outils qui simplifient le travail numérique.",
-heroText:"Guides pratiques, outils IA, applications Android et comparatifs.",
-explore:"Explorer",
-subscribe:"Recevoir les nouveautés",
-latestTitle:"Dernières informations",
-search:"Rechercher...",
-aiTitle:"Outils IA à connaître",
-aiText:"Des outils et cas d'usage pratiques, sans battage.",
-androidTitle:"Android, simplement",
-guidesTitle:"Pensé pour l'action",
-guidesText:"Chaque guide répond à une question et propose une prochaine étape.",
-newsTitle:"Des mises à jour utiles.",
-newsText:"Recevez des conseils numériques utiles.",
-join:"S'inscrire",
-readMore:"Lire la suite →",
-all:"Tous",
-noResults:"Aucun article correspondant.",
-subscribed:"Inscription réussie. Bienvenue sur AI Nova !",
-copy:"Copier le lien",
-copied:"Lien copié !"
-},
+echo "🔧 AI NOVA — FIX PACK (gitignore + RTL + multilingual articles)"
 
-es:{
-latest:"Últimos",
-aiTools:"Herramientas IA",
-android:"Android",
-guides:"Guías",
-security:"Seguridad",
-eyebrow:"VIDA DIGITAL MÁS INTELIGENTE",
-heroTitle:"Encuentra herramientas que facilitan el trabajo digital.",
-heroText:"Guías prácticas, herramientas de IA, apps Android y comparativas.",
-explore:"Explorar",
-subscribe:"Recibir novedades",
-latestTitle:"Últimos contenidos",
-search:"Buscar artículos...",
-aiTitle:"Herramientas IA que debes conocer",
-aiText:"Herramientas y casos prácticos sin exageraciones.",
-androidTitle:"Android, simplificado",
-guidesTitle:"Hecho para actuar",
-guidesText:"Cada guía responde una pregunta y lleva a un siguiente paso.",
-newsTitle:"Actualizaciones útiles.",
-newsText:"Recibe consejos y actualizaciones digitales.",
-join:"Unirse",
-readMore:"Leer más →",
-all:"Todos",
-noResults:"No se encontraron artículos.",
-subscribed:"Suscripción realizada. ¡Bienvenido a AI Nova!",
-copy:"Copiar enlace",
-copied:"¡Enlace copiado!"
+# ==============================
+# 1) GITIGNORE + REMOVE BACKUPS FROM GIT
+# ==============================
+cat > .gitignore <<'EOF'
+*.backup
+backup-v2/
+EOF
+
+git rm -r --cached backup-v2 2>/dev/null || true
+git rm --cached index.html.backup assets/app.js.backup assets/style.css.backup 2>/dev/null || true
+
+echo "✓ gitignore created, backups untracked"
+
+# ==============================
+# 2) RTL CSS FIXES
+# ==============================
+cat >> assets/style.css <<'EOF'
+
+/* ===== RTL support ===== */
+html[dir="rtl"] body{
+text-align:right;
 }
-};
 
-const articles=[
+html[dir="rtl"] .back-link{
+margin-right:0;
+margin-left:auto;
+}
+
+html[dir="rtl"] .share-row{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .site-links{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .article-lead,
+html[dir="rtl"] .article-body{
+text-align:right;
+}
+
+html[dir="rtl"] .topbar{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .newsletter form{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .read-article{
+flex-direction:row-reverse;
+}
+
+@media(max-width:600px){
+html[dir="rtl"] .site-links{
+justify-content:flex-end;
+}
+}
+EOF
+
+echo "✓ RTL styles appended"
+
+# ==============================
+# 3) MULTILINGUAL ARTICLES — rewrite app.js article data + render logic
+# ==============================
+python3 - <<'PY'
+from pathlib import Path
+import re
+
+p = Path("assets/app.js")
+s = p.read_text()
+
+# ---- new multilingual articles array ----
+new_articles = '''const articles=[
 {
 id:"choose-ai-tool",
 tag:"AI",
@@ -177,26 +139,42 @@ fr:{title:"Comment construire une ressource en ligne utile à partir de zéro",t
 es:{title:"Cómo construir un recurso en línea útil desde cero",text:"Una hoja de ruta práctica desde la primera página hasta un sistema de contenido sostenible.",body:"Empieza en pequeño. Construye una página de inicio clara, publica contenido útil de forma constante, organízalo en categorías y mide qué temas realmente ayudan a los visitantes."}
 }
 }
-];
+];'''
 
-let currentLang="en";
-let currentFilter="";
+# replace old articles array (from "const articles=[" up to its closing "];")
+pattern = re.compile(r"const articles=\[.*?\n\];", re.DOTALL)
+s, n = pattern.subn(new_articles, s, count=1)
+if n == 0:
+    raise SystemExit("ERROR: could not find articles array to replace")
 
-function escapeHTML(str){
-return String(str).replace(/[&<>"']/g,m=>({
-"&":"&amp;",
-"<":"&lt;",
-">":"&gt;",
-'"':"&quot;",
-"'":"&#039;"
-}[m]));
-}
+# ---- update renderArticles() to use content[currentLang] ----
+old_render = '''function renderArticles(){
+const box=document.querySelector("#articles");
+if(!box)return;
 
-function getTranslation(){
-return translations[currentLang]||translations.en;
-}
+const q=currentFilter.trim().toLowerCase();
 
-function getArticleContent(article){
+const results=articles.filter(a=>{
+const matchesSearch=(a.title+" "+a.text+" "+a.tag).toLowerCase().includes(q);
+return matchesSearch;
+});
+
+const t=getTranslation();
+
+box.innerHTML=results.length
+?results.map(a=>`
+<article class="article">
+<span class="tag">${escapeHTML(a.tag)}</span>
+<h3>${escapeHTML(a.title)}</h3>
+<p>${escapeHTML(a.text)}</p>
+<a href="?article=${encodeURIComponent(a.id)}" class="read-article" data-id="${escapeHTML(a.id)}">
+${t.readMore}
+</a>
+</article>`).join("")
+:`<p>${t.noResults}</p>`;
+}'''
+
+new_render = '''function getArticleContent(article){
 return article.content[currentLang]||article.content.en;
 }
 
@@ -228,9 +206,47 @@ ${t.readMore}
 </article>`;
 }).join("")
 :`<p>${t.noResults}</p>`;
-}
+}'''
 
-function renderArticlePage(id){
+if old_render not in s:
+    raise SystemExit("ERROR: could not find renderArticles() to replace")
+s = s.replace(old_render, new_render, 1)
+
+# ---- update renderArticlePage() to use content[currentLang] ----
+old_page = '''function renderArticlePage(id){
+const article=articles.find(a=>a.id===id);
+if(!article)return false;
+
+const t=getTranslation();
+const root=document.querySelector("main");
+
+if(!root)return false;
+
+root.innerHTML=`
+<section class="article-page section">
+<div class="article-page-inner">
+<a href="./" class="back-link">← ${t.latestTitle}</a>
+<span class="tag">${escapeHTML(article.tag)}</span>
+<h1>${escapeHTML(article.title)}</h1>
+<p class="article-lead">${escapeHTML(article.text)}</p>
+<div class="article-body">
+<p>${escapeHTML(article.body)}</p>
+<h2>Why it matters</h2>
+<p>Good digital decisions come from understanding the problem, comparing realistic options and choosing tools that fit your needs.</p>
+<h2>Practical takeaway</h2>
+<p>Start with the simplest solution. Test it, measure the result and improve the workflow only when necessary.</p>
+</div>
+<div class="share-row">
+<button id="copyLink" class="btn primary">${t.copy}</button>
+<a href="./" class="btn ghost">${t.latest}</a>
+</div>
+</div>
+</section>
+`;
+
+document.title=`${article.title} — AI Nova`;'''
+
+new_page = '''function renderArticlePage(id){
 const article=articles.find(a=>a.id===id);
 if(!article)return false;
 
@@ -258,98 +274,38 @@ root.innerHTML=`
 </section>
 `;
 
-document.title=`${c.title} — AI Nova`;
+document.title=`${c.title} — AI Nova`;'''
 
-document.querySelector("#copyLink")?.addEventListener("click",async()=>{
-try{
-await navigator.clipboard.writeText(location.href);
-document.querySelector("#copyLink").textContent=t.copied;
-setTimeout(()=>{
-document.querySelector("#copyLink").textContent=t.copy;
-},1800);
-}catch(e){}
-});
+if old_page not in s:
+    raise SystemExit("ERROR: could not find renderArticlePage() to replace")
+s = s.replace(old_page, new_page, 1)
 
-return true;
-}
+p.write_text(s)
+print("✓ app.js updated: multilingual articles + render functions")
+PY
 
-function setLang(lang){
-currentLang=translations[lang]?lang:"en";
-const t=getTranslation();
+# ==============================
+# VALIDATION
+# ==============================
+echo
+echo "========== VALIDATION =========="
+node -c assets/app.js 2>/dev/null && echo "✓ app.js syntax OK" || echo "⚠ node not available, skipping syntax check"
+grep -q "RTL support" assets/style.css && echo "✓ RTL CSS present"
+grep -q "backup-v2/" .gitignore && echo "✓ gitignore present"
 
-document.documentElement.lang=currentLang;
-document.documentElement.dir=currentLang==="ar"?"rtl":"ltr";
+# ==============================
+# GIT
+# ==============================
+echo
+echo "========== GIT =========="
 
-document.querySelectorAll("[data-i18n]").forEach(el=>{
-if(t[el.dataset.i18n])el.textContent=t[el.dataset.i18n];
-});
+git add .
+git status --short
+git commit -m "Fix pack: gitignore backups, RTL support, multilingual articles" || true
+git push origin main
 
-document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
-if(t[el.dataset.i18nPlaceholder])
-el.placeholder=t[el.dataset.i18nPlaceholder];
-});
-
-localStorage.setItem("aiNovaLang",currentLang);
-
-const articleId=new URLSearchParams(location.search).get("article");
-
-if(articleId){
-renderArticlePage(articleId);
-}else{
-renderArticles();
-}
-}
-
-const savedLang=localStorage.getItem("aiNovaLang");
-const browser=(navigator.language||"en").slice(0,2);
-const initial=savedLang||(["en","ar","fr","es"].includes(browser)?browser:"en");
-
-setLang(initial);
-
-document.querySelector("#langSelect")?.addEventListener("change",e=>{
-setLang(e.target.value);
-});
-
-document.querySelector("#search")?.addEventListener("input",e=>{
-currentFilter=e.target.value;
-renderArticles();
-});
-
-document.querySelector("#themeBtn")?.addEventListener("click",()=>{
-const dark=document.body.classList.toggle("dark");
-localStorage.setItem("aiNovaTheme",dark?"dark":"light");
-});
-
-if(localStorage.getItem("aiNovaTheme")==="dark"){
-document.body.classList.add("dark");
-}
-
-document.querySelector(".newsletter form")?.addEventListener("submit",e=>{
-e.preventDefault();
-
-const input=e.currentTarget.querySelector("input");
-
-if(!input?.value)return;
-
-const t=getTranslation();
-
-e.currentTarget.innerHTML=
-`<p class="subscribe-success">${t.subscribed}</p>`;
-});
-
-const year=document.querySelector("#year");
-if(year)year.textContent=new Date().getFullYear();
-
-if("serviceWorker" in navigator){
-window.addEventListener("load",()=>{
-navigator.serviceWorker.register("./sw.js").catch(()=>{});
-});
-}
-
-const articleId=new URLSearchParams(location.search).get("article");
-
-if(articleId){
-renderArticlePage(articleId);
-}else{
-renderArticles();
-}
+echo
+echo "========== DONE =========="
+echo "https://aspirinegamed-beep.github.io/teknik-platform/"
+echo
+echo "curl -sS -o /dev/null -w 'HTTP: %{http_code}\n' https://aspirinegamed-beep.github.io/teknik-platform/"

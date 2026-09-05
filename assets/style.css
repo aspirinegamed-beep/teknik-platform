@@ -213,3 +213,44 @@ flex-direction:column;
 width:100%;
 }
 }
+
+/* ===== RTL support ===== */
+html[dir="rtl"] body{
+text-align:right;
+}
+
+html[dir="rtl"] .back-link{
+margin-right:0;
+margin-left:auto;
+}
+
+html[dir="rtl"] .share-row{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .site-links{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .article-lead,
+html[dir="rtl"] .article-body{
+text-align:right;
+}
+
+html[dir="rtl"] .topbar{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .newsletter form{
+flex-direction:row-reverse;
+}
+
+html[dir="rtl"] .read-article{
+flex-direction:row-reverse;
+}
+
+@media(max-width:600px){
+html[dir="rtl"] .site-links{
+justify-content:flex-end;
+}
+}
