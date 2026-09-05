@@ -1,0 +1,18 @@
+{
+  "site": "AI Nova",
+  "default_language": "en",
+  "articles": [
+    {
+      "slug": "choose-an-ai-tool",
+      "title": "How to choose an AI tool for a real task",
+      "category": "AI",
+      "status": "draft"
+    },
+    {
+      "slug": "android-productivity-setup",
+      "title": "Android productivity setup: a simple starting point",
+      "category": "Android",
+      "status": "draft"
+    }
+  ]
+}
