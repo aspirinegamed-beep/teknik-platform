@@ -1,1 +1,18 @@
-{"name":"AI Nova","short_name":"AI Nova","start_url":"/","display":"standalone","background_color":"#0b1020","theme_color":"#0b1020","icons":[]}
+{
+  "name": "AI Nova",
+  "short_name": "AI Nova",
+  "description": "Practical AI tools, Android guides, digital tools and technology insights.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#111827",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

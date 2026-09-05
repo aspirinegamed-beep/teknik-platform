@@ -8,12 +8,7 @@
   <meta name="theme-color" content="#0b1020">
   <link rel="canonical" href="/">
   <link rel="manifest" href="/manifest.webmanifest">
-  <link rel="stylesheet" href="assets/style.css">
-<meta property="og:title" content="AI Nova — Smarter Digital Life">
-<meta property="og:description" content="Practical AI tools, Android guides and useful digital insights.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://aspirinegamed-beep.github.io/teknik-platform/">
-<meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <header class="topbar">
@@ -88,11 +83,7 @@
 </section>
 </main>
 
-<footer><div class="brand"><span class="brand-mark">✦</span> AI Nova</div><p>© <span id="year"></span> AI Nova. Independent digital publication.</p><div class="site-links">
-<a href="about.html">About</a>
-<a href="privacy.html">Privacy</a>
-</div>
-</footer>
-<script src="assets/app.js"></script>
+<footer><div class="brand"><span class="brand-mark">✦</span> AI Nova</div><p>© <span id="year"></span> AI Nova. Independent digital publication.</p></footer>
+<script src="/assets/app.js"></script>
 </body>
 </html>
