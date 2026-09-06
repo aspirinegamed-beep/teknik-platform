@@ -1,82 +1,57 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Best practices for organizing Android home screens — AI Nova</title>
+
 <meta name="description" content="A cleaner layout that reduces distraction and speeds up daily use.">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="AI Nova">
+
 <link rel="canonical" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/">
-<link rel="alternate" hreflang="en" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/">
-<link rel="alternate" hreflang="ar" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/ar/">
-<link rel="alternate" hreflang="fr" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/fr/">
-<link rel="alternate" hreflang="es" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/es/">
-<link rel="alternate" hreflang="x-default" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/">
-<meta property="og:type" content="article">
+
 <meta property="og:title" content="Best practices for organizing Android home screens">
 <meta property="og:description" content="A cleaner layout that reduces distraction and speeds up daily use.">
+<meta property="og:type" content="article">
 <meta property="og:url" content="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/">
-<meta property="og:image" content="https://aspirinegamed-beep.github.io/teknik-platform/assets/img-android.svg">
-<meta property="og:site_name" content="AI Nova">
+
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="../../assets/icon.svg">
+
 <link rel="stylesheet" href="../../assets/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Best practices for organizing Android home screens", "description": "A cleaner layout that reduces distraction and speeds up daily use.", "url": "https://aspirinegamed-beep.github.io/teknik-platform/articles/android-home-screen-organization/", "image": "https://aspirinegamed-beep.github.io/teknik-platform/assets/img-android.svg", "publisher": {"@type": "Organization", "name": "AI Nova", "url": "https://aspirinegamed-beep.github.io/teknik-platform"}}</script>
-<style>
-.article-static {
-max-width:900px;
-margin:auto;
-}
-.article-static .article-body {
-font-size:1.12rem;
-line-height:1.9;
-}
-.article-static .article-body p {
-margin:0 0 24px;
-}
-.article-lang {
-display:flex;
-gap:8px;
-flex-wrap:wrap;
-margin-top:25px;
-}
-.article-meta {
-display:flex;
-gap:12px;
-align-items:center;
-flex-wrap:wrap;
-}
-</style>
 </head>
+
 <body>
+
 <header class="topbar">
 <a class="brand" href="../../">
-<span class="brand-mark">N</span>
+<span class="brand-mark">✦</span>
 <span>AI Nova</span>
 </a>
 
 <nav class="nav">
-<a href="../../">Home</a>
-<a href="../../about.html">About</a>
-<a href="../../privacy.html">Privacy</a>
-<a href="../../feed.xml">RSS</a>
+<a href="../../#latest">Latest</a>
+<a href="../../#ai">AI Tools</a>
+<a href="../../#android">Android</a>
+<a href="../../#guides">Guides</a>
 </nav>
 </header>
 
-<main class="section article-static">
+<main>
 
-<a class="back-link" href="../../">← AI Nova</a>
+<section class="article-page section">
+<div class="article-page-inner">
 
-<img class="article-hero"
-src="../../assets/img-android.svg"
-alt="ANDROID"
-loading="eager">
+<a href="../../" class="back-link">← Back to AI Nova</a>
 
-<div class="article-meta">
 <span class="tag">ANDROID</span>
-</div>
 
 <h1>Best practices for organizing Android home screens</h1>
+
+<div class="article-meta">
+<span>AI Nova</span>
+<span>2026-09-06</span>
+</div>
 
 <p class="article-lead">A cleaner layout that reduces distraction and speeds up daily use.</p>
 
@@ -85,41 +60,28 @@ loading="eager">
 <p>Grouping apps by purpose — communication, productivity, media — rather than by app name, makes it easier to find what you need quickly, especially on devices with smaller screens.</p>
 </div>
 
-<div class="article-lang">
-<a class="btn ghost" href="../../articles/android-home-screen-organization/">English</a><a class="btn ghost" href="../../articles/android-home-screen-organization/ar/">العربية</a><a class="btn ghost" href="../../articles/android-home-screen-organization/fr/">Français</a><a class="btn ghost" href="../../articles/android-home-screen-organization/es/">Español</a>
+<div class="article-tags">
+<span class="tag">android</span>
 </div>
 
 <div class="share-row">
-<button class="btn primary" id="copyLink">Copy link</button>
-<a class="btn ghost" href="../../">Latest articles</a>
+<a href="../../" class="btn primary">AI Nova</a>
+<button class="btn ghost" onclick="navigator.clipboard.writeText(location.href)">
+Copy link
+</button>
 </div>
+
+</div>
+</section>
 
 </main>
 
 <footer>
-<p>© <span id="year"></span> AI Nova</p>
-<div class="site-links">
-<a href="../../about.html">About</a>
-<a href="../../privacy.html">Privacy</a>
-<a href="../../feed.xml">RSS</a>
+<div class="brand">
+<span class="brand-mark">✦</span> AI Nova
 </div>
+<p>© 2026 AI Nova. Independent digital publication.</p>
 </footer>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-
-document.getElementById("copyLink")?.addEventListener("click", async () => {
-    const btn = document.getElementById("copyLink");
-    try {
-        await navigator.clipboard.writeText(location.href);
-        btn.textContent = "Link copied!";
-        setTimeout(() => btn.textContent = "Copy link", 1800);
-    } catch(e) {}
-});
-
-if(localStorage.getItem("aiNovaTheme") === "dark") {
-    document.body.classList.add("dark");
-}
-</script>
 </body>
 </html>
