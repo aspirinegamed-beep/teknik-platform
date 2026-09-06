@@ -425,7 +425,11 @@ let currentLang="en";
 let currentFilter="";
 
 function escapeHTML(str){
-return String(str).replace(/[&<>"']/g,m=>({\n"&":"&amp;",\n"<":"&lt;",\n">":"&gt;",\n'"':"&quot;",
+return String(str).replace(/[&<>"']/g,m=>({
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
 "'":"&#039;"
 }[m]));
 }
@@ -467,7 +471,7 @@ box.innerHTML=results.length
 ?results.map(a=>{
 const c=getArticleContent(a);
 return `
-<article class="article">
+<article class="article" data-tag="${escapeHTML(a.tag)}">
 <img class="article-thumb" src="${getArticleImage(a)}" alt="${escapeHTML(a.tag)}" loading="lazy">
 <span class="tag">${escapeHTML(a.tag)}</span>
 <h3>${escapeHTML(c.title)}</h3>

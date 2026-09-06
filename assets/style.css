@@ -281,3 +281,10 @@ margin:20px 0;
 .article-thumb{height:130px;}
 .article-hero{max-height:200px;}
 }
+.v4-category-bar{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 24px}
+.v4-filter{border:1px solid #dfe3ea;background:#fff;color:#111827;padding:8px 14px;border-radius:999px;cursor:pointer;font:inherit;font-weight:700}
+.v4-filter.active,.v4-filter:hover{background:#111827;color:#fff}
+.v4-category-bar .v4-filter{transition:.2s}
+body.dark .v4-filter{background:#111827;color:#edf0f7;border-color:#273044}
+body.dark .v4-filter.active,body.dark .v4-filter:hover{background:#6366f1;color:#fff}
+@media(max-width:600px){.v4-category-bar{overflow-x:auto;flex-wrap:nowrap}.v4-filter{white-space:nowrap}}
