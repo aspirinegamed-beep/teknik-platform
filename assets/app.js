@@ -170,16 +170,49 @@ box.innerHTML=results.length
 const c=getArticleContent(a);
 return `
 <article class="article" data-tag="${escapeHTML(a.tag)}">
-<img class="article-thumb" src="${getArticleImage(a)}" alt="${escapeHTML(a.tag)}" loading="lazy">
+<img class="article-thumb" src="${getArticleImage(a)}" alt="${escapeHTML(c.title)}" loading="lazy">
 <span class="tag">${escapeHTML(a.tag)}</span>
 <h3>${escapeHTML(c.title)}</h3>
 <p>${escapeHTML(c.text)}</p>
-<a href="?article=${encodeURIComponent(a.id)}" class="read-article" data-id="${escapeHTML(a.id)}">
+<div class="article-meta">
+<span>${escapeHTML(a.author||"AI Nova")}</span>
+<span>${escapeHTML(a.date||"")}</span>
+</div>
+<a href="articles/${encodeURIComponent(a.id)}/" class="read-article" data-id="${escapeHTML(a.id)}">
 ${t.readMore}
 </a>
 </article>`;
 }).join("")
 :`<p>${t.noResults}</p>`;
+}
+
+
+function renderRelatedArticles(article){
+const related=articles
+.filter(a=>a.id!==article.id && a.tag===article.tag)
+.slice(0,3);
+
+if(!related.length)return "";
+
+const t=getTranslation();
+
+return `
+<section class="related-section">
+<h2>${escapeHTML(t.latestTitle)}</h2>
+<div class="related-grid">
+${related.map(a=>{
+const c=getArticleContent(a);
+return `
+<article class="article related-card">
+<img class="article-thumb" src="${getArticleImage(a)}" alt="${escapeHTML(c.title)}" loading="lazy">
+<span class="tag">${escapeHTML(a.tag)}</span>
+<h3>${escapeHTML(c.title)}</h3>
+<p>${escapeHTML(c.text)}</p>
+<a href="../${encodeURIComponent(a.id)}/" class="read-article">${t.readMore}</a>
+</article>`;
+}).join("")}
+</div>
+</section>`;
 }
 
 function renderArticlePage(id){
@@ -199,10 +232,20 @@ root.innerHTML=`
 <img class="article-hero" src="${getArticleImage(article)}" alt="${escapeHTML(article.tag)}" loading="lazy">
 <span class="tag">${escapeHTML(article.tag)}</span>
 <h1>${escapeHTML(c.title)}</h1>
+<div class="article-meta">
+<span>${escapeHTML(article.author||"AI Nova")}</span>
+<span>${escapeHTML(article.date||"")}</span>
+</div>
 <p class="article-lead">${escapeHTML(c.text)}</p>
 <div class="article-body">
-<p>${escapeHTML(c.body)}</p>
+${c.body.split("\n\n").map(p=>`<p>${escapeHTML(p)}</p>`).join("")}
 </div>
+
+<div class="article-tags">
+${(article.tags||[]).map(tag=>`<span class="tag">${escapeHTML(tag)}</span>`).join("")}
+</div>
+
+${renderRelatedArticles(article)}
 <div class="share-row">
 <button id="copyLink" class="btn primary">${t.copy}</button>
 <a href="./" class="btn ghost">${t.latest}</a>
@@ -211,7 +254,37 @@ root.innerHTML=`
 </section>
 `;
 
+
 document.title=`${c.title} — AI Nova`;
+
+function setMeta(name, content){
+let el=document.querySelector(`meta[name="${name}"]`);
+if(!el){
+el=document.createElement("meta");
+el.setAttribute("name",name);
+document.head.appendChild(el);
+}
+el.setAttribute("content",content);
+}
+
+function setProperty(property, content){
+let el=document.querySelector(`meta[property="${property}"]`);
+if(!el){
+el=document.createElement("meta");
+el.setAttribute("property",property);
+document.head.appendChild(el);
+}
+el.setAttribute("content",content);
+}
+
+setMeta("description",c.text);
+setProperty("og:title",c.title);
+setProperty("og:description",c.text);
+setProperty("og:type","article");
+setProperty("og:url",location.href);
+setProperty("og:image",new URL(getArticleImage(article),location.href).href);
+
+
 
 document.querySelector("#copyLink")?.addEventListener("click",async()=>{
 try{
@@ -244,7 +317,21 @@ el.placeholder=t[el.dataset.i18nPlaceholder];
 
 localStorage.setItem("aiNovaLang",currentLang);
 
-const articleId=new URLSearchParams(location.search).get("article");
+const queryArticle=new URLSearchParams(location.search).get("article");
+
+const pathParts=location.pathname
+.split("/")
+.filter(Boolean);
+
+let pathArticle=null;
+
+const articlesIndex=pathParts.indexOf("articles");
+
+if(articlesIndex!==-1 && pathParts[articlesIndex+1]){
+pathArticle=decodeURIComponent(pathParts[articlesIndex+1]);
+}
+
+const articleId=queryArticle||pathArticle;
 
 if(articleId){
 renderArticlePage(articleId);
@@ -302,18 +389,7 @@ if(localStorage.getItem("aiNovaTheme")==="dark"){
 document.body.classList.add("dark");
 }
 
-document.querySelector(".newsletter form")?.addEventListener("submit",e=>{
-e.preventDefault();
 
-const input=e.currentTarget.querySelector("input");
-
-if(!input?.value)return;
-
-const t=getTranslation();
-
-e.currentTarget.innerHTML=
-`<p class="subscribe-success">${t.subscribed}</p>`;
-});
 
 const year=document.querySelector("#year");
 if(year)year.textContent=new Date().getFullYear();
@@ -324,7 +400,21 @@ navigator.serviceWorker.register("./sw.js").catch(()=>{});
 });
 }
 
-const articleId=new URLSearchParams(location.search).get("article");
+const queryArticle=new URLSearchParams(location.search).get("article");
+
+const pathParts=location.pathname
+.split("/")
+.filter(Boolean);
+
+let pathArticle=null;
+
+const articlesIndex=pathParts.indexOf("articles");
+
+if(articlesIndex!==-1 && pathParts[articlesIndex+1]){
+pathArticle=decodeURIComponent(pathParts[articlesIndex+1]);
+}
+
+const articleId=queryArticle||pathArticle;
 
 if(articleId){
 renderArticlePage(articleId);

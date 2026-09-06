@@ -50,6 +50,7 @@
     <div class="mini-stat"><strong>Android</strong><span>Apps & how-to</span></div>
     <div class="mini-stat"><strong>Global</strong><span>Multilingual content</span></div>
   </div>
+
 </section>
 
 <section class="section" id="latest">
@@ -84,7 +85,28 @@
 
 <section class="newsletter" id="newsletter">
   <div><span class="eyebrow">NEWSLETTER</span><h2 data-i18n="newsTitle">Useful updates. No noise.</h2><p data-i18n="newsText">The form is ready for a free email provider when the site goes live.</p></div>
-  <form onsubmit="event.preventDefault(); alert('Newsletter connection will be enabled after choosing a free provider.');"><input type="email" required placeholder="Your email"><button class="btn primary" data-i18n="join">Join</button></form>
+  <form
+  action="https://buttondown.com/api/emails/embed-subscribe/aspirine"
+  method="post"
+  class="embeddable-buttondown-form"
+  id="ai-nova-newsletter-form"
+>
+  <label for="bd-email">Enter your email</label>
+  <input
+    type="email"
+    name="email"
+    id="bd-email"
+    placeholder="you@example.com"
+    autocomplete="email"
+    required
+  >
+  <input type="submit" value="Subscribe">
+  <p>
+    <a href="https://buttondown.com/refer/aspirine" target="_blank" rel="noopener">
+      Powered by Buttondown.
+    </a>
+  </p>
+</form>
 </section>
 </main>
 
