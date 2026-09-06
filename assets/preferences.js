@@ -88,48 +88,12 @@
   function createControls() {
     if (!document.body) return;
 
-    let actions = document.querySelector(".shared-preferences");
-
-    if (!actions) {
-      actions = document.createElement("div");
-      actions.className = "actions shared-preferences";
-      actions.innerHTML = `
-        <button
-          id="themeBtn"
-          class="icon-btn"
-          type="button"
-          aria-label="Toggle theme"
-        >◐</button>
-
-        <select
-          id="langSelect"
-          class="lang"
-          aria-label="Language"
-        >
-          <option value="en">English</option>
-          <option value="ar">العربية</option>
-          <option value="fr">Français</option>
-          <option value="es">Español</option>
-        </select>
-      `;
-
-      const header = document.querySelector("header");
-
-      if (header) {
-        header.appendChild(actions);
-      } else {
-        const main = document.querySelector("main");
-
-        if (main) {
-          const wrapper = document.createElement("div");
-          wrapper.className = "container shared-preferences-wrapper";
-          wrapper.appendChild(actions);
-          main.parentNode.insertBefore(wrapper, main);
-        } else {
-          document.body.insertBefore(actions, document.body.firstChild);
-        }
-      }
-    }
+    /*
+     * IMPORTANT:
+     * preferences.js is responsible for persistence only.
+     * Existing page controls are handled here.
+     * NEVER create another language selector or theme button.
+     */
 
     const langSelect = document.querySelector("#langSelect");
     const themeBtn = document.querySelector("#themeBtn");
@@ -154,20 +118,6 @@
             return;
           }
 
-          const page = detectStaticPage();
-
-          if (page) {
-            const base = location.pathname.replace(/[^/]+$/, "");
-
-            if (lang === "en") {
-              location.href = base + page + ".html";
-            } else {
-              location.href = base + page + "/" + lang + "/";
-            }
-
-            return;
-          }
-
           document.documentElement.lang = lang;
           document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
 
@@ -178,16 +128,18 @@
       }
     }
 
-    if (themeBtn && !themeBtn.dataset.preferencesBound) {
-      themeBtn.dataset.preferencesBound = "1";
+    if (themeBtn) {
+      if (!themeBtn.dataset.preferencesBound) {
+        themeBtn.dataset.preferencesBound = "1";
 
-      themeBtn.addEventListener("click", function () {
-        const dark = !document.body.classList.contains("dark");
+        themeBtn.addEventListener("click", function () {
+          const dark = !document.body.classList.contains("dark");
 
-        localStorage.setItem(THEME_KEY, dark ? "dark" : "light");
+          localStorage.setItem(THEME_KEY, dark ? "dark" : "light");
 
-        applyTheme();
-      });
+          applyTheme();
+        });
+      }
     }
 
     applyTheme();

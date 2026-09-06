@@ -380,11 +380,7 @@ currentFilter=e.target.value;
 renderArticles();
 });
 
-document.querySelector("#themeBtn")?.addEventListener("click",()=>{
-const dark=document.body.classList.toggle("dark");
-localStorage.setItem("aiNovaTheme",dark?"dark":"light");
-});
-
+// Theme persistence is handled by preferences.js.
 if(localStorage.getItem("aiNovaTheme")==="dark"){
 document.body.classList.add("dark");
 }
