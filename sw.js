@@ -1,4 +1,4 @@
-const CACHE_NAME = "ai-nova-v5";
+const CACHE_NAME = "ai-nova-v6";
 
 const CORE = [
   "./",

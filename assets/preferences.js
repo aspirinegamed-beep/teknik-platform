@@ -95,6 +95,12 @@
      * NEVER create another language selector or theme button.
      */
 
+    // Remove accidental duplicate language selectors left by older cached versions.
+    const langSelects = document.querySelectorAll("#langSelect");
+    langSelects.forEach((el, index) => {
+      if (index > 0) el.remove();
+    });
+
     const langSelect = document.querySelector("#langSelect");
     const themeBtn = document.querySelector("#themeBtn");
 
