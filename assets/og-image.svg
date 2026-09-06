@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g1" cx="85%" cy="15%" r="65%">
+      <stop offset="0%" stop-color="#24345f"/>
+      <stop offset="100%" stop-color="#0a0c12"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#7d89a8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0a0c12"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+
+  <rect x="55" y="55" width="1090" height="520"
+        rx="34" fill="none" stroke="#46506a" stroke-width="2"/>
+
+  <circle cx="1030" cy="170" r="145"
+          fill="none" stroke="#344264" stroke-width="2"/>
+  <circle cx="1030" cy="170" r="95"
+          fill="none" stroke="#26324e" stroke-width="2"/>
+
+  <circle cx="980" cy="270" r="58"
+          fill="none" stroke="url(#line)" stroke-width="4"/>
+
+  <text x="948" y="291"
+        font-family="Arial, sans-serif"
+        font-size="72"
+        font-weight="700"
+        fill="#f5f7ff">✦</text>
+
+  <text x="105" y="205"
+        font-family="Arial, sans-serif"
+        font-size="76"
+        font-weight="700"
+        fill="#f5f7ff">AI Nova</text>
+
+  <text x="108" y="285"
+        font-family="Arial, sans-serif"
+        font-size="34"
+        fill="#b0b8cd">AI Tools • Android • Digital Work</text>
+
+  <text x="108" y="340"
+        font-family="Arial, sans-serif"
+        font-size="30"
+        fill="#b0b8cd">Practical technology guides</text>
+
+  <text x="108" y="505"
+        font-family="Arial, sans-serif"
+        font-size="24"
+        fill="#7d87a0">Practical AI, Android and digital insights</text>
+
+  <text x="108" y="545"
+        font-family="Arial, sans-serif"
+        font-size="20"
+        fill="#68738d">AI Nova</text>
+</svg>
