@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Entender las alucinaciones de la IA y cómo reducirlas — AI Nova</title>
+<meta name="description" content="Por qué los modelos de IA a veces generan respuestas seguras pero incorrectas, y formas prácticas de detectarlo.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/es/">
+<link rel="alternate" hreflang="en" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/">
+<link rel="alternate" hreflang="ar" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/ar/">
+<link rel="alternate" hreflang="fr" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/fr/">
+<link rel="alternate" hreflang="es" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/es/">
+<link rel="alternate" hreflang="x-default" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Entender las alucinaciones de la IA y cómo reducirlas">
+<meta property="og:description" content="Por qué los modelos de IA a veces generan respuestas seguras pero incorrectas, y formas prácticas de detectarlo.">
+<meta property="og:url" content="https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/es/">
+<meta property="og:image" content="https://aspirinegamed-beep.github.io/teknik-platform/assets/img-ai.svg">
+<meta property="og:site_name" content="AI Nova">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../assets/icon.svg">
+<link rel="stylesheet" href="../../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Entender las alucinaciones de la IA y cómo reducirlas", "description": "Por qué los modelos de IA a veces generan respuestas seguras pero incorrectas, y formas prácticas de detectarlo.", "url": "https://aspirinegamed-beep.github.io/teknik-platform/articles/ai-hallucinations/es/", "image": "https://aspirinegamed-beep.github.io/teknik-platform/assets/img-ai.svg", "publisher": {"@type": "Organization", "name": "AI Nova", "url": "https://aspirinegamed-beep.github.io/teknik-platform"}}</script>
+<style>
+.article-static {
+max-width:900px;
+margin:auto;
+}
+.article-static .article-body {
+font-size:1.12rem;
+line-height:1.9;
+}
+.article-static .article-body p {
+margin:0 0 24px;
+}
+.article-lang {
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+.article-meta {
+display:flex;
+gap:12px;
+align-items:center;
+flex-wrap:wrap;
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="../../../">
+<span class="brand-mark">N</span>
+<span>AI Nova</span>
+</a>
+
+<nav class="nav">
+<a href="../../../">Home</a>
+<a href="../../../about.html">About</a>
+<a href="../../../privacy.html">Privacy</a>
+<a href="../../../feed.xml">RSS</a>
+</nav>
+</header>
+
+<main class="section article-static">
+
+<a class="back-link" href="../../../">← AI Nova</a>
+
+<img class="article-hero"
+src="../../../assets/img-ai.svg"
+alt="AI"
+loading="eager">
+
+<div class="article-meta">
+<span class="tag">AI</span>
+</div>
+
+<h1>Entender las alucinaciones de la IA y cómo reducirlas</h1>
+
+<p class="article-lead">Por qué los modelos de IA a veces generan respuestas seguras pero incorrectas, y formas prácticas de detectarlo.</p>
+
+<div class="article-body">
+<p>Las alucinaciones de la IA ocurren cuando un modelo genera información que suena plausible pero es incorrecta. Esto no es un error en el sentido tradicional, sino una consecuencia natural de cómo los modelos de lenguaje predicen texto basándose en patrones y no en hechos verificados.</p>
+<p>Para reducir el impacto de las alucinaciones, verifica siempre datos específicos, fechas y cifras con una fuente confiable antes de confiar en ellos. Pedir fuentes al modelo, dividir preguntas complejas en pasos más pequeños y verificar de forma cruzada los resultados importantes son hábitos simples que mejoran significativamente la fiabilidad.</p>
+</div>
+
+<div class="article-lang">
+<a class="btn ghost" href="../../../articles/ai-hallucinations/">English</a><a class="btn ghost" href="../../../articles/ai-hallucinations/ar/">العربية</a><a class="btn ghost" href="../../../articles/ai-hallucinations/fr/">Français</a><a class="btn ghost" href="../../../articles/ai-hallucinations/es/">Español</a>
+</div>
+
+<div class="share-row">
+<button class="btn primary" id="copyLink">Copy link</button>
+<a class="btn ghost" href="../../../">Latest articles</a>
+</div>
+
+</main>
+
+<footer>
+<p>© <span id="year"></span> AI Nova</p>
+<div class="site-links">
+<a href="../../../about.html">About</a>
+<a href="../../../privacy.html">Privacy</a>
+<a href="../../../feed.xml">RSS</a>
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("copyLink")?.addEventListener("click", async () => {
+    const btn = document.getElementById("copyLink");
+    try {
+        await navigator.clipboard.writeText(location.href);
+        btn.textContent = "Link copied!";
+        setTimeout(() => btn.textContent = "Copy link", 1800);
+    } catch(e) {}
+});
+
+if(localStorage.getItem("aiNovaTheme") === "dark") {
+    document.body.classList.add("dark");
+}
+</script>
+</body>
+</html>

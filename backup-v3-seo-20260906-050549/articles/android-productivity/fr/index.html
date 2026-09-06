@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Configuration Android productive : un point de départ simple — AI Nova</title>
+<meta name="description" content="Un flux de travail clair pour les fichiers, notes, automatisation et le travail numérique quotidien.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/fr/">
+<link rel="alternate" hreflang="en" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/">
+<link rel="alternate" hreflang="ar" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/ar/">
+<link rel="alternate" hreflang="fr" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/fr/">
+<link rel="alternate" hreflang="es" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/es/">
+<link rel="alternate" hreflang="x-default" href="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Configuration Android productive : un point de départ simple">
+<meta property="og:description" content="Un flux de travail clair pour les fichiers, notes, automatisation et le travail numérique quotidien.">
+<meta property="og:url" content="https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/fr/">
+<meta property="og:image" content="https://aspirinegamed-beep.github.io/teknik-platform/assets/img-android.svg">
+<meta property="og:site_name" content="AI Nova">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../../assets/icon.svg">
+<link rel="stylesheet" href="../../../assets/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Configuration Android productive : un point de départ simple", "description": "Un flux de travail clair pour les fichiers, notes, automatisation et le travail numérique quotidien.", "url": "https://aspirinegamed-beep.github.io/teknik-platform/articles/android-productivity/fr/", "image": "https://aspirinegamed-beep.github.io/teknik-platform/assets/img-android.svg", "publisher": {"@type": "Organization", "name": "AI Nova", "url": "https://aspirinegamed-beep.github.io/teknik-platform"}}</script>
+<style>
+.article-static {
+max-width:900px;
+margin:auto;
+}
+.article-static .article-body {
+font-size:1.12rem;
+line-height:1.9;
+}
+.article-static .article-body p {
+margin:0 0 24px;
+}
+.article-lang {
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+.article-meta {
+display:flex;
+gap:12px;
+align-items:center;
+flex-wrap:wrap;
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="../../../">
+<span class="brand-mark">N</span>
+<span>AI Nova</span>
+</a>
+
+<nav class="nav">
+<a href="../../../">Home</a>
+<a href="../../../about.html">About</a>
+<a href="../../../privacy.html">Privacy</a>
+<a href="../../../feed.xml">RSS</a>
+</nav>
+</header>
+
+<main class="section article-static">
+
+<a class="back-link" href="../../../">← AI Nova</a>
+
+<img class="article-hero"
+src="../../../assets/img-android.svg"
+alt="ANDROID"
+loading="eager">
+
+<div class="article-meta">
+<span class="tag">ANDROID</span>
+</div>
+
+<h1>Configuration Android productive : un point de départ simple</h1>
+
+<p class="article-lead">Un flux de travail clair pour les fichiers, notes, automatisation et le travail numérique quotidien.</p>
+
+<div class="article-body">
+<p>Une configuration Android productive ne nécessite pas des dizaines d&#x27;applications. Commencez par une gestion fiable des fichiers, des notes, des sauvegardes et quelques outils d&#x27;automatisation qui résolvent de vrais problèmes.</p>
+</div>
+
+<div class="article-lang">
+<a class="btn ghost" href="../../../articles/android-productivity/">English</a><a class="btn ghost" href="../../../articles/android-productivity/ar/">العربية</a><a class="btn ghost" href="../../../articles/android-productivity/fr/">Français</a><a class="btn ghost" href="../../../articles/android-productivity/es/">Español</a>
+</div>
+
+<div class="share-row">
+<button class="btn primary" id="copyLink">Copy link</button>
+<a class="btn ghost" href="../../../">Latest articles</a>
+</div>
+
+</main>
+
+<footer>
+<p>© <span id="year"></span> AI Nova</p>
+<div class="site-links">
+<a href="../../../about.html">About</a>
+<a href="../../../privacy.html">Privacy</a>
+<a href="../../../feed.xml">RSS</a>
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("copyLink")?.addEventListener("click", async () => {
+    const btn = document.getElementById("copyLink");
+    try {
+        await navigator.clipboard.writeText(location.href);
+        btn.textContent = "Link copied!";
+        setTimeout(() => btn.textContent = "Copy link", 1800);
+    } catch(e) {}
+});
+
+if(localStorage.getItem("aiNovaTheme") === "dark") {
+    document.body.classList.add("dark");
+}
+</script>
+</body>
+</html>
