@@ -1,4 +1,4 @@
-# Deploy AI Nova for free with GitHub Pages
+# Deploy AI PLADUOM for free with GitHub Pages
 
 1. Create a free GitHub account.
 2. Create a new public repository, for example `ai-nova`.

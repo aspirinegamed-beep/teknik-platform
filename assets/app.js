@@ -23,7 +23,7 @@ join:"Join",
 readMore:"Read more →",
 all:"All",
 noResults:"No matching articles found.",
-subscribed:"You're subscribed. Welcome to AI Nova!",
+subscribed:"You're subscribed. Welcome to AI PLADUOM!",
 copy:"Copy link",
 copied:"Link copied!"
 },
@@ -52,7 +52,7 @@ join:"اشترك",
 readMore:"اقرأ المزيد ←",
 all:"الكل",
 noResults:"لم نجد مقالات مطابقة.",
-subscribed:"تم الاشتراك بنجاح. أهلاً بك في AI Nova!",
+subscribed:"تم الاشتراك بنجاح. أهلاً بك في AI PLADUOM!",
 copy:"نسخ الرابط",
 copied:"تم نسخ الرابط!"
 },
@@ -81,7 +81,7 @@ join:"S'inscrire",
 readMore:"Lire la suite →",
 all:"Tous",
 noResults:"Aucun article correspondant.",
-subscribed:"Inscription réussie. Bienvenue sur AI Nova !",
+subscribed:"Inscription réussie. Bienvenue sur AI PLADUOM !",
 copy:"Copier le lien",
 copied:"Lien copié !"
 },
@@ -110,7 +110,7 @@ join:"Unirse",
 readMore:"Leer más →",
 all:"Todos",
 noResults:"No se encontraron artículos.",
-subscribed:"Suscripción realizada. ¡Bienvenido a AI Nova!",
+subscribed:"Suscripción realizada. ¡Bienvenido a AI PLADUOM!",
 copy:"Copiar enlace",
 copied:"¡Enlace copiado!"
 }
@@ -175,7 +175,7 @@ return `
 <h3>${escapeHTML(c.title)}</h3>
 <p>${escapeHTML(c.text)}</p>
 <div class="article-meta">
-<span>${escapeHTML(a.author||"AI Nova")}</span>
+<span>${escapeHTML(a.author||"AI PLADUOM")}</span>
 <span>${escapeHTML(a.date||"")}</span>
 </div>
 <a href="articles/${encodeURIComponent(a.id)}/" class="read-article" data-id="${escapeHTML(a.id)}">
@@ -233,7 +233,7 @@ root.innerHTML=`
 <span class="tag">${escapeHTML(article.tag)}</span>
 <h1>${escapeHTML(c.title)}</h1>
 <div class="article-meta">
-<span>${escapeHTML(article.author||"AI Nova")}</span>
+<span>${escapeHTML(article.author||"AI PLADUOM")}</span>
 <span>${escapeHTML(article.date||"")}</span>
 </div>
 <p class="article-lead">${escapeHTML(c.text)}</p>
@@ -255,7 +255,7 @@ ${renderRelatedArticles(article)}
 `;
 
 
-document.title=`${c.title} — AI Nova`;
+document.title=`${c.title} — AI PLADUOM`;
 
 function setMeta(name, content){
 let el=document.querySelector(`meta[name="${name}"]`);
@@ -315,7 +315,7 @@ if(t[el.dataset.i18nPlaceholder])
 el.placeholder=t[el.dataset.i18nPlaceholder];
 });
 
-localStorage.setItem("aiNovaLang",currentLang);
+localStorage.setItem("aiPLADUOMLang",currentLang);
 
 const queryArticle=new URLSearchParams(location.search).get("article");
 
@@ -340,7 +340,7 @@ renderArticles();
 }
 }
 
-const savedLang=localStorage.getItem("aiNovaLang");
+const savedLang=localStorage.getItem("aiPLADUOMLang");
 const browser=(navigator.language||"en").slice(0,2);
 const initial=savedLang||(["en","ar","fr","es"].includes(browser)?browser:"en");
 
@@ -360,7 +360,7 @@ articles=data.articles;
 
 setLang(currentLang);
 }catch(error){
-console.error("AI Nova content engine:",error);
+console.error("AI PLADUOM content engine:",error);
 
 const box=document.querySelector("#articles");
 if(box){
@@ -381,7 +381,7 @@ renderArticles();
 });
 
 // Theme persistence is handled by preferences.js.
-if(localStorage.getItem("aiNovaTheme")==="dark"){
+if(localStorage.getItem("aiPLADUOMTheme")==="dark"){
 document.body.classList.add("dark");
 }
 

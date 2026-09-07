@@ -2,8 +2,8 @@
   "use strict";
 
   const LANGS = ["en", "ar", "fr", "es"];
-  const LANG_KEY = "aiNovaLang";
-  const THEME_KEY = "aiNovaTheme";
+  const LANG_KEY = "aiPLADUOMLang";
+  const THEME_KEY = "aiPLADUOMTheme";
 
   function getLang() {
     const saved = localStorage.getItem(LANG_KEY);

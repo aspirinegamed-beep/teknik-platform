@@ -1,4 +1,4 @@
-# AI Nova — Zero-Budget Professional Content Platform
+# AI PLADUOM — Zero-Budget Professional Content Platform
 
 A mobile-first, multilingual static publication starter with English as the default interface.
 
