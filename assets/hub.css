@@ -295,3 +295,93 @@ footer{
     grid-template-columns:1fr;
   }
 }
+
+
+/* ===== AI NOVA — MODERN SAAS LAYER ===== */
+:root{
+  --nova-bg:#070a12;
+  --nova-panel:rgba(15,20,34,.78);
+  --nova-border:rgba(255,255,255,.09);
+  --nova-text:#f5f7ff;
+  --nova-muted:#8d98b2;
+  --nova-accent:#7c5cff;
+  --nova-accent2:#00d4ff;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  background:
+    radial-gradient(circle at 15% 5%,rgba(124,92,255,.16),transparent 30%),
+    radial-gradient(circle at 85% 10%,rgba(0,212,255,.10),transparent 28%),
+    var(--nova-bg);
+  color:var(--nova-text);
+}
+
+header,nav,.navbar{
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+button,a,.tool-card,.card{
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;
+}
+
+.tool-card,.card{
+  background:linear-gradient(145deg,rgba(20,26,43,.92),rgba(10,14,25,.88));
+  border:1px solid var(--nova-border);
+  box-shadow:0 10px 35px rgba(0,0,0,.18);
+}
+
+.tool-card:hover,.card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(124,92,255,.45);
+  box-shadow:0 18px 50px rgba(0,0,0,.32);
+}
+
+input,select{
+  background:rgba(255,255,255,.045)!important;
+  border:1px solid var(--nova-border)!important;
+  color:var(--nova-text)!important;
+  border-radius:14px!important;
+}
+
+.nova-founder{
+  margin:55px auto 20px;
+  padding:25px;
+  max-width:1100px;
+  text-align:center;
+  border:1px solid var(--nova-border);
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(124,92,255,.10),rgba(0,212,255,.05));
+  box-shadow:0 20px 60px rgba(0,0,0,.22);
+}
+
+.nova-founder span{
+  display:block;
+  font-size:12px;
+  letter-spacing:4px;
+  opacity:.65;
+  margin-bottom:8px;
+}
+
+.nova-founder strong{
+  display:block;
+  font-size:22px;
+  letter-spacing:.3px;
+}
+
+.nova-founder small{
+  display:block;
+  margin-top:5px;
+  color:var(--nova-muted);
+  font-size:13px;
+}
+
+@media(max-width:700px){
+  .nova-founder{
+    margin:35px 14px 16px;
+    padding:20px;
+    border-radius:18px;
+  }
+}
