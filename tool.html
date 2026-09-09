@@ -1,29 +1,39 @@
 <!doctype html>
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1,viewport-fit=cover">
+
 <meta name="theme-color" content="#080b12">
+
 <title>AI Nova Tool</title>
+
 <link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="assets/nova-v4.css">
+
+<link rel="stylesheet"
+href="assets/nova-v4.css">
 
 <style>
-.v52{
+
+.smart-page{
 max-width:1050px;
 margin:auto;
-padding:22px 16px 80px;
+padding:20px 15px 80px;
 }
 
-.v52-card{
+.smart-card{
 background:rgba(255,255,255,.045);
 border:1px solid rgba(255,255,255,.09);
-border-radius:22px;
+border-radius:24px;
 padding:20px;
 margin:14px 0;
 }
 
-.v52-head{
+.smart-head{
 display:flex;
 justify-content:space-between;
 align-items:flex-start;
@@ -31,214 +41,235 @@ gap:12px;
 flex-wrap:wrap;
 }
 
-.v52-status{
-padding:7px 11px;
+.smart-status{
+padding:7px 12px;
 border-radius:999px;
 background:rgba(255,255,255,.07);
 font-size:12px;
 }
 
-.v52-grid{
+.smart-grid{
 display:grid;
 grid-template-columns:repeat(2,minmax(0,1fr));
-gap:12px;
+gap:13px;
 }
 
-.v52-field{
+.smart-field{
 display:flex;
 flex-direction:column;
 gap:7px;
 }
 
-.v52-field label{
+.smart-field label{
 font-size:13px;
-opacity:.75;
+opacity:.78;
 }
 
-.v52-field input{
+.smart-field input,
+.smart-field textarea{
+width:100%;
+box-sizing:border-box;
 background:#090d15;
 color:#fff;
 border:1px solid rgba(255,255,255,.12);
-border-radius:12px;
+border-radius:13px;
 padding:12px;
+font:inherit;
 outline:none;
 }
 
-.v52-textarea{
-width:100%;
-box-sizing:border-box;
-min-height:240px;
-background:#090d15;
-color:#fff;
-border:1px solid rgba(255,255,255,.12);
-border-radius:16px;
-padding:15px;
-font:inherit;
+.smart-field textarea{
+min-height:170px;
 resize:vertical;
 }
 
-.v52-output{
-white-space:pre-wrap;
-min-height:220px;
-overflow:auto;
-}
-
-.v52-actions{
+.smart-actions{
 display:flex;
-gap:9px;
 flex-wrap:wrap;
-margin-top:12px;
+gap:9px;
+margin-top:15px;
 }
 
-.v52-btn{
+.smart-btn{
 border:0;
 border-radius:12px;
-padding:12px 16px;
+padding:12px 17px;
 font-weight:700;
 cursor:pointer;
 }
 
-.v52-btn.alt{
+.smart-btn.alt{
 background:rgba(255,255,255,.08);
 color:#fff;
 }
 
-@media(max-width:650px){
-.v52-grid{grid-template-columns:1fr}
+.smart-output{
+min-height:220px;
+white-space:pre-wrap;
+overflow:auto;
+background:#090d15;
+border-radius:16px;
+padding:16px;
 }
+
+@media(max-width:680px){
+.smart-grid{
+grid-template-columns:1fr;
+}
+}
+
 </style>
+
 </head>
 
 <body>
 
-<div class="v52">
+<div class="smart-page">
 
 <a href="index.html">← AI Nova</a>
 
-<section class="v52-card">
-<div class="v52-head">
+<section class="smart-card">
+
+<div class="smart-head">
+
 <div>
 <h1 id="title">AI Nova Tool</h1>
 <p id="family"></p>
 </div>
-<div id="status" class="v52-status"></div>
-</div>
-</section>
 
-<section class="v52-card">
-
-<div class="v52-grid">
-
-<div class="v52-field">
-<label>Value / Amount</label>
-<input id="value" placeholder="Optional">
+<div id="status"
+class="smart-status">
+Loading...
 </div>
 
-<div class="v52-field">
-<label>Percent</label>
-<input id="percent" type="number" placeholder="Optional">
-</div>
-
-<div class="v52-field">
-<label>Pattern</label>
-<input id="pattern" placeholder="For Regex tools">
-</div>
-
-<div class="v52-field">
-<label>Length</label>
-<input id="length" type="number" value="18">
-</div>
-
-<div class="v52-field">
-<label>Total</label>
-<input id="total" type="number" placeholder="Optional">
-</div>
-
-<div class="v52-field">
-<label>URL</label>
-<input id="url" placeholder="https://example.com">
-</div>
-
-</div>
-
-<br>
-
-<label>Input</label>
-<textarea id="input" class="v52-textarea"
-placeholder="Enter your data here..."></textarea>
-
-<div class="v52-actions">
-<button id="run" class="v52-btn">Run Tool</button>
-<button id="copy" class="v52-btn alt">Copy</button>
-<button id="download" class="v52-btn alt">Download</button>
-<button id="clear" class="v52-btn alt">Clear</button>
 </div>
 
 </section>
 
-<section class="v52-card">
+<section class="smart-card">
+
+<div id="fields"
+class="smart-grid">
+</div>
+
+<div class="smart-actions">
+
+<button id="run"
+class="smart-btn">
+Run Tool
+</button>
+
+<button id="copy"
+class="smart-btn alt">
+Copy
+</button>
+
+<button id="download"
+class="smart-btn alt">
+Download
+</button>
+
+<button id="clear"
+class="smart-btn alt">
+Clear
+</button>
+
+</div>
+
+</section>
+
+<section class="smart-card">
+
 <h3>Output</h3>
-<pre id="output" class="v52-output"></pre>
+
+<pre id="output"
+class="smart-output"></pre>
+
 </section>
 
 </div>
 
 <script src="assets/nova-engine-v52.js"></script>
+<script src="assets/nova-smart-ui.js"></script>
 
 <script>
+
 (async()=>{
 
-const id=new URLSearchParams(location.search).get("id");
+const id =
+new URLSearchParams(location.search).get("id");
 
-const registry=await fetch("data/tool-registry.json")
+const registry =
+await fetch("data/tool-registry.json")
 .then(r=>r.json());
 
-const tool=registry.tools.find(x=>x.id===id);
+const tool =
+registry.tools.find(x=>x.id===id);
 
 if(!tool){
-document.getElementById("title").textContent="Tool not found";
+
+document.getElementById("title")
+.textContent="Tool not found";
+
 return;
+
 }
 
-document.title=tool.name+" — AI Nova";
+const profile =
+await AINovaSmartUI.load(id);
 
-document.getElementById("title").textContent=tool.name;
+document.title =
+tool.name+" — AI Nova";
 
-document.getElementById("family").textContent=
-"Category: "+(tool.category||"Utility")+" • Family: "+tool.family;
+document.getElementById("title")
+.textContent=tool.name;
 
-document.getElementById("status").textContent=
+document.getElementById("family")
+.textContent=
+"Category: "+
+(tool.category||"Utility")+
+" • "+
+tool.family;
+
+document.getElementById("status")
+.textContent=
 tool.status==="available"
 ?"AVAILABLE • LOCAL • OFFLINE"
 :"COMING SOON";
 
-const input=document.getElementById("input");
-const output=document.getElementById("output");
+AINovaSmartUI.render(
+profile,
+document.getElementById("fields")
+);
 
-function options(){
+const output =
+document.getElementById("output");
 
-return {
-value:document.getElementById("value").value,
-amount:document.getElementById("value").value,
-percent:document.getElementById("percent").value,
-pattern:document.getElementById("pattern").value,
-length:document.getElementById("length").value,
-total:document.getElementById("total").value,
-url:document.getElementById("url").value
-};
-
-}
-
-document.getElementById("run").onclick=async()=>{
+document.getElementById("run").onclick =
+async()=>{
 
 if(tool.status!=="available"){
-output.textContent=
+
+output.textContent =
 "This tool is currently Coming Soon.\n\n"+
 "AI Nova does not generate fake results.";
+
 return;
+
 }
 
-let result=AINovaV52.run(tool,input.value,options());
+const values =
+AINovaSmartUI.values(profile);
+
+const input =
+values.input || "";
+
+let result =
+AINovaV52.run(
+tool,
+input,
+values
+);
 
 if(result instanceof Promise)
 result=await result;
@@ -247,20 +278,22 @@ output.textContent=result;
 
 localStorage.setItem(
 "aiNova:lastTool",
-tool.id
+id
 );
 
 let recent=[];
 
 try{
+
 recent=JSON.parse(
 localStorage.getItem("aiNova:recent")||"[]"
 );
+
 }catch(e){}
 
 recent=[
-tool.id,
-...recent.filter(x=>x!==tool.id)
+id,
+...recent.filter(x=>x!==id)
 ].slice(0,12);
 
 localStorage.setItem(
@@ -270,19 +303,23 @@ JSON.stringify(recent)
 
 };
 
-document.getElementById("copy").onclick=async()=>{
+document.getElementById("copy").onclick =
+async()=>{
 
 if(!output.textContent)return;
 
 try{
+
 await navigator.clipboard.writeText(
 output.textContent
 );
+
 }catch(e){}
 
 };
 
-document.getElementById("download").onclick=()=>{
+document.getElementById("download").onclick =
+()=>{
 
 AINovaV52.download(
 tool.id+".txt",
@@ -292,14 +329,26 @@ output.textContent||"",
 
 };
 
-document.getElementById("clear").onclick=()=>{
+document.getElementById("clear").onclick =
+()=>{
 
-input.value="";
+document.querySelectorAll(
+"#fields input,#fields textarea"
+).forEach(el=>{
+
+if(el.type==="number")
+el.value="";
+else
+el.value="";
+
+});
+
 output.textContent="";
 
 };
 
 })();
+
 </script>
 
 </body>
