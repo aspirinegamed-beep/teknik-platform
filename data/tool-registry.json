@@ -3,1074 +3,1722 @@
     "id": "ai-writer",
     "status": "Coming Soon",
     "name": "AI Writer",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "summarizer",
     "status": "Coming Soon",
     "name": "Text Summarizer",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "rewriter",
     "status": "Coming Soon",
     "name": "AI Rewriter",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "translator",
     "status": "Coming Soon",
     "name": "AI Translator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "idea-generator",
     "status": "Coming Soon",
     "name": "Idea Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "title-generator",
     "status": "Coming Soon",
     "name": "Title Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "product-description",
     "status": "Coming Soon",
     "name": "Product Description Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "cv-builder",
     "status": "Coming Soon",
     "name": "CV Builder",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "cover-letter",
     "status": "Coming Soon",
     "name": "Cover Letter Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "social-post",
     "status": "Coming Soon",
     "name": "Social Media Post Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "email-writer",
     "status": "Coming Soon",
     "name": "Email Writer",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "business-plan",
     "status": "Coming Soon",
     "name": "Business Plan Generator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "company-name",
     "status": "Coming Soon",
     "name": "Company Name Generator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "product-name",
     "status": "Coming Soon",
     "name": "Product Name Generator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "prompt-generator",
     "status": "Coming Soon",
     "name": "Prompt Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "seo-content",
     "status": "Coming Soon",
     "name": "SEO Content Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "faq-generator",
     "status": "Coming Soon",
     "name": "FAQ Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "meta-generator",
     "status": "Coming Soon",
     "name": "Meta Description Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "keyword-generator",
     "status": "Coming Soon",
     "name": "Keyword Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "thumbnail-maker",
     "status": "Coming Soon",
     "name": "Thumbnail Maker",
-    "category": "Image"
+    "category": "Image",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "image-resizer",
     "status": "Coming Soon",
     "name": "Image Resizer",
-    "category": "Image"
+    "category": "Image",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "image-compressor",
     "status": "Coming Soon",
     "name": "Image Compressor",
-    "category": "Image"
+    "category": "Image",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "background-remover",
     "status": "Coming Soon",
     "name": "Background Remover",
-    "category": "Image"
+    "category": "Image",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "image-converter",
     "status": "Coming Soon",
     "name": "Image Converter",
-    "category": "Image"
+    "category": "Image",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "qr-generator",
     "status": "Coming Soon",
     "name": "QR Code Generator",
-    "category": "Tools"
+    "category": "Tools",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "json-formatter",
     "status": "Coming Soon",
     "name": "JSON Formatter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "html-formatter",
     "status": "Coming Soon",
     "name": "HTML Formatter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "css-formatter",
     "status": "Coming Soon",
     "name": "CSS Formatter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "js-formatter",
     "status": "Coming Soon",
     "name": "JavaScript Formatter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "regex-tester",
     "status": "Coming Soon",
     "name": "Regex Tester",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "uuid-generator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "UUID Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "local",
+    "engine": "AINovaV60",
+    "implementation_id": "uuid-generator",
+    "implementation_sources": [
+      "nova-engine-v59.js"
+    ],
+    "available": true,
+    "implemented": true,
+    "implementation": "uuid-generator",
+    "execution": "local-browser"
   },
   {
     "id": "hash-generator",
     "status": "Coming Soon",
     "name": "Hash Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "base64-tool",
     "status": "Coming Soon",
     "name": "Base64 Encoder",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "timestamp",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Timestamp Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "timestamp-converter",
+    "aliases": [
+      "timestamp-converter",
+      "unix-timestamp"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "color-converter",
     "status": "Coming Soon",
     "name": "Color Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "markdown-tool",
     "status": "Coming Soon",
     "name": "Markdown Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "sql-formatter",
     "status": "Coming Soon",
     "name": "SQL Formatter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "invoice-generator",
     "status": "Coming Soon",
     "name": "Invoice Generator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "receipt-generator",
     "status": "Coming Soon",
     "name": "Receipt Generator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "profit-calculator",
     "status": "Coming Soon",
     "name": "Profit Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "margin-calculator",
     "status": "Coming Soon",
     "name": "Margin Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "vat-calculator",
     "status": "Coming Soon",
     "name": "VAT Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "salary-calculator",
     "status": "Coming Soon",
     "name": "Salary Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "loan-calculator",
     "status": "Coming Soon",
     "name": "Loan Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "roi-calculator",
     "status": "Coming Soon",
     "name": "ROI Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "break-even",
     "status": "Coming Soon",
     "name": "Break-even Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "currency-tool",
     "status": "Coming Soon",
     "name": "Currency Tool",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "prompt-packs",
     "status": "Coming Soon",
     "name": "Prompt Packs",
-    "category": "Digital"
+    "category": "Digital",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "cv-templates",
     "status": "Coming Soon",
     "name": "CV Templates",
-    "category": "Digital"
+    "category": "Digital",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "business-templates",
     "status": "Coming Soon",
     "name": "Business Templates",
-    "category": "Digital"
+    "category": "Digital",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "social-packs",
     "status": "Coming Soon",
     "name": "Social Media Packs",
-    "category": "Digital"
+    "category": "Digital",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "ebook-library",
     "status": "Coming Soon",
     "name": "eBook Library",
-    "category": "Digital"
+    "category": "Digital",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "notion-templates",
     "status": "Coming Soon",
     "name": "Notion Templates",
-    "category": "Digital"
+    "category": "Digital",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "excel-templates",
     "status": "Coming Soon",
     "name": "Excel Templates",
-    "category": "Digital"
+    "category": "Digital",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "ai-directory",
     "status": "Coming Soon",
     "name": "AI Tools Directory",
-    "category": "Directory"
+    "category": "Directory",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "saas-directory",
     "status": "Coming Soon",
     "name": "SaaS Directory",
-    "category": "Directory"
+    "category": "Directory",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "deals",
     "status": "Coming Soon",
     "name": "Deals & Offers",
-    "category": "Deals"
+    "category": "Deals",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "jobs",
     "status": "Coming Soon",
     "name": "AI Jobs",
-    "category": "Jobs"
+    "category": "Jobs",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "newsletter",
     "status": "Coming Soon",
     "name": "AI Nova Newsletter",
-    "category": "Community"
+    "category": "Community",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "premium",
     "status": "Coming Soon",
     "name": "AI Nova Premium",
-    "category": "Premium"
+    "category": "Premium",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "api",
     "status": "Coming Soon",
     "name": "AI Nova API",
-    "category": "Premium"
+    "category": "Premium",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "text-counter",
     "status": "Coming Soon",
     "name": "Text Counter",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "case-converter",
     "status": "Coming Soon",
     "name": "Case Converter",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "text-cleaner",
     "status": "Coming Soon",
     "name": "Text Cleaner",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "duplicate-remover",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Duplicate Line Remover",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "remove-line-breaks",
+    "aliases": [
+      "remove-line-breaks"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "sort-lines",
     "status": "Coming Soon",
     "name": "Sort Lines",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "reverse-text",
     "status": "Coming Soon",
     "name": "Reverse Text",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "slug-generator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Slug Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "local",
+    "engine": "AINovaV60",
+    "implementation_id": "slug-generator",
+    "implementation_sources": [
+      "nova-engine-v59.js"
+    ],
+    "available": true,
+    "implemented": true,
+    "implementation": "slug-generator",
+    "execution": "local-browser"
   },
   {
     "id": "url-encoder",
     "status": "Coming Soon",
     "name": "URL Encoder",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "url-decoder",
     "status": "Coming Soon",
     "name": "URL Decoder",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "html-entities",
     "status": "Coming Soon",
     "name": "HTML Entities",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "unicode-converter",
     "status": "Coming Soon",
     "name": "Unicode Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "ascii-converter",
     "status": "Coming Soon",
     "name": "ASCII Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "binary-converter",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Binary Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "binary-to-decimal",
+    "aliases": [
+      "binary-to-decimal",
+      "decimal-to-binary"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "hex-converter",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Hex Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "decimal-to-hex",
+    "aliases": [
+      "decimal-to-hex",
+      "hex-to-decimal",
+      "hex-to-hsl",
+      "hsl-to-hex"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "octal-converter",
     "status": "Coming Soon",
     "name": "Octal Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "number-base",
     "status": "Coming Soon",
     "name": "Number Base Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "percentage-calculator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Percentage Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "local",
+    "engine": "AINovaV60",
+    "implementation_id": "percentage-calculator",
+    "implementation_sources": [
+      "nova-engine-v59.js"
+    ],
+    "available": true,
+    "implemented": true,
+    "implementation": "percentage-change-calculator",
+    "execution": "local-browser",
+    "aliases": [
+      "percentage-change-calculator"
+    ]
   },
   {
     "id": "discount-calculator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Discount Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "local",
+    "engine": "AINovaV60",
+    "implementation_id": "discount-calculator",
+    "implementation_sources": [
+      "nova-engine-v59.js"
+    ],
+    "available": true,
+    "implemented": true,
+    "implementation": "discount-calculator",
+    "execution": "local-browser"
   },
   {
     "id": "tip-calculator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Tip Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "local",
+    "engine": "AINovaV60",
+    "implementation_id": "tip-calculator",
+    "implementation_sources": [
+      "nova-engine-v59.js"
+    ],
+    "available": true,
+    "implemented": true,
+    "implementation": "tip-calculator",
+    "execution": "local-browser"
   },
   {
     "id": "compound-interest",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Compound Interest Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "compound-interest-calculator",
+    "aliases": [
+      "compound-interest-calculator"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "simple-interest",
     "status": "Coming Soon",
     "name": "Simple Interest Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "savings-calculator",
     "status": "Coming Soon",
     "name": "Savings Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "markup-calculator",
     "status": "Coming Soon",
     "name": "Markup Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "commission-calculator",
     "status": "Coming Soon",
     "name": "Commission Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "conversion-length",
     "status": "Coming Soon",
     "name": "Length Converter",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "conversion-weight",
     "status": "Coming Soon",
     "name": "Weight Converter",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "conversion-temperature",
     "status": "Coming Soon",
     "name": "Temperature Converter",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "conversion-area",
     "status": "Coming Soon",
     "name": "Area Converter",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "conversion-volume",
     "status": "Coming Soon",
     "name": "Volume Converter",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "conversion-speed",
     "status": "Coming Soon",
     "name": "Speed Converter",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "conversion-time",
     "status": "Coming Soon",
     "name": "Time Converter",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "date-difference",
     "status": "Coming Soon",
     "name": "Date Difference",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "age-calculator",
     "status": "Coming Soon",
     "name": "Age Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "days-calculator",
     "status": "Coming Soon",
     "name": "Days Calculator",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "password-generator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Password Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "local",
+    "engine": "AINovaV60",
+    "implementation_id": "password-generator",
+    "implementation_sources": [
+      "nova-engine-v59.js"
+    ],
+    "available": true,
+    "implemented": true,
+    "implementation": "password-generator",
+    "execution": "local-browser"
   },
   {
     "id": "random-number",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Random Number Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "extract-numbers",
+    "aliases": [
+      "extract-numbers",
+      "random-number-generator"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "random-string",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Random String Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "random-string-generator",
+    "aliases": [
+      "random-string-generator"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "color-generator",
     "status": "Coming Soon",
     "name": "Random Color Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "ip-regex",
     "status": "Coming Soon",
     "name": "IP Regex Tester",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "json-to-csv",
     "status": "Coming Soon",
     "name": "JSON to CSV",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "csv-to-json",
     "status": "Coming Soon",
     "name": "CSV to JSON",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "xml-formatter",
     "status": "Coming Soon",
     "name": "XML Formatter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "yaml-validator",
     "status": "Coming Soon",
     "name": "YAML Helper",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "diff-checker",
     "status": "Coming Soon",
     "name": "Text Diff Checker",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "word-frequency",
     "status": "Coming Soon",
     "name": "Word Frequency",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "reading-time",
     "status": "Coming Soon",
     "name": "Reading Time Calculator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "lorem-generator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Lorem Ipsum Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "lorem-ipsum-generator",
+    "aliases": [
+      "lorem-ipsum-generator"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "character-frequency",
     "status": "Coming Soon",
     "name": "Character Frequency",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "sentence-counter",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Sentence Counter",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "count-sentences",
+    "aliases": [
+      "count-sentences"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "paragraph-counter",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Paragraph Counter",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": true,
+    "implemented": true,
+    "implementation": "count-paragraphs",
+    "aliases": [
+      "count-paragraphs"
+    ],
+    "execution": "local-browser"
   },
   {
     "id": "meta-preview",
     "status": "Coming Soon",
     "name": "SEO Meta Preview",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "keyword-density",
     "status": "Coming Soon",
     "name": "Keyword Density",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "robots-generator",
     "status": "Coming Soon",
     "name": "Robots.txt Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "sitemap-generator",
     "status": "Coming Soon",
     "name": "Sitemap Helper",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "canonical-generator",
     "status": "Coming Soon",
     "name": "Canonical URL Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "schema-generator",
     "status": "Coming Soon",
     "name": "Schema Markup Helper",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "open-graph-generator",
     "status": "Coming Soon",
     "name": "Open Graph Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "twitter-card-generator",
     "status": "Coming Soon",
     "name": "Twitter Card Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "utm-builder",
     "status": "Coming Soon",
     "name": "UTM Builder",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "affiliate-link-builder",
     "status": "Coming Soon",
     "name": "Affiliate Link Builder",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "invoice-number-generator",
     "status": "Coming Soon",
     "name": "Invoice Number Generator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "business-email",
     "status": "Coming Soon",
     "name": "Business Email Generator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "meeting-agenda",
     "status": "Coming Soon",
     "name": "Meeting Agenda Generator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "meeting-notes",
     "status": "Coming Soon",
     "name": "Meeting Notes Template",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "project-estimator",
     "status": "Coming Soon",
     "name": "Project Estimator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "hourly-rate",
     "status": "Coming Soon",
     "name": "Hourly Rate Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "freelance-profit",
     "status": "Coming Soon",
     "name": "Freelance Profit Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "pricing-calculator",
     "status": "Coming Soon",
     "name": "Pricing Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "subscription-calculator",
     "status": "Coming Soon",
     "name": "Subscription Revenue Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "mrr-calculator",
     "status": "Coming Soon",
     "name": "MRR Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "arr-calculator",
     "status": "Coming Soon",
     "name": "ARR Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "churn-calculator",
     "status": "Coming Soon",
     "name": "Churn Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "conversion-rate",
     "status": "Coming Soon",
     "name": "Conversion Rate Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "cpm-calculator",
     "status": "Coming Soon",
     "name": "CPM Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "cpc-calculator",
     "status": "Coming Soon",
     "name": "CPC Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "ctr-calculator",
     "status": "Coming Soon",
     "name": "CTR Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "ad-revenue-calculator",
     "status": "Coming Soon",
     "name": "Ad Revenue Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "break-even-revenue",
     "status": "Coming Soon",
     "name": "Break-even Revenue Calculator",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "email-subject-generator",
     "status": "Coming Soon",
     "name": "Email Subject Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "bio-generator",
     "status": "Coming Soon",
     "name": "Bio Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "tagline-generator",
     "status": "Coming Soon",
     "name": "Tagline Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "slogan-generator",
     "status": "Coming Soon",
     "name": "Slogan Generator",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "brand-voice",
     "status": "Coming Soon",
     "name": "Brand Voice Helper",
-    "category": "AI"
+    "category": "AI",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "faq-schema",
     "status": "Coming Soon",
     "name": "FAQ Schema Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "breadcrumb-schema",
     "status": "Coming Soon",
     "name": "Breadcrumb Schema Generator",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "redirect-generator",
     "status": "Coming Soon",
     "name": "Redirect Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "nginx-config",
     "status": "Coming Soon",
     "name": "Nginx Config Helper",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "apache-htaccess",
     "status": "Coming Soon",
     "name": "HTAccess Helper",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "gitignore-generator",
     "status": "Coming Soon",
     "name": "Gitignore Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "license-generator",
     "status": "Coming Soon",
     "name": "License Header Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "readme-generator",
     "status": "Coming Soon",
     "name": "README Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "api-request-builder",
     "status": "Coming Soon",
     "name": "API Request Builder",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "curl-generator",
     "status": "Coming Soon",
     "name": "cURL Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "jwt-decoder",
     "status": "Coming Soon",
     "name": "JWT Decoder",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "query-string-parser",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Query String Parser",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "local",
+    "engine": "AINovaV60",
+    "implementation_id": "query-string-parser",
+    "implementation_sources": [
+      "nova-engine-v59.js"
+    ],
+    "available": true,
+    "implemented": true,
+    "implementation": "query-string-builder",
+    "execution": "local-browser",
+    "aliases": [
+      "query-string-builder"
+    ]
   },
   {
     "id": "json-path-helper",
     "status": "Coming Soon",
     "name": "JSON Path Helper",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "password-strength",
     "status": "Coming Soon",
     "name": "Password Strength Checker",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "hash-checker",
     "status": "Coming Soon",
     "name": "Hash Checker",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "text-to-html",
     "status": "Coming Soon",
     "name": "Text to HTML",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "html-to-text",
     "status": "Coming Soon",
     "name": "HTML to Text",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "markdown-to-html",
     "status": "Coming Soon",
     "name": "Markdown to HTML",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "code-counter",
     "status": "Coming Soon",
     "name": "Code Line Counter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "css-gradient",
     "status": "Coming Soon",
     "name": "CSS Gradient Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "box-shadow",
     "status": "Coming Soon",
     "name": "Box Shadow Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "border-radius",
     "status": "Coming Soon",
     "name": "Border Radius Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "flexbox-generator",
     "status": "Coming Soon",
     "name": "Flexbox Helper",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "grid-generator",
     "status": "Coming Soon",
     "name": "CSS Grid Helper",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "favicon-generator",
     "status": "Coming Soon",
     "name": "Favicon Helper",
-    "category": "SEO"
+    "category": "SEO",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "color-palette",
     "status": "Coming Soon",
     "name": "Color Palette Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "contrast-checker",
     "status": "Coming Soon",
     "name": "Contrast Checker",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "aspect-ratio",
     "status": "Coming Soon",
     "name": "Aspect Ratio Calculator",
-    "category": "Image"
+    "category": "Image",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "image-dimensions",
     "status": "Coming Soon",
     "name": "Image Dimension Checker",
-    "category": "Image"
+    "category": "Image",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "data-uri-generator",
     "status": "Coming Soon",
     "name": "Data URI Generator",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "file-size-converter",
     "status": "Coming Soon",
     "name": "File Size Converter",
-    "category": "Developer"
+    "category": "Developer",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "time-zone-helper",
     "status": "Coming Soon",
     "name": "Time Zone Helper",
-    "category": "Finance"
+    "category": "Finance",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "pomodoro-timer",
     "status": "Coming Soon",
     "name": "Pomodoro Timer",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "countdown-timer",
     "status": "Coming Soon",
     "name": "Countdown Timer",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   },
   {
     "id": "stopwatch",
     "status": "Coming Soon",
     "name": "Stopwatch",
-    "category": "Business"
+    "category": "Business",
+    "availability": "planned",
+    "available": false,
+    "implemented": false
   }
 ]
