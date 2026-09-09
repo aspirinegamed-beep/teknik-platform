@@ -16,6 +16,34 @@
 .v5-btn{border:0;border-radius:12px;padding:12px 16px;background:#ffffff;color:#090d15;font-weight:700}
 .v5-btn.alt{background:rgba(255,255,255,.09);color:#fff}
 .v5-status{font-size:13px;opacity:.75}
+
+<style>
+.v51-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px;
+flex-wrap:wrap;
+}
+.v51-badge{
+display:inline-flex;
+align-items:center;
+gap:6px;
+padding:7px 11px;
+border-radius:999px;
+background:rgba(255,255,255,.07);
+font-size:12px;
+}
+.v51-fav{
+border:1px solid rgba(255,255,255,.12);
+background:rgba(255,255,255,.06);
+color:#fff;
+border-radius:12px;
+padding:10px 14px;
+font-size:18px;
+}
+</style>
+
 </style>
 </head>
 <body>
@@ -23,9 +51,14 @@
 <a href="index.html">← AI Nova</a>
 
 <div class="v5-card">
+<div class="v51-top">
+<div>
 <h1 id="title">AI Nova Tool</h1>
 <p id="desc" class="v5-status"></p>
 <p id="status" class="v5-status"></p>
+</div>
+<button class="v51-fav" id="favorite">☆</button>
+</div>
 </div>
 
 <div class="v5-card">
@@ -102,5 +135,43 @@ input.addEventListener("keydown",e=>{
 });
 })();
 </script>
+
+<script>
+(() => {
+const id = new URLSearchParams(location.search).get("id");
+const fav = document.getElementById("favorite");
+
+function getFavs(){
+  try {
+    return JSON.parse(localStorage.getItem("aiNova:favorites") || "[]");
+  } catch(e) {
+    return [];
+  }
+}
+
+function saveFavs(x){
+  localStorage.setItem("aiNova:favorites", JSON.stringify(x));
+}
+
+function render(){
+  fav.textContent = getFavs().includes(id) ? "★" : "☆";
+}
+
+fav.onclick = () => {
+  let list = getFavs();
+
+  if(list.includes(id))
+    list = list.filter(x => x !== id);
+  else
+    list.push(id);
+
+  saveFavs(list);
+  render();
+};
+
+render();
+})();
+</script>
+
 </body>
 </html>

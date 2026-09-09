@@ -1,0 +1,16 @@
+{
+  "version": "5.1",
+  "generated": "2026-09-09T05:30:45.482502",
+  "total": 179,
+  "available": 130,
+  "coming_soon": 49,
+  "features": {
+    "direct_tool_launch": true,
+    "favorites": true,
+    "recent_tools": true,
+    "offline_local_tools": true,
+    "download": true,
+    "copy": true,
+    "android": true
+  }
+}
