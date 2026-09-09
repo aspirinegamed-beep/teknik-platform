@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI Nova — free AI tools, business tools, developer tools, SEO tools and digital resources.">
+<title>AI Nova Tools Hub</title>
+<link rel="stylesheet" href="assets/hub.css">
+</head>
+<body>
+<header class="top">
+<a class="logo" href="../../">AI NOVA</a>
+<nav>
+<a href="../../">Home</a>
+<a href="#tools">Tools</a>
+<a href="#categories">Categories</a>
+<a href="#premium">Premium</a>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<span class="badge">100+ TOOLS & IDEAS</span>
+<h1>One platform.<br><span>Hundreds of possibilities.</span></h1>
+<p>Free AI tools, business utilities, developer tools, SEO resources and digital products — all inside AI Nova.</p>
+<input id="search" placeholder="Search tools..." autocomplete="off">
+</section>
+
+<section id="categories" class="categories">
+<button data-cat="All" class="active">All</button>
+<button data-cat="AI">AI</button>
+<button data-cat="Business">Business</button>
+<button data-cat="Developer">Developer</button>
+<button data-cat="SEO">SEO</button>
+<button data-cat="Image">Image</button>
+<button data-cat="Finance">Finance</button>
+<button data-cat="Digital">Digital</button>
+</section>
+
+<section id="tools">
+<div id="grid" class="grid"></div>
+</section>
+
+<section id="premium" class="premium">
+<div>
+<span class="badge">COMING SOON</span>
+<h2>AI Nova Premium</h2>
+<p>Advanced tools, higher limits, digital products, automation and developer features.</p>
+</div>
+<a href="../about.html">Learn more →</a>
+</section>
+</main>
+
+<footer>
+<strong>AI NOVA</strong>
+<p>AI tools, useful utilities and digital resources.</p>
+</footer>
+
+<script>
+const grid=document.getElementById('grid');
+const search=document.getElementById('search');
+let tools=[],cat='All';
+
+fetch('data/tools.json').then(r=>r.json()).then(data=>{
+ tools=data; render();
+});
+
+function render(){
+ const q=search.value.toLowerCase();
+ const list=tools.filter(t=>(cat==='All'||t.cat===cat)&&
+ (t.name.toLowerCase().includes(q)||t.desc.toLowerCase().includes(q)||t.cat.toLowerCase().includes(q)));
+ grid.innerHTML=list.map(t=>`
+ <article class="card">
+   <div class="icon">${icon(t.cat)}</div>
+   <div class="tag">${t.cat}</div>
+   <h3>${escapeHtml(t.name)}</h3>
+   <p>${escapeHtml(t.desc)}</p>
+   <button onclick="openTool('${t.id}')">Open tool →</button>
+ </article>`).join('');
+}
+
+function icon(c){
+ return {AI:'✦',Business:'◈',Developer:'⌘',SEO:'⌕',Image:'▣',Finance:'◉',Digital:'◆',Directory:'▤',Deals:'◇',Jobs:'↗',Community:'◎',Premium:'★'}[c]||'•';
+}
+
+function openTool(id){
+ location.href='tool.html?id='+encodeURIComponent(id);
+}
+
+function escapeHtml(s){
+ return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+}
+
+search.addEventListener('input',render);
+document.querySelectorAll('.categories button').forEach(b=>{
+ b.onclick=()=>{
+  document.querySelectorAll('.categories button').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); cat=b.dataset.cat; render();
+ };
+});
+</script>
+</body>
+</html>
