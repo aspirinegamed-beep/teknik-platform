@@ -1,0 +1,10 @@
+{
+  "name": "AI Nova",
+  "short_name": "AI Nova",
+  "description": "AI Nova — 179 browser-first tools.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#050812",
+  "theme_color": "#050812",
+  "icons": []
+}

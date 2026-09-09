@@ -1,0 +1,1076 @@
+{
+  "ai-writer": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "summarizer": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "rewriter": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "translator": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "idea-generator": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "title-generator": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "product-description": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "cv-builder": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "cover-letter": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "social-post": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "email-writer": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "business-plan": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "company-name": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "product-name": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "prompt-generator": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "seo-content": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "faq-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "meta-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "keyword-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "thumbnail-maker": {
+    "status": "coming-soon",
+    "family": "Image",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "image-resizer": {
+    "status": "coming-soon",
+    "family": "Image",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "image-compressor": {
+    "status": "coming-soon",
+    "family": "Image",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "background-remover": {
+    "status": "coming-soon",
+    "family": "Image",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "image-converter": {
+    "status": "coming-soon",
+    "family": "Image",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "qr-generator": {
+    "status": "coming-soon",
+    "family": "Tools",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "json-formatter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "html-formatter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "css-formatter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "js-formatter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "regex-tester": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "uuid-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "hash-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "base64-tool": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "timestamp": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "color-converter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "markdown-tool": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "sql-formatter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "invoice-generator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "receipt-generator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "profit-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "margin-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "vat-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "salary-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "loan-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "roi-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "break-even": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "currency-tool": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "prompt-packs": {
+    "status": "coming-soon",
+    "family": "Digital",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "cv-templates": {
+    "status": "coming-soon",
+    "family": "Digital",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "business-templates": {
+    "status": "coming-soon",
+    "family": "Digital",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "social-packs": {
+    "status": "coming-soon",
+    "family": "Digital",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "ebook-library": {
+    "status": "coming-soon",
+    "family": "Digital",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "notion-templates": {
+    "status": "coming-soon",
+    "family": "Digital",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "excel-templates": {
+    "status": "coming-soon",
+    "family": "Digital",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "ai-directory": {
+    "status": "coming-soon",
+    "family": "Directory",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "saas-directory": {
+    "status": "coming-soon",
+    "family": "Directory",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "deals": {
+    "status": "coming-soon",
+    "family": "Deals",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "jobs": {
+    "status": "coming-soon",
+    "family": "Jobs",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "newsletter": {
+    "status": "coming-soon",
+    "family": "Community",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "premium": {
+    "status": "coming-soon",
+    "family": "Premium",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "api": {
+    "status": "coming-soon",
+    "family": "Premium",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "text-counter": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "case-converter": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "text-cleaner": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "duplicate-remover": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "sort-lines": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "reverse-text": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "slug-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "url-encoder": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "url-decoder": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "html-entities": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "unicode-converter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "ascii-converter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "binary-converter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "hex-converter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "octal-converter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "number-base": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "percentage-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "discount-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "tip-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "compound-interest": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "simple-interest": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "savings-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "markup-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "commission-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "conversion-length": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "conversion-weight": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "conversion-temperature": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "conversion-area": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "conversion-volume": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "conversion-speed": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "conversion-time": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "date-difference": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "age-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "days-calculator": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "password-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "random-number": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "random-string": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "color-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "ip-regex": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "json-to-csv": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "csv-to-json": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "xml-formatter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "yaml-validator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "diff-checker": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "word-frequency": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "reading-time": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "lorem-generator": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "character-frequency": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "sentence-counter": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "paragraph-counter": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "meta-preview": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "keyword-density": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "robots-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "sitemap-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "canonical-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "schema-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "open-graph-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "twitter-card-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "utm-builder": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "affiliate-link-builder": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "invoice-number-generator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "business-email": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "meeting-agenda": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "meeting-notes": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "project-estimator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "hourly-rate": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "freelance-profit": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "pricing-calculator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "subscription-calculator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "mrr-calculator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "arr-calculator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "churn-calculator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "conversion-rate": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "cpm-calculator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "cpc-calculator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "ctr-calculator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "ad-revenue-calculator": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "break-even-revenue": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "email-subject-generator": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "bio-generator": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "tagline-generator": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "slogan-generator": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "brand-voice": {
+    "status": "coming-soon",
+    "family": "AI",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "faq-schema": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "breadcrumb-schema": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "redirect-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "nginx-config": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "apache-htaccess": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "gitignore-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "license-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "readme-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "api-request-builder": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "curl-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "jwt-decoder": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "query-string-parser": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "json-path-helper": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "password-strength": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "hash-checker": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "text-to-html": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "html-to-text": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "markdown-to-html": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "code-counter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "css-gradient": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "box-shadow": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "border-radius": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "flexbox-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "grid-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "favicon-generator": {
+    "status": "coming-soon",
+    "family": "SEO",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "color-palette": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "contrast-checker": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "aspect-ratio": {
+    "status": "coming-soon",
+    "family": "Image",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "image-dimensions": {
+    "status": "coming-soon",
+    "family": "Image",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "data-uri-generator": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "file-size-converter": {
+    "status": "coming-soon",
+    "family": "Developer",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "time-zone-helper": {
+    "status": "coming-soon",
+    "family": "Finance",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "pomodoro-timer": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "countdown-timer": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  },
+  "stopwatch": {
+    "status": "coming-soon",
+    "family": "Business",
+    "offline": true,
+    "implementation": "pending"
+  }
+}
