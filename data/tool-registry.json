@@ -1,5 +1,5 @@
 {
-  "version": "5.5",
+  "version": "5.6",
   "generated": "2026-09-09T05:31:34.706451",
   "total": 179,
   "tools": [
@@ -745,11 +745,11 @@
       "name": "Slug Generator",
       "category": "SEO",
       "family": "text",
-      "status": "Coming Soon",
-      "execution": null,
+      "status": "Available",
+      "execution": "local-browser",
       "offline": true,
       "api_required": false,
-      "implementation": null
+      "implementation": "slug"
     },
     {
       "id": "url-encoder",
@@ -866,33 +866,33 @@
       "name": "Discount Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "Coming Soon",
-      "execution": null,
+      "status": "Available",
+      "execution": "local-browser",
       "offline": true,
       "api_required": false,
-      "implementation": null
+      "implementation": "discount"
     },
     {
       "id": "tip-calculator",
       "name": "Tip Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "Coming Soon",
-      "execution": null,
+      "status": "Available",
+      "execution": "local-browser",
       "offline": true,
       "api_required": false,
-      "implementation": null
+      "implementation": "tip"
     },
     {
       "id": "compound-interest",
       "name": "Compound Interest Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "Coming Soon",
-      "execution": null,
+      "status": "Available",
+      "execution": "local-browser",
       "offline": true,
       "api_required": false,
-      "implementation": null
+      "implementation": "compound_interest"
     },
     {
       "id": "simple-interest",
@@ -1713,11 +1713,11 @@
       "name": "Query String Parser",
       "category": "Developer",
       "family": "developer",
-      "status": "Coming Soon",
-      "execution": null,
+      "status": "Available",
+      "execution": "local-browser",
       "offline": true,
       "api_required": false,
-      "implementation": null
+      "implementation": "query_parse"
     },
     {
       "id": "json-path-helper",
@@ -1973,6 +1973,6 @@
       "implementation": null
     }
   ],
-  "updated": "2026-09-09T05:35:33.984603",
-  "verified_local_implementations": 4
+  "updated": "2026-09-09T05:36:33.184477",
+  "verified_local_implementations": 9
 }
