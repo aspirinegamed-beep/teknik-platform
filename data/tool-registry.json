@@ -1,5 +1,5 @@
 {
-  "version": "5.2",
+  "version": "5.5",
   "generated": "2026-09-09T05:31:34.706451",
   "total": 179,
   "tools": [
@@ -8,1790 +8,1971 @@
       "name": "AI Writer",
       "category": "AI",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "summarizer",
       "name": "Text Summarizer",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "rewriter",
       "name": "AI Rewriter",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "translator",
       "name": "AI Translator",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "idea-generator",
       "name": "Idea Generator",
       "category": "AI",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "title-generator",
       "name": "Title Generator",
       "category": "AI",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "product-description",
       "name": "Product Description Generator",
       "category": "AI",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "cv-builder",
       "name": "CV Builder",
       "category": "AI",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "cover-letter",
       "name": "Cover Letter Generator",
       "category": "AI",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "social-post",
       "name": "Social Media Post Generator",
       "category": "AI",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "email-writer",
       "name": "Email Writer",
       "category": "AI",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "business-plan",
       "name": "Business Plan Generator",
       "category": "Business",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "company-name",
       "name": "Company Name Generator",
       "category": "Business",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "product-name",
       "name": "Product Name Generator",
       "category": "Business",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "prompt-generator",
       "name": "Prompt Generator",
       "category": "AI",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "seo-content",
       "name": "SEO Content Generator",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "faq-generator",
       "name": "FAQ Generator",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "meta-generator",
       "name": "Meta Description Generator",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "keyword-generator",
       "name": "Keyword Generator",
       "category": "SEO",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "thumbnail-maker",
       "name": "Thumbnail Maker",
       "category": "Image",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "image-resizer",
       "name": "Image Resizer",
       "category": "Image",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "image-compressor",
       "name": "Image Compressor",
       "category": "Image",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "background-remover",
       "name": "Background Remover",
       "category": "Image",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "image-converter",
       "name": "Image Converter",
       "category": "Image",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "qr-generator",
       "name": "QR Code Generator",
       "category": "Tools",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "json-formatter",
       "name": "JSON Formatter",
       "category": "Developer",
       "family": "json",
-      "status": "available",
-      "execution": "local",
+      "status": "Available",
+      "execution": "local-browser",
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": "json_format"
     },
     {
       "id": "html-formatter",
       "name": "HTML Formatter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "css-formatter",
       "name": "CSS Formatter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "js-formatter",
       "name": "JavaScript Formatter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "regex-tester",
       "name": "Regex Tester",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "uuid-generator",
       "name": "UUID Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Available",
+      "execution": "local-browser",
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": "uuid"
     },
     {
       "id": "hash-generator",
       "name": "Hash Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "base64-tool",
       "name": "Base64 Encoder",
       "category": "Developer",
       "family": "encoding",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "timestamp",
       "name": "Timestamp Converter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "color-converter",
       "name": "Color Converter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "markdown-tool",
       "name": "Markdown Converter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "sql-formatter",
       "name": "SQL Formatter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "invoice-generator",
       "name": "Invoice Generator",
       "category": "Business",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "receipt-generator",
       "name": "Receipt Generator",
       "category": "Business",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "profit-calculator",
       "name": "Profit Calculator",
       "category": "Finance",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "margin-calculator",
       "name": "Margin Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "vat-calculator",
       "name": "VAT Calculator",
       "category": "Finance",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "salary-calculator",
       "name": "Salary Calculator",
       "category": "Finance",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "loan-calculator",
       "name": "Loan Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "roi-calculator",
       "name": "ROI Calculator",
       "category": "Finance",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "break-even",
       "name": "Break-even Calculator",
       "category": "Finance",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "currency-tool",
       "name": "Currency Tool",
       "category": "Finance",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "prompt-packs",
       "name": "Prompt Packs",
       "category": "Digital",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "cv-templates",
       "name": "CV Templates",
       "category": "Digital",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "business-templates",
       "name": "Business Templates",
       "category": "Digital",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "social-packs",
       "name": "Social Media Packs",
       "category": "Digital",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "ebook-library",
       "name": "eBook Library",
       "category": "Digital",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "notion-templates",
       "name": "Notion Templates",
       "category": "Digital",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "excel-templates",
       "name": "Excel Templates",
       "category": "Digital",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "ai-directory",
       "name": "AI Tools Directory",
       "category": "Directory",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "saas-directory",
       "name": "SaaS Directory",
       "category": "Directory",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "deals",
       "name": "Deals & Offers",
       "category": "Deals",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "jobs",
       "name": "AI Jobs",
       "category": "Jobs",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "newsletter",
       "name": "AI Nova Newsletter",
       "category": "Community",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "premium",
       "name": "AI Nova Premium",
       "category": "Premium",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "api",
       "name": "AI Nova API",
       "category": "Premium",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "text-counter",
       "name": "Text Counter",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "case-converter",
       "name": "Case Converter",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "text-cleaner",
       "name": "Text Cleaner",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "duplicate-remover",
       "name": "Duplicate Line Remover",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "sort-lines",
       "name": "Sort Lines",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Available",
+      "execution": "local-browser",
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": "sort_lines"
     },
     {
       "id": "reverse-text",
       "name": "Reverse Text",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "slug-generator",
       "name": "Slug Generator",
       "category": "SEO",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "url-encoder",
       "name": "URL Encoder",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "url-decoder",
       "name": "URL Decoder",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "html-entities",
       "name": "HTML Entities",
       "category": "Developer",
       "family": "encoding",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "unicode-converter",
       "name": "Unicode Converter",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "ascii-converter",
       "name": "ASCII Converter",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "binary-converter",
       "name": "Binary Converter",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "hex-converter",
       "name": "Hex Converter",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "octal-converter",
       "name": "Octal Converter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "number-base",
       "name": "Number Base Converter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "percentage-calculator",
       "name": "Percentage Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "discount-calculator",
       "name": "Discount Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "tip-calculator",
       "name": "Tip Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "compound-interest",
       "name": "Compound Interest Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "simple-interest",
       "name": "Simple Interest Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "savings-calculator",
       "name": "Savings Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "markup-calculator",
       "name": "Markup Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "commission-calculator",
       "name": "Commission Calculator",
       "category": "Finance",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "conversion-length",
       "name": "Length Converter",
       "category": "Finance",
       "family": "converter",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "conversion-weight",
       "name": "Weight Converter",
       "category": "Finance",
       "family": "converter",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "conversion-temperature",
       "name": "Temperature Converter",
       "category": "Finance",
       "family": "converter",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "conversion-area",
       "name": "Area Converter",
       "category": "Finance",
       "family": "converter",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "conversion-volume",
       "name": "Volume Converter",
       "category": "Finance",
       "family": "converter",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "conversion-speed",
       "name": "Speed Converter",
       "category": "Finance",
       "family": "converter",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "conversion-time",
       "name": "Time Converter",
       "category": "Finance",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "date-difference",
       "name": "Date Difference",
       "category": "Finance",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "age-calculator",
       "name": "Age Calculator",
       "category": "Finance",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "days-calculator",
       "name": "Days Calculator",
       "category": "Finance",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "password-generator",
       "name": "Password Generator",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Available",
+      "execution": "local-browser",
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": "password"
     },
     {
       "id": "random-number",
       "name": "Random Number Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "random-string",
       "name": "Random String Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "color-generator",
       "name": "Random Color Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "ip-regex",
       "name": "IP Regex Tester",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "json-to-csv",
       "name": "JSON to CSV",
       "category": "Developer",
       "family": "json",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "csv-to-json",
       "name": "CSV to JSON",
       "category": "Developer",
       "family": "json",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "xml-formatter",
       "name": "XML Formatter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "yaml-validator",
       "name": "YAML Helper",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "diff-checker",
       "name": "Text Diff Checker",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "word-frequency",
       "name": "Word Frequency",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "reading-time",
       "name": "Reading Time Calculator",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "lorem-generator",
       "name": "Lorem Ipsum Generator",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "character-frequency",
       "name": "Character Frequency",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "sentence-counter",
       "name": "Sentence Counter",
       "category": "AI",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "paragraph-counter",
       "name": "Paragraph Counter",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "meta-preview",
       "name": "SEO Meta Preview",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "keyword-density",
       "name": "Keyword Density",
       "category": "SEO",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "robots-generator",
       "name": "Robots.txt Generator",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "sitemap-generator",
       "name": "Sitemap Helper",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "canonical-generator",
       "name": "Canonical URL Generator",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "schema-generator",
       "name": "Schema Markup Helper",
       "category": "SEO",
       "family": "json",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "open-graph-generator",
       "name": "Open Graph Generator",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "twitter-card-generator",
       "name": "Twitter Card Generator",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "utm-builder",
       "name": "UTM Builder",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "affiliate-link-builder",
       "name": "Affiliate Link Builder",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "invoice-number-generator",
       "name": "Invoice Number Generator",
       "category": "Business",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "business-email",
       "name": "Business Email Generator",
       "category": "Business",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "meeting-agenda",
       "name": "Meeting Agenda Generator",
       "category": "Business",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "meeting-notes",
       "name": "Meeting Notes Template",
       "category": "Business",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "project-estimator",
       "name": "Project Estimator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "hourly-rate",
       "name": "Hourly Rate Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "freelance-profit",
       "name": "Freelance Profit Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "pricing-calculator",
       "name": "Pricing Calculator",
       "category": "Business",
       "family": "finance",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "subscription-calculator",
       "name": "Subscription Revenue Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "mrr-calculator",
       "name": "MRR Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "arr-calculator",
       "name": "ARR Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "churn-calculator",
       "name": "Churn Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "conversion-rate",
       "name": "Conversion Rate Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "cpm-calculator",
       "name": "CPM Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "cpc-calculator",
       "name": "CPC Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "ctr-calculator",
       "name": "CTR Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "ad-revenue-calculator",
       "name": "Ad Revenue Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "break-even-revenue",
       "name": "Break-even Revenue Calculator",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "email-subject-generator",
       "name": "Email Subject Generator",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "bio-generator",
       "name": "Bio Generator",
       "category": "AI",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "tagline-generator",
       "name": "Tagline Generator",
       "category": "AI",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "slogan-generator",
       "name": "Slogan Generator",
       "category": "AI",
       "family": "generator",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "brand-voice",
       "name": "Brand Voice Helper",
       "category": "AI",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "faq-schema",
       "name": "FAQ Schema Generator",
       "category": "SEO",
       "family": "seo",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "breadcrumb-schema",
       "name": "Breadcrumb Schema Generator",
       "category": "SEO",
       "family": "json",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "redirect-generator",
       "name": "Redirect Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "nginx-config",
       "name": "Nginx Config Helper",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "apache-htaccess",
       "name": "HTAccess Helper",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "gitignore-generator",
       "name": "Gitignore Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "license-generator",
       "name": "License Header Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "readme-generator",
       "name": "README Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "api-request-builder",
       "name": "API Request Builder",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "curl-generator",
       "name": "cURL Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "jwt-decoder",
       "name": "JWT Decoder",
       "category": "Developer",
       "family": "encoding",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "query-string-parser",
       "name": "Query String Parser",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "json-path-helper",
       "name": "JSON Path Helper",
       "category": "Developer",
       "family": "json",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "password-strength",
       "name": "Password Strength Checker",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "hash-checker",
       "name": "Hash Checker",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "text-to-html",
       "name": "Text to HTML",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "html-to-text",
       "name": "HTML to Text",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "markdown-to-html",
       "name": "Markdown to HTML",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "code-counter",
       "name": "Code Line Counter",
       "category": "Developer",
       "family": "text",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "css-gradient",
       "name": "CSS Gradient Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "box-shadow",
       "name": "Box Shadow Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "border-radius",
       "name": "Border Radius Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "flexbox-generator",
       "name": "Flexbox Helper",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "grid-generator",
       "name": "CSS Grid Helper",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "favicon-generator",
       "name": "Favicon Helper",
       "category": "SEO",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "color-palette",
       "name": "Color Palette Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "contrast-checker",
       "name": "Contrast Checker",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "aspect-ratio",
       "name": "Aspect Ratio Calculator",
       "category": "Image",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "image-dimensions",
       "name": "Image Dimension Checker",
       "category": "Image",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "data-uri-generator",
       "name": "Data URI Generator",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "file-size-converter",
       "name": "File Size Converter",
       "category": "Developer",
       "family": "developer",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "time-zone-helper",
       "name": "Time Zone Helper",
       "category": "Finance",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "pomodoro-timer",
       "name": "Pomodoro Timer",
       "category": "Business",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "countdown-timer",
       "name": "Countdown Timer",
       "category": "Business",
       "family": "date",
-      "status": "available",
-      "execution": "local",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": true,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     },
     {
       "id": "stopwatch",
       "name": "Stopwatch",
       "category": "Business",
       "family": "general",
-      "status": "coming-soon",
-      "execution": "future",
+      "status": "Coming Soon",
+      "execution": null,
       "offline": false,
-      "api_required": false
+      "api_required": false,
+      "implementation": null
     }
-  ]
+  ],
+  "updated": "2026-09-09T05:35:33.984603",
+  "verified_local_implementations": 4
 }
