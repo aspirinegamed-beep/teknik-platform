@@ -1,2 +1,12 @@
 *.backup
 backup-v2/
+
+# AI Nova backups
+nova-hub/assets/*.backup*
+nova-hub/assets/*.before-*
+nova-hub/data/*.backup*
+nova-hub/data/*.before-*
+nova-hub/tools/*.backup*
+nova-hub/tools/*.before-*
+backup-pladuom-*/
+nova-hub-backup-*/
