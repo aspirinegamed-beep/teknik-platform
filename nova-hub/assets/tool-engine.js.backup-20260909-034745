@@ -1,0 +1,457 @@
+(function () {
+  "use strict";
+
+  const $ = (id) => document.getElementById(id);
+
+  function value(id) {
+    const el = $(id);
+    return el ? el.value : "";
+  }
+
+  function num(id, fallback = 0) {
+    const n = parseFloat(value(id));
+    return Number.isFinite(n) ? n : fallback;
+  }
+
+  function escapeHTML(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  function setOutput(text) {
+    const out = $("output");
+    if (out) {
+      if ("value" in out) out.value = String(text);
+      else out.textContent = String(text);
+      return;
+    }
+
+    const result = $("result");
+    if (result) result.textContent = String(text);
+  }
+
+  function getOutput() {
+    const out = $("output");
+    if (out) return "value" in out ? out.value : out.textContent;
+
+    const result = $("result");
+    return result ? result.textContent : "";
+  }
+
+  function copyOutput() {
+    const text = getOutput();
+    if (!text) return;
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text);
+    } else {
+      const out = $("output");
+      out.focus();
+      out.select();
+      document.execCommand("copy");
+    }
+  }
+
+  function downloadOutput() {
+    const text = getOutput();
+    if (!text) return;
+
+    const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+
+    a.href = url;
+    a.download = "ai-nova-output.txt";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    URL.revokeObjectURL(url);
+  }
+
+  function clearTool() {
+    document.querySelectorAll("input, textarea, select").forEach((el) => {
+      if (el.id !== "toolSearch") el.value = "";
+    });
+
+    setOutput("");
+  }
+
+  function uuid() {
+    if (crypto.randomUUID) return crypto.randomUUID();
+
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+      const r = Math.random() * 16 | 0;
+      const v = c === "x" ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+  function base64Encode(text) {
+    const bytes = new TextEncoder().encode(text);
+    let binary = "";
+    bytes.forEach((b) => binary += String.fromCharCode(b));
+    return btoa(binary);
+  }
+
+  function base64Decode(text) {
+    const binary = atob(text);
+    const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+    return new TextDecoder().decode(bytes);
+  }
+
+  async function sha256(text) {
+    const data = new TextEncoder().encode(text);
+    const hash = await crypto.subtle.digest("SHA-256", data);
+
+    return [...new Uint8Array(hash)]
+      .map(b => b.toString(16).padStart(2, "0"))
+      .join("");
+  }
+
+  function formatJSON(text) {
+    return JSON.stringify(JSON.parse(text), null, 2);
+  }
+
+  function timestamp() {
+    const d = new Date();
+    return {
+      unix_seconds: Math.floor(d.getTime() / 1000),
+      unix_milliseconds: d.getTime(),
+      iso: d.toISOString(),
+      local: d.toString()
+    };
+  }
+
+  function regexTest() {
+    const pattern = value("pattern");
+    const text = value("text");
+    const flags = value("flags");
+
+    try {
+      const re = new RegExp(pattern, flags);
+      const matches = text.match(re);
+
+      return matches
+        ? JSON.stringify({
+            valid: true,
+            matched: true,
+            matches
+          }, null, 2)
+        : JSON.stringify({
+            valid: true,
+            matched: false,
+            matches: []
+          }, null, 2);
+    } catch (e) {
+      return JSON.stringify({
+        valid: false,
+        error: e.message
+      }, null, 2);
+    }
+  }
+
+  function calculate(id) {
+    switch (id) {
+      case "percentage-calculator": {
+        const a = num("a");
+        const b = num("b");
+        return `${b}% of ${a} = ${(a * b / 100).toFixed(2)}`;
+      }
+
+      case "discount-calculator": {
+        const price = num("price");
+        const discount = num("discount");
+        const saved = price * discount / 100;
+        return JSON.stringify({
+          original: price,
+          discount_percent: discount,
+          saved: Number(saved.toFixed(2)),
+          final_price: Number((price - saved).toFixed(2))
+        }, null, 2);
+      }
+
+      case "tip-calculator": {
+        const bill = num("bill");
+        const tip = num("tip");
+        const amount = bill * tip / 100;
+        return JSON.stringify({
+          bill,
+          tip_percent: tip,
+          tip_amount: Number(amount.toFixed(2)),
+          total: Number((bill + amount).toFixed(2))
+        }, null, 2);
+      }
+
+      case "profit-calculator": {
+        const revenue = num("revenue");
+        const cost = num("cost");
+        return JSON.stringify({
+          revenue,
+          cost,
+          profit: Number((revenue - cost).toFixed(2)),
+          margin_percent: revenue
+            ? Number(((revenue - cost) / revenue * 100).toFixed(2))
+            : 0
+        }, null, 2);
+      }
+
+      case "margin-calculator": {
+        const revenue = num("revenue");
+        const cost = num("cost");
+        const profit = revenue - cost;
+        return `${revenue ? (profit / revenue * 100).toFixed(2) : 0}%`;
+      }
+
+      case "roi-calculator": {
+        const gain = num("gain");
+        const investment = num("investment");
+        return `${investment ? ((gain - investment) / investment * 100).toFixed(2) : 0}%`;
+      }
+
+      case "break-even": {
+        const fixed = num("fixed");
+        const price = num("price");
+        const variable = num("variable");
+        const contribution = price - variable;
+
+        return contribution > 0
+          ? JSON.stringify({
+              contribution_per_unit: contribution,
+              break_even_units: Math.ceil(fixed / contribution),
+              break_even_revenue: Number((fixed / contribution * price).toFixed(2))
+            }, null, 2)
+          : "Price must be greater than variable cost.";
+      }
+
+      case "simple-interest": {
+        const principal = num("principal");
+        const rate = num("rate");
+        const years = num("years");
+
+        const interest = principal * rate * years / 100;
+
+        return JSON.stringify({
+          principal,
+          interest: Number(interest.toFixed(2)),
+          total: Number((principal + interest).toFixed(2))
+        }, null, 2);
+      }
+
+      case "compound-interest": {
+        const principal = num("principal");
+        const rate = num("rate");
+        const years = num("years");
+        const frequency = Math.max(1, num("frequency", 1));
+
+        const total =
+          principal *
+          Math.pow(1 + rate / 100 / frequency, frequency * years);
+
+        return JSON.stringify({
+          principal,
+          rate_percent: rate,
+          years,
+          final_amount: Number(total.toFixed(2)),
+          interest: Number((total - principal).toFixed(2))
+        }, null, 2);
+      }
+
+      case "conversion-length": {
+        const meters = num("value");
+        return JSON.stringify({
+          meters,
+          kilometers: meters / 1000,
+          centimeters: meters * 100,
+          millimeters: meters * 1000,
+          miles: meters / 1609.344,
+          feet: meters * 3.280839895,
+          inches: meters * 39.37007874
+        }, null, 2);
+      }
+
+      case "conversion-weight": {
+        const kg = num("value");
+        return JSON.stringify({
+          kilograms: kg,
+          grams: kg * 1000,
+          pounds: kg * 2.2046226218,
+          ounces: kg * 35.27396195
+        }, null, 2);
+      }
+
+      case "conversion-temperature": {
+        const c = num("value");
+
+        return JSON.stringify({
+          celsius: c,
+          fahrenheit: c * 9 / 5 + 32,
+          kelvin: c + 273.15
+        }, null, 2);
+      }
+
+      case "conversion-area": {
+        const m2 = num("value");
+
+        return JSON.stringify({
+          square_meters: m2,
+          square_kilometers: m2 / 1e6,
+          square_feet: m2 * 10.7639104167,
+          square_yards: m2 * 1.1959900463,
+          hectares: m2 / 10000
+        }, null, 2);
+      }
+
+      case "conversion-volume": {
+        const liters = num("value");
+
+        return JSON.stringify({
+          liters,
+          milliliters: liters * 1000,
+          cubic_meters: liters / 1000,
+          gallons_us: liters * 0.2641720524,
+          cups_us: liters * 4.2267528377
+        }, null, 2);
+      }
+
+      case "conversion-speed": {
+        const kmh = num("value");
+
+        return JSON.stringify({
+          km_h: kmh,
+          m_s: kmh / 3.6,
+          mph: kmh * 0.6213711922,
+          knots: kmh * 0.5399568035
+        }, null, 2);
+      }
+
+      case "number-base": {
+        const n = parseInt(value("value"), 10);
+
+        if (!Number.isFinite(n)) return "Enter a valid integer.";
+
+        return JSON.stringify({
+          decimal: n,
+          binary: n.toString(2),
+          octal: n.toString(8),
+          hexadecimal: n.toString(16).toUpperCase()
+        }, null, 2);
+      }
+
+      default:
+        return null;
+    }
+  }
+
+  window.NovaTools = {
+    $,
+    value,
+    num,
+    escapeHTML,
+    setOutput,
+    getOutput,
+    copyOutput,
+    downloadOutput,
+    clearTool,
+    uuid,
+    base64Encode,
+    base64Decode,
+    sha256,
+    formatJSON,
+    timestamp,
+    regexTest,
+    calculate
+  };
+
+  console.log("AI Nova Modular Tool Engine loaded.");
+})();
+
+/* AI NOVA TOOL BRIDGE */
+(function () {
+  "use strict";
+
+  function toolId() {
+    return new URLSearchParams(location.search).get("id") || "";
+  }
+
+  function runCurrentTool() {
+    const id = toolId();
+
+    try {
+      let result = null;
+
+      if (id === "json-formatter") {
+        result = NovaTools.formatJSON(NovaTools.value("text"));
+      }
+
+      else if (id === "uuid-generator") {
+        result = NovaTools.uuid();
+      }
+
+      else if (id === "base64-tool") {
+        const mode = NovaTools.value("mode") || "encode";
+        result = mode === "decode"
+          ? NovaTools.base64Decode(NovaTools.value("text"))
+          : NovaTools.base64Encode(NovaTools.value("text"));
+      }
+
+      else if (id === "timestamp") {
+        result = JSON.stringify(NovaTools.timestamp(), null, 2);
+      }
+
+      else if (id === "regex-tester") {
+        result = NovaTools.regexTest();
+      }
+
+      else if (id === "hash-generator") {
+        NovaTools.sha256(NovaTools.value("text"))
+          .then((hash) => NovaTools.setOutput(hash))
+          .catch((e) => NovaTools.setOutput("Error: " + e.message));
+        return;
+      }
+
+      else {
+        result = NovaTools.calculate(id);
+      }
+
+      if (result !== null && result !== undefined) {
+        NovaTools.setOutput(result);
+      } else {
+        NovaTools.setOutput(
+          "This tool is available in the AI Nova catalog. Engine integration is being expanded."
+        );
+      }
+
+    } catch (e) {
+      NovaTools.setOutput("Error: " + e.message);
+    }
+  }
+
+  window.runNovaTool = runCurrentTool;
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(
+      "button, [role='button'], .run-tool, .run"
+    );
+
+    buttons.forEach(function (button) {
+      const text = (button.textContent || "").trim().toLowerCase();
+
+      if (
+        text.includes("run") ||
+        text.includes("generate") ||
+        text.includes("calculate") ||
+        text.includes("convert") ||
+        text.includes("format")
+      ) {
+        button.addEventListener("click", runCurrentTool);
+      }
+    });
+  });
+
+  console.log("AI Nova Tool Bridge loaded.");
+})();

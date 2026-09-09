@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI Nova free online tools">
+<title>AI Nova Tool</title>
+<link rel="stylesheet" href="../../assets/hub.css">
+<style>
+.toolbox{max-width:950px;margin:30px auto;padding:20px}
+.panel{background:#0b1220;border:1px solid #263247;border-radius:16px;padding:20px}
+textarea,input,select{width:100%;box-sizing:border-box;margin:8px 0;padding:13px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff}
+textarea{min-height:180px;resize:vertical}
+button{padding:11px 18px;margin:6px 5px 6px 0;border:0;border-radius:10px;cursor:pointer;font-weight:700}
+.actions{margin-top:12px}
+.result{white-space:pre-wrap;background:#020617;border:1px solid #334155;border-radius:12px;padding:16px;margin-top:15px;min-height:100px;overflow:auto}
+label{display:block;margin-top:12px;font-weight:700}
+.small{opacity:.7;font-size:.9rem}
+.ok{margin-top:10px}
+</style>
+</head>
+
+<body>
+<div class="toolbox">
+<a href="../../">← AI Nova Home</a>
+
+<div class="panel">
+<h1 id="title">AI Nova Tool</h1>
+<p id="desc"></p>
+<p class="small">Runs locally in your browser whenever possible.</p>
+
+<div id="form"></div>
+
+<div class="actions">
+<button onclick="runTool()">Run Tool</button>
+<button onclick="copyResult()">Copy</button>
+<button onclick="downloadResult()">Download</button>
+<button onclick="clearTool()">Clear</button>
+</div>
+
+<div id="result" class="result">Ready.</div>
+</div>
+</div>
+
+<script>
+let tool=null;
+
+const $=id=>document.getElementById(id);
+const val=id=>$(id)?$(id).value:"";
+const num=id=>parseFloat(val(id))||0;
+
+function out(x){
+ $("result").textContent=String(x);
+}
+
+async function loadTool(){
+ try{
+  const id=new URLSearchParams(location.search).get("id");
+  const data=await fetch("../data/tools.json").then(r=>r.json());
+  tool=data.find(x=>x.id===id)||data[0];
+
+  document.title=tool.name+" — AI Nova";
+  $("title").textContent=tool.name;
+  $("desc").textContent=tool.description||"Free AI Nova online tool.";
+
+  buildForm(tool.id);
+ }catch(e){
+  out("Unable to load tool: "+e.message);
+ }
+}
+
+function input(id,label,type="text",placeholder=""){
+ return `<label>${label}</label><input id="${id}" type="${type}" placeholder="${placeholder}">`;
+}
+
+function area(id,label,placeholder=""){
+ return `<label>${label}</label><textarea id="${id}" placeholder="${placeholder}"></textarea>`;
+}
+
+function buildForm(id){
+ let f="";
+
+ const textTools=[
+  "text-counter","case-converter","text-cleaner","duplicate-remover",
+  "sort-lines","reverse-text","slug-generator","word-frequency",
+  "reading-time","lorem-generator","character-frequency",
+  "sentence-counter","paragraph-counter","text-to-html","html-to-text",
+  "code-counter"
+ ];
+
+ if(textTools.includes(id)){
+   f=area("input","Input","Enter or paste text here...");
+ }
+
+ else if(["json-formatter","json-path-helper","json-to-csv"].includes(id)){
+   f=area("input","JSON","Paste JSON here...");
+ }
+
+ else if(id==="csv-to-json"){
+   f=area("input","CSV","name,age\nAlice,25");
+ }
+
+ else if(["html-formatter","css-formatter","js-formatter","xml-formatter","sql-formatter","markdown-to-html"].includes(id)){
+   f=area("input","Input","Paste code or text here...");
+ }
+
+ else if(["url-encoder","url-decoder","base64-tool","binary-converter","hex-converter","ascii-converter","unicode-converter"].includes(id)){
+   f=area("input","Input","Enter text...");
+ }
+
+ else if(id==="uuid-generator"){
+   f="<p>Generate a secure UUID locally.</p>";
+ }
+
+ else if(id==="timestamp"){
+   f="<p>Generate the current Unix timestamp.</p>";
+ }
+
+ else if(id==="password-generator"){
+   f=input("length","Password Length","number","20");
+ }
+
+ else if(id==="random-number"){
+   f=input("min","Minimum","number","1")+input("max","Maximum","number","100");
+ }
+
+ else if(id==="random-string"){
+   f=input("length","Length","number","20");
+ }
+
+ else if(id==="color-generator"){
+   f="<p>Generate a random HEX color.</p>";
+ }
+
+ else if(id==="regex-tester"){
+   f=input("pattern","Regular Expression","text","^[a-z]+$")
+    +area("input","Test Text");
+ }
+
+ else if(id==="hash-generator"){
+   f=area("input","Text")
+    +`<label>Algorithm</label><select id="algorithm">
+    <option>SHA-256</option><option>SHA-384</option><option>SHA-512</option>
+    </select>`;
+ }
+
+ else if(id==="color-converter"){
+   f=input("color","HEX or RGB","text","#ff0000");
+ }
+
+ else if(["percentage-calculator","discount-calculator","tip-calculator",
+          "markup-calculator","commission-calculator"].includes(id)){
+   f=input("amount","Amount")
+    +input("percent","Percentage");
+ }
+
+ else if(id==="vat-calculator"){
+   f=input("price","Price")+input("vat","VAT %");
+ }
+
+ else if(["profit-calculator","margin-calculator"].includes(id)){
+   f=input("cost","Cost")+input("revenue","Revenue");
+ }
+
+ else if(id==="roi-calculator"){
+   f=input("investment","Investment")+input("return","Return");
+ }
+
+ else if(id==="break-even"){
+   f=input("fixed","Fixed Costs")
+    +input("price","Selling Price")
+    +input("variable","Variable Cost");
+ }
+
+ else if(id==="loan-calculator"){
+   f=input("amount","Loan Amount")
+    +input("rate","Annual Interest %")
+    +input("months","Months");
+ }
+
+ else if(id==="compound-interest"){
+   f=input("principal","Principal")
+    +input("rate","Annual Rate %")
+    +input("years","Years")
+    +input("frequency","Compounds / Year","number","12");
+ }
+
+ else if(id==="simple-interest"){
+   f=input("principal","Principal")
+    +input("rate","Annual Rate %")
+    +input("years","Years");
+ }
+
+ else if(id==="conversion-temperature"){
+   f=input("value","Value")
+    +`<label>From</label><select id="from"><option>C</option><option>F</option><option>K</option></select>`
+    +`<label>To</label><select id="to"><option>C</option><option>F</option><option>K</option></select>`;
+ }
+
+ else if(id==="conversion-length"){
+   f=input("value","Value")
+    +`<label>From</label><select id="from"><option>m</option><option>km</option><option>cm</option><option>mm</option><option>mi</option><option>ft</option><option>in</option></select>`
+    +`<label>To</label><select id="to"><option>m</option><option>km</option><option>cm</option><option>mm</option><option>mi</option><option>ft</option><option>in</option></select>`;
+ }
+
+ else if(id==="file-size-converter"){
+   f=input("value","Value")+`<label>From</label><select id="from"><option>B</option><option>KB</option><option>MB</option><option>GB</option></select>`
+   +`<label>To</label><select id="to"><option>B</option><option>KB</option><option>MB</option><option>GB</option></select>`;
+ }
+
+ else if(id==="aspect-ratio"){
+   f=input("width","Width")+input("height","Height");
+ }
+
+ else if(id==="date-difference"){
+   f=input("date1","Start Date","date")+input("date2","End Date","date");
+ }
+
+ else if(id==="age-calculator"){
+   f=input("birth","Birth Date","date");
+ }
+
+ else if(id==="days-calculator"){
+   f=input("date","Date","date")+input("days","Days","number","30");
+ }
+
+ else if(id==="mrr-calculator"){
+   f=input("customers","Customers")+input("price","Monthly Price");
+ }
+
+ else if(id==="arr-calculator"){
+   f=input("mrr","Monthly Recurring Revenue");
+ }
+
+ else if(id==="churn-calculator"){
+   f=input("lost","Customers Lost")+input("start","Customers at Start");
+ }
+
+ else if(["conversion-rate","ctr-calculator"].includes(id)){
+   f=input("conversions","Conversions / Clicks")+input("visitors","Visitors / Impressions");
+ }
+
+ else if(id==="cpc-calculator"){
+   f=input("cost","Ad Cost")+input("clicks","Clicks");
+ }
+
+ else if(id==="cpm-calculator"){
+   f=input("cost","Ad Cost")+input("impressions","Impressions");
+ }
+
+ else if(id==="ad-revenue-calculator"){
+   f=input("impressions","Impressions")+input("rpm","Revenue per 1000 Views");
+ }
+
+ else if(id==="utm-builder"){
+   f=input("url","URL","text","https://example.com")
+    +input("source","Source","text","google")
+    +input("medium","Medium","text","cpc")
+    +input("campaign","Campaign","text","summer");
+ }
+
+ else if(id==="query-string-parser"){
+   f=input("url","URL","text","https://example.com/?name=alice&age=25");
+ }
+
+ else if(id==="jwt-decoder"){
+   f=area("input","JWT","Paste JWT token...");
+ }
+
+ else if(id==="sitemap-generator"){
+   f=area("input","URLs","One URL per line");
+ }
+
+ else if(id==="robots-generator"){
+   f=input("site","Website","text","https://example.com");
+ }
+
+ else if(id==="canonical-generator"){
+   f=input("url","Canonical URL");
+ }
+
+ else if(id==="open-graph-generator"){
+   f=input("title","Title")+input("description","Description")+input("url","URL");
+ }
+
+ else if(id==="redirect-generator"){
+   f=input("from","From Path","text","/old")
+    +input("to","To Path","text","/new");
+ }
+
+ else if(id==="gitignore-generator"){
+   f=input("project","Project Type","text","Node");
+ }
+
+ else if(id==="css-gradient"){
+   f=input("color1","Color 1","text","#ff0000")
+    +input("color2","Color 2","text","#0000ff")
+    +input("angle","Angle","number","90");
+ }
+
+ else if(id==="box-shadow"){
+   f=input("x","X","number","0")
+    +input("y","Y","number","10")
+    +input("blur","Blur","number","20")
+    +input("spread","Spread","number","0")
+    +input("color","Color","text","rgba(0,0,0,.25)");
+ }
+
+ else if(id==="border-radius"){
+   f=input("radius","Radius","text","12px");
+ }
+
+ else if(id==="flexbox-generator"){
+   f=`<label>Direction</label><select id="direction"><option>row</option><option>column</option></select>
+      <label>Justify</label><select id="justify"><option>center</option><option>space-between</option><option>flex-start</option><option>flex-end</option></select>
+      <label>Align</label><select id="align"><option>center</option><option>stretch</option><option>flex-start</option><option>flex-end</option></select>`;
+ }
+
+ else if(id==="grid-generator"){
+   f=input("columns","Columns","number","3")+input("gap","Gap","text","10px");
+ }
+
+ else if(id==="data-uri-generator"){
+   f=area("input","Text","Enter text to encode...");
+ }
+
+ else if(id==="time-zone-helper"){
+   f=input("hour","Hour","number","12")+input("offset1","UTC Offset From","number","0")+input("offset2","UTC Offset To","number","1");
+ }
+
+ else if(id==="pomodoro-timer"){
+   f=input("minutes","Minutes","number","25");
+ }
+
+ else if(id==="countdown-timer"){
+   f=input("seconds","Seconds","number","60");
+ }
+
+ else if(id==="stopwatch"){
+   f="<p>Press Run Tool to start the stopwatch.</p>";
+ }
+
+ else{
+   f=area("input","Input","This tool's dedicated module will be added next.");
+ }
+
+ $("form").innerHTML=f;
+}
+
+async function runTool(){
+ const id=tool.id;
+
+ try{
+
+  if(id==="text-counter"){
+   const t=val("input");
+   const words=t.trim()?t.trim().split(/\s+/).length:0;
+   out(`Words: ${words}\nCharacters: ${t.length}\nCharacters without spaces: ${t.replace(/\s/g,"").length}\nSentences: ${(t.match(/[.!?]+/g)||[]).length}\nParagraphs: ${t.trim()?t.split(/\n\s*\n/).length:0}`);
+  }
+
+  else if(id==="case-converter"){
+   const t=val("input");
+   out(`UPPERCASE:\n${t.toUpperCase()}\n\nlowercase:\n${t.toLowerCase()}\n\nTitle Case:\n${t.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())}`);
+  }
+
+  else if(id==="text-cleaner"){
+   out(val("input").replace(/[ \t]+/g," ").replace(/\n{3,}/g,"\n\n").trim());
+  }
+
+  else if(id==="duplicate-remover"){
+   out([...new Set(val("input").split(/\r?\n/))].join("\n"));
+  }
+
+  else if(id==="sort-lines"){
+   out(val("input").split(/\r?\n/).sort((a,b)=>a.localeCompare(b)).join("\n"));
+  }
+
+  else if(id==="reverse-text"){
+   out([...val("input")].reverse().join(""));
+  }
+
+  else if(id==="slug-generator"){
+   out(val("input").toLowerCase().trim().replace(/[^a-z0-9\u00C0-\u024F\u0600-\u06FF]+/gi,"-").replace(/^-+|-+$/g,""));
+  }
+
+  else if(id==="word-frequency"){
+   const words=(val("input").toLowerCase().match(/\b[\p{L}\p{N}']+\b/gu)||[]);
+   const c={};
+   words.forEach(w=>c[w]=(c[w]||0)+1);
+   out(Object.entries(c).sort((a,b)=>b[1]-a[1]).map(x=>x[0]+" : "+x[1]).join("\n"));
+  }
+
+  else if(id==="reading-time"){
+   const words=val("input").trim().split(/\s+/).filter(Boolean).length;
+   out(`Words: ${words}\nEstimated reading time: ${Math.max(1,Math.ceil(words/200))} minute(s)`);
+  }
+
+  else if(id==="character-frequency"){
+   const c={};
+   [...val("input")].forEach(x=>c[x]=(c[x]||0)+1);
+   out(Object.entries(c).sort((a,b)=>b[1]-a[1]).map(x=>JSON.stringify(x[0])+" : "+x[1]).join("\n"));
+  }
+
+  else if(id==="sentence-counter"){
+   out("Sentences: "+(val("input").match(/[.!?]+/g)||[]).length);
+  }
+
+  else if(id==="paragraph-counter"){
+   out("Paragraphs: "+(val("input").trim()?val("input").split(/\n\s*\n/).length:0));
+  }
+
+  else if(id==="json-formatter"){
+   out(JSON.stringify(JSON.parse(val("input")),null,2));
+  }
+
+  else if(id==="json-to-csv"){
+   const d=JSON.parse(val("input"));
+   if(!Array.isArray(d)) throw Error("Expected a JSON array");
+   const keys=[...new Set(d.flatMap(x=>Object.keys(x)))];
+   out([keys.join(","),...d.map(x=>keys.map(k=>JSON.stringify(x[k]??"")).join(","))].join("\n"));
+  }
+
+  else if(id==="csv-to-json"){
+   const lines=val("input").trim().split(/\r?\n/);
+   const keys=lines.shift().split(",").map(x=>x.trim());
+   out(JSON.stringify(lines.map(line=>{
+    const v=line.split(",");
+    return Object.fromEntries(keys.map((k,i)=>[k,v[i]??""]));
+   }),null,2));
+  }
+
+  else if(id==="url-encoder"){
+   out(encodeURIComponent(val("input")));
+  }
+
+  else if(id==="url-decoder"){
+   out(decodeURIComponent(val("input")));
+  }
+
+  else if(id==="base64-tool"){
+   out(btoa(unescape(encodeURIComponent(val("input")))));
+  }
+
+  else if(id==="binary-converter"){
+   out([...val("input")].map(c=>c.charCodeAt(0).toString(2).padStart(8,"0")).join(" "));
+  }
+
+  else if(id==="hex-converter"){
+   out([...val("input")].map(c=>c.charCodeAt(0).toString(16).padStart(2,"0")).join(" "));
+  }
+
+  else if(id==="ascii-converter"){
+   out([...val("input")].map(c=>c.charCodeAt(0)).join(" "));
+  }
+
+  else if(id==="unicode-converter"){
+   out([...val("input")].map(c=>"\\u"+c.codePointAt(0).toString(16).padStart(4,"0")).join(""));
+  }
+
+  else if(id==="uuid-generator"){
+   out(crypto.randomUUID?crypto.randomUUID():"UUID generation unavailable");
+  }
+
+  else if(id==="timestamp"){
+   const d=new Date();
+   out(`Unix seconds: ${Math.floor(d.getTime()/1000)}\nUnix milliseconds: ${d.getTime()}\nISO: ${d.toISOString()}`);
+  }
+
+  else if(id==="password-generator"){
+   const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%^&*";
+   const n=Math.max(4,Math.min(128,num("length")||20));
+   const a=new Uint32Array(n);
+   crypto.getRandomValues(a);
+   out([...a].map(x=>chars[x%chars.length]).join(""));
+  }
+
+  else if(id==="random-number"){
+   const min=num("min"),max=num("max");
+   out(String(Math.floor(Math.random()*(max-min+1))+min));
+  }
+
+  else if(id==="random-string"){
+   const chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+   const n=Math.max(1,Math.min(256,num("length")||20));
+   const a=new Uint32Array(n);
+   crypto.getRandomValues(a);
+   out([...a].map(x=>chars[x%chars.length]).join(""));
+  }
+
+  else if(id==="color-generator"){
+   const a=new Uint8Array(3);
+   crypto.getRandomValues(a);
+   out("#"+[...a].map(x=>x.toString(16).padStart(2,"0")).join(""));
+  }
+
+  else if(id==="regex-tester"){
+   const re=new RegExp(val("pattern"),"g");
+   const m=val("input").match(re)||[];
+   out(`Matches: ${m.length}\n\n${m.join("\n")}`);
+  }
+
+  else if(id==="hash-generator"){
+   const bytes=new TextEncoder().encode(val("input"));
+   const hash=await crypto.subtle.digest(val("algorithm"),bytes);
+   out([...new Uint8Array(hash)].map(b=>b.toString(16).padStart(2,"0")).join(""));
+  }
+
+  else if(id==="color-converter"){
+   const c=val("color").trim();
+   if(/^#[0-9a-f]{6}$/i.test(c)){
+    const r=parseInt(c.slice(1,3),16),g=parseInt(c.slice(3,5),16),b=parseInt(c.slice(5,7),16);
+    out(`HEX: ${c}\nRGB: rgb(${r}, ${g}, ${b})`);
+   }else throw Error("Use HEX format such as #ff0000");
+  }
+
+  else if(["percentage-calculator","discount-calculator","tip-calculator"].includes(id)){
+   const a=num("amount"),p=num("percent"),x=a*p/100;
+   out(`Percentage: ${x.toFixed(2)}\nRemaining: ${(a-x).toFixed(2)}`);
+  }
+
+  else if(id==="vat-calculator"){
+   const p=num("price"),v=num("vat");
+   out(`VAT: ${(p*v/100).toFixed(2)}\nTotal: ${(p*(1+v/100)).toFixed(2)}`);
+  }
+
+  else if(["profit-calculator","margin-calculator"].includes(id)){
+   const c=num("cost"),r=num("revenue"),profit=r-c;
+   out(`Profit: ${profit.toFixed(2)}\nMargin: ${(r?profit/r*100:0).toFixed(2)}%`);
+  }
+
+  else if(id==="roi-calculator"){
+   const i=num("investment"),r=num("return");
+   out(`ROI: ${(i?(r-i)/i*100:0).toFixed(2)}%`);
+  }
+
+  else if(id==="break-even"){
+   const f=num("fixed"),p=num("price"),v=num("variable");
+   if(p<=v) throw Error("Selling price must be greater than variable cost");
+   out(`Break-even units: ${(f/(p-v)).toFixed(2)}`);
+  }
+
+  else if(id==="loan-calculator"){
+   const P=num("amount"),r=num("rate")/100/12,n=num("months");
+   const pay=r?P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1):P/n;
+   out(`Monthly payment: ${pay.toFixed(2)}\nTotal paid: ${(pay*n).toFixed(2)}`);
+  }
+
+  else if(id==="compound-interest"){
+   const P=num("principal"),r=num("rate")/100,n=num("frequency"),t=num("years");
+   const A=P*Math.pow(1+r/n,n*t);
+   out(`Final amount: ${A.toFixed(2)}\nInterest earned: ${(A-P).toFixed(2)}`);
+  }
+
+  else if(id==="simple-interest"){
+   const P=num("principal"),r=num("rate")/100,t=num("years");
+   const I=P*r*t;
+   out(`Interest: ${I.toFixed(2)}\nTotal: ${(P+I).toFixed(2)}`);
+  }
+
+  else if(id==="conversion-temperature"){
+   let x=num("value"),from=val("from"),to=val("to");
+   if(from==="F")x=(x-32)*5/9;
+   if(from==="K")x=x-273.15;
+   if(to==="F")x=x*9/5+32;
+   if(to==="K")x=x+273.15;
+   out(x.toFixed(4)+" "+to);
+  }
+
+  else if(id==="conversion-length"){
+   const factors={m:1,km:1000,cm:.01,mm:.001,mi:1609.344,ft:.3048,in:.0254};
+   out((num("value")*factors[val("from")]/factors[val("to")]).toFixed(6)+" "+val("to"));
+  }
+
+  else if(id==="file-size-converter"){
+   const f={B:1,KB:1024,MB:1048576,GB:1073741824};
+   out((num("value")*f[val("from")]/f[val("to")]).toFixed(6)+" "+val("to"));
+  }
+
+  else if(id==="aspect-ratio"){
+   const w=num("width"),h=num("height"),g=(a,b)=>b?g(b,a%b):a;
+   const d=g(w,h);
+   out(`Ratio: ${w/d}:${h/d}\nHeight for 1920 width: ${(1920*h/w).toFixed(2)}`);
+  }
+
+  else if(id==="date-difference"){
+   const a=new Date(val("date1")),b=new Date(val("date2"));
+   out(`Days: ${Math.abs(Math.round((b-a)/86400000))}`);
+  }
+
+  else if(id==="age-calculator"){
+   const b=new Date(val("birth")),n=new Date();
+   let age=n.getFullYear()-b.getFullYear();
+   if(n.getMonth()<b.getMonth()||(n.getMonth()===b.getMonth()&&n.getDate()<b.getDate()))age--;
+   out("Age: "+age+" years");
+  }
+
+  else if(id==="days-calculator"){
+   const d=new Date(val("date"));
+   d.setDate(d.getDate()+num("days"));
+   out(d.toISOString().slice(0,10));
+  }
+
+  else if(id==="mrr-calculator"){
+   out("MRR: "+(num("customers")*num("price")).toFixed(2));
+  }
+
+  else if(id==="arr-calculator"){
+   out("ARR: "+(num("mrr")*12).toFixed(2));
+  }
+
+  else if(id==="churn-calculator"){
+   out("Churn rate: "+(num("start")?(num("lost")/num("start")*100):0).toFixed(2)+"%");
+  }
+
+  else if(["conversion-rate","ctr-calculator"].includes(id)){
+   out(((num("conversions")/num("visitors")*100)||0).toFixed(2)+"%");
+  }
+
+  else if(id==="cpc-calculator"){
+   out((num("cost")/num("clicks")).toFixed(4));
+  }
+
+  else if(id==="cpm-calculator"){
+   out((num("cost")/num("impressions")*1000).toFixed(4));
+  }
+
+  else if(id==="ad-revenue-calculator"){
+   out((num("impressions")/1000*num("rpm")).toFixed(2));
+  }
+
+  else if(id==="utm-builder"){
+   const u=new URL(val("url"));
+   u.searchParams.set("utm_source",val("source"));
+   u.searchParams.set("utm_medium",val("medium"));
+   u.searchParams.set("utm_campaign",val("campaign"));
+   out(u.toString());
+  }
+
+  else if(id==="query-string-parser"){
+   const u=new URL(val("url"));
+   out([...u.searchParams].map(x=>x[0]+" = "+x[1]).join("\n"));
+  }
+
+  else if(id==="jwt-decoder"){
+   const parts=val("input").split(".");
+   if(parts.length<2)throw Error("Invalid JWT");
+   const decode=x=>JSON.stringify(JSON.parse(atob(x.replace(/-/g,"+").replace(/_/g,"/"))),null,2);
+   out("HEADER:\n"+decode(parts[0])+"\n\nPAYLOAD:\n"+decode(parts[1]));
+  }
+
+  else if(id==="sitemap-generator"){
+   const urls=val("input").split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+   out(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u=>`  <url><loc>${u}</loc></url>`).join("\n")}\n</urlset>`);
+  }
+
+  else if(id==="robots-generator"){
+   out(`User-agent: *\nAllow: /\n\nSitemap: ${val("site").replace(/\/$/,"")}/sitemap.xml`);
+  }
+
+  else if(id==="canonical-generator"){
+   out(`<link rel="canonical" href="${val("url")}">`);
+  }
+
+  else if(id==="open-graph-generator"){
+   out(`<meta property="og:title" content="${val("title")}">\n<meta property="og:description" content="${val("description")}">\n<meta property="og:url" content="${val("url")}">`);
+  }
+
+  else if(id==="redirect-generator"){
+   out(`Redirect 301 ${val("from")} ${val("to")}`);
+  }
+
+  else if(id==="css-gradient"){
+   out(`background: linear-gradient(${num("angle")}deg, ${val("color1")}, ${val("color2")});`);
+  }
+
+  else if(id==="box-shadow"){
+   out(`box-shadow: ${num("x")}px ${num("y")}px ${num("blur")}px ${num("spread")}px ${val("color")};`);
+  }
+
+  else if(id==="border-radius"){
+   out(`border-radius: ${val("radius")};`);
+  }
+
+  else if(id==="flexbox-generator"){
+   out(`display:flex;\nflex-direction:${val("direction")};\njustify-content:${val("justify")};\nalign-items:${val("align")};`);
+  }
+
+  else if(id==="grid-generator"){
+   out(`display:grid;\ngrid-template-columns:repeat(${num("columns")},1fr);\ngap:${val("gap")};`);
+  }
+
+  else if(id==="data-uri-generator"){
+   out("data:text/plain;charset=utf-8,"+encodeURIComponent(val("input")));
+  }
+
+  else if(id==="time-zone-helper"){
+   let h=num("hour")+(num("offset2")-num("offset1"));
+   h=(h%24+24)%24;
+   out("Converted hour: "+h);
+  }
+
+  else if(id==="pomodoro-timer"){
+   startTimer(num("minutes")*60);
+  }
+
+  else if(id==="countdown-timer"){
+   startTimer(num("seconds"));
+  }
+
+  else if(id==="stopwatch"){
+   startStopwatch();
+  }
+
+  else{
+   out("This module is ready for the next integration layer.");
+  }
+
+ }catch(e){
+   out("Error: "+e.message);
+ }
+}
+
+let timerInterval=null;
+
+function startTimer(seconds){
+ clearInterval(timerInterval);
+ let s=Math.max(0,Math.floor(seconds));
+ timerInterval=setInterval(()=>{
+   out(`Time remaining: ${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`);
+   if(s<=0)clearInterval(timerInterval);
+   s--;
+ },1000);
+}
+
+let swStart=0;
+
+function startStopwatch(){
+ swStart=Date.now();
+ clearInterval(timerInterval);
+ timerInterval=setInterval(()=>{
+   const s=Math.floor((Date.now()-swStart)/1000);
+   out(`Stopwatch: ${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`);
+ },1000);
+}
+
+async function copyResult(){
+ try{
+  await navigator.clipboard.writeText($("result").textContent);
+  out($("result").textContent+"\n\n✓ Copied");
+ }catch(e){}
+}
+
+function downloadResult(){
+ const blob=new Blob([$("result").textContent],{type:"text/plain"});
+ const a=document.createElement("a");
+ a.href=URL.createObjectURL(blob);
+ a.download=(tool?.id||"ai-nova-tool")+"-result.txt";
+ a.click();
+ URL.revokeObjectURL(a.href);
+}
+
+function clearTool(){
+ clearInterval(timerInterval);
+ document.querySelectorAll("input,textarea").forEach(x=>x.value="");
+ $("result").textContent="Ready.";
+}
+
+loadTool();
+</script>
+<script src="../assets/tool-engine.js"></script>
+</body>
+</html>

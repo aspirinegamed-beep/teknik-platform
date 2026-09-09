@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI Nova free online tools">
+<title>AI Nova Tool</title>
+<link rel="stylesheet" href="../../assets/hub.css">
+<style>
+.toolbox{max-width:900px;margin:30px auto;padding:20px}
+textarea,input,select{width:100%;box-sizing:border-box;margin:8px 0;padding:12px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff}
+button{padding:11px 18px;margin:6px 4px 6px 0;border:0;border-radius:10px;cursor:pointer;font-weight:700}
+.result{white-space:pre-wrap;background:#020617;border:1px solid #334155;border-radius:12px;padding:16px;margin-top:15px;min-height:80px;overflow:auto}
+label{display:block;margin-top:12px;font-weight:700}
+</style>
+</head>
+<body>
+<div class="toolbox">
+<a href="../../">← AI Nova Home</a>
+<h1 id="title">AI Nova Tool</h1>
+<p id="desc"></p>
+<div id="form"></div>
+<div>
+<button onclick="runTool()">Run Tool</button>
+<button onclick="clearTool()">Clear</button>
+</div>
+<div id="result" class="result">Ready.</div>
+</div>
+
+<script>
+let tool=null;
+
+async function loadTool(){
+ const id=new URLSearchParams(location.search).get("id");
+ const data=await fetch("../data/tools.json").then(r=>r.json());
+ tool=data.find(x=>x.id===id)||data[0];
+ document.title=tool.name+" — AI Nova";
+ title.textContent=tool.name;
+ desc.textContent=tool.description||"Free AI Nova online tool.";
+ buildForm(tool.id);
+}
+
+function field(id,label,type="number",placeholder=""){
+ return `<label>${label}</label><input id="${id}" type="${type}" placeholder="${placeholder}">`;
+}
+
+function buildForm(id){
+ const f=document.getElementById("form");
+ if(["json-formatter","html-formatter","css-formatter","js-formatter","markdown-tool","sql-formatter"].includes(id)){
+   f.innerHTML=`<label>Input</label><textarea id="input" rows="14" placeholder="Paste your text here..."></textarea>`;
+ }else if(id==="base64-tool"){
+   f.innerHTML=`<label>Text</label><textarea id="input" rows="8" placeholder="Enter text..."></textarea>`;
+ }else if(id==="uuid-generator"){
+   f.innerHTML=`<p>Generate a secure UUID directly in your browser.</p>`;
+ }else if(id==="timestamp"){
+   f.innerHTML=`<p>Generate the current Unix timestamp and ISO date.</p>`;
+ }else if(id==="regex-tester"){
+   f.innerHTML=`${field("pattern","Regular Expression","text","^[a-z]+$")}
+   <label>Test Text</label><textarea id="input" rows="6"></textarea>`;
+ }else if(id==="hash-generator"){
+   f.innerHTML=`<label>Text</label><textarea id="input" rows="6"></textarea>
+   <label>Algorithm</label><select id="algorithm"><option>SHA-256</option><option>SHA-384</option><option>SHA-512</option></select>`;
+ }else if(id==="color-converter"){
+   f.innerHTML=`${field("color","Color (HEX or RGB)","text","#ff0000")}`;
+ }else if(id==="profit-calculator"){
+   f.innerHTML=field("cost","Cost")+" "+field("revenue","Revenue");
+ }else if(id==="margin-calculator"){
+   f.innerHTML=field("cost","Cost")+" "+field("revenue","Revenue");
+ }else if(id==="vat-calculator"){
+   f.innerHTML=field("price","Price")+" "+field("vat","VAT %");
+ }else if(id==="roi-calculator"){
+   f.innerHTML=field("investment","Investment")+" "+field("return","Return");
+ }else if(id==="break-even"){
+   f.innerHTML=field("fixed","Fixed Costs")+" "+field("price","Selling Price")+" "+field("variable","Variable Cost");
+ }else if(id==="loan-calculator"){
+   f.innerHTML=field("amount","Loan Amount")+" "+field("rate","Annual Interest %")+" "+field("months","Months");
+ }else{
+   f.innerHTML=`<label>Input</label><textarea id="input" rows="12" placeholder="Enter your content here..."></textarea>`;
+ }
+}
+
+function val(id){return parseFloat(document.getElementById(id).value)||0}
+function out(x){document.getElementById("result").textContent=String(x)}
+
+async function runTool(){
+ const id=tool.id;
+ try{
+  if(id==="json-formatter"){
+   out(JSON.stringify(JSON.parse(input.value),null,2));
+  }
+  else if(id==="uuid-generator"){
+   out(crypto.randomUUID ? crypto.randomUUID() :
+   "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,c=>{
+    const r=Math.random()*16|0,v=c==="x"?r:(r&3|8);return v.toString(16)
+   }));
+  }
+  else if(id==="base64-tool"){
+   out(btoa(unescape(encodeURIComponent(input.value))));
+  }
+  else if(id==="timestamp"){
+   const now=new Date();
+   out("Unix seconds: "+Math.floor(now.getTime()/1000)+"\nUnix milliseconds: "+now.getTime()+"\nISO: "+now.toISOString());
+  }
+  else if(id==="regex-tester"){
+   const re=new RegExp(pattern.value,"g");
+   const matches=input.value.match(re)||[];
+   out("Matches: "+matches.length+"\n\n"+matches.join("\n"));
+  }
+  else if(id==="hash-generator"){
+   const bytes=new TextEncoder().encode(input.value);
+   const hash=await crypto.subtle.digest(algorithm.value,bytes);
+   out([...new Uint8Array(hash)].map(b=>b.toString(16).padStart(2,"0")).join(""));
+  }
+  else if(id==="color-converter"){
+   let c=color.value.trim();
+   if(/^#[0-9a-f]{6}$/i.test(c)){
+    const r=parseInt(c.slice(1,3),16),g=parseInt(c.slice(3,5),16),b=parseInt(c.slice(5,7),16);
+    out(`HEX: ${c}\nRGB: rgb(${r}, ${g}, ${b})`);
+   }else{
+    const m=c.match(/rgb\\s*\\(\\s*(\\d+)\\s*,\\s*(\\d+)\\s*,\\s*(\\d+)\\s*\\)/i);
+    if(!m) throw Error("Use #RRGGBB or rgb(r,g,b)");
+    out(`RGB: rgb(${m[1]}, ${m[2]}, ${m[3]})\nHEX: #${[m[1],m[2],m[3]].map(x=>Number(x).toString(16).padStart(2,"0")).join("")}`);
+   }
+  }
+  else if(id==="profit-calculator"){
+   out("Profit: "+(val("revenue")-val("cost"))+"\nProfit margin: "+(((val("revenue")-val("cost"))/val("revenue")*100)||0).toFixed(2)+"%");
+  }
+  else if(id==="margin-calculator"){
+   out("Profit: "+(val("revenue")-val("cost"))+"\nMargin: "+(((val("revenue")-val("cost"))/val("revenue")*100)||0).toFixed(2)+"%");
+  }
+  else if(id==="vat-calculator"){
+   const p=val("price"),v=val("vat");
+   out("VAT: "+(p*v/100).toFixed(2)+"\nTotal: "+(p*(1+v/100)).toFixed(2));
+  }
+  else if(id==="roi-calculator"){
+   out("ROI: "+(((val("return")-val("investment"))/val("investment")*100)||0).toFixed(2)+"%");
+  }
+  else if(id==="break-even"){
+   const fixed=val("fixed"),price=val("price"),variable=val("variable");
+   out("Break-even units: "+(fixed/(price-variable)).toFixed(2));
+  }
+  else if(id==="loan-calculator"){
+   const P=val("amount"),r=val("rate")/100/12,n=val("months");
+   const payment=r ? P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1) : P/n;
+   out("Monthly payment: "+payment.toFixed(2)+"\nTotal paid: "+(payment*n).toFixed(2));
+  }
+  else if(id==="image-resizer" || id==="image-compressor"){
+   out("Image processing module ready. The next layer will add local browser processing.");
+  }
+  else{
+   out("Tool loaded successfully.\n\nThis tool is ready for its dedicated processing module.");
+  }
+ }catch(e){out("Error: "+e.message)}
+}
+
+function clearTool(){
+ document.querySelectorAll("input,textarea").forEach(x=>x.value="");
+ document.getElementById("result").textContent="Ready.";
+}
+
+loadTool();
+</script>
+</body>
+</html>
