@@ -421,3 +421,287 @@ input,select{
   opacity:.5;
   font-size:13px;
 }
+
+
+/* =========================================================
+   AI NOVA — MODERN GLOBAL SAAS UI
+   ========================================================= */
+
+:root{
+  --nova-bg:#070a12;
+  --nova-bg2:#0b1020;
+  --nova-panel:rgba(17,23,39,.78);
+  --nova-panel2:rgba(24,31,52,.72);
+  --nova-border:rgba(255,255,255,.09);
+  --nova-border-hover:rgba(124,92,255,.48);
+  --nova-text:#f7f8ff;
+  --nova-muted:#98a2bb;
+  --nova-accent:#7c5cff;
+  --nova-accent2:#00d9ff;
+  --nova-radius:22px;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 10% 0%,rgba(124,92,255,.17),transparent 32%),
+    radial-gradient(circle at 90% 8%,rgba(0,217,255,.10),transparent 28%),
+    linear-gradient(180deg,var(--nova-bg),var(--nova-bg2));
+  color:var(--nova-text);
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,black,transparent 80%);
+}
+
+.nova-tool-count{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:10px auto 18px;
+  padding:8px 15px;
+  border:1px solid var(--nova-border);
+  border-radius:999px;
+  background:rgba(124,92,255,.08);
+  color:#dcd7ff;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.5px;
+}
+
+.tool-card,
+.card{
+  border:1px solid var(--nova-border)!important;
+  border-radius:var(--nova-radius)!important;
+  background:
+    linear-gradient(145deg,rgba(22,29,49,.88),rgba(10,14,25,.92))!important;
+  box-shadow:0 12px 40px rgba(0,0,0,.18);
+  overflow:hidden;
+  position:relative;
+}
+
+.tool-card::after,
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(135deg,rgba(255,255,255,.035),transparent 45%);
+}
+
+.tool-card:hover,
+.card:hover{
+  transform:translateY(-5px);
+  border-color:var(--nova-border-hover)!important;
+  box-shadow:0 22px 60px rgba(0,0,0,.34);
+}
+
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
+button{
+  cursor:pointer;
+}
+
+input,
+select,
+textarea{
+  border-radius:14px!important;
+  border:1px solid var(--nova-border)!important;
+  background:rgba(255,255,255,.045)!important;
+  color:var(--nova-text)!important;
+  outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:rgba(124,92,255,.65)!important;
+  box-shadow:0 0 0 4px rgba(124,92,255,.09);
+}
+
+.nova-business-section{
+  width:min(1100px,calc(100% - 28px));
+  margin:75px auto 35px;
+  padding:46px 24px;
+  text-align:center;
+  border:1px solid var(--nova-border);
+  border-radius:30px;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(124,92,255,.12),transparent 50%),
+    rgba(11,16,30,.72);
+  box-shadow:0 25px 80px rgba(0,0,0,.25);
+}
+
+.nova-section-label{
+  color:#bdb4ff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:3px;
+}
+
+.nova-business-section h2{
+  margin:12px 0 8px;
+  font-size:clamp(28px,5vw,46px);
+  line-height:1.05;
+}
+
+.nova-business-section>p{
+  max-width:650px;
+  margin:0 auto 30px;
+  color:var(--nova-muted);
+}
+
+.nova-business-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  text-align:left;
+}
+
+.nova-business-card{
+  padding:25px;
+  border:1px solid var(--nova-border);
+  border-radius:22px;
+  background:rgba(255,255,255,.025);
+  transition:.22s ease;
+}
+
+.nova-business-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--nova-border-hover);
+  background:rgba(124,92,255,.06);
+}
+
+.nova-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  margin-bottom:18px;
+  border-radius:13px;
+  background:linear-gradient(135deg,rgba(124,92,255,.22),rgba(0,217,255,.12));
+  font-size:20px;
+}
+
+.nova-business-card h3{
+  margin:0 0 8px;
+  font-size:18px;
+}
+
+.nova-business-card p{
+  min-height:48px;
+  margin:0 0 20px;
+  color:var(--nova-muted);
+  font-size:14px;
+  line-height:1.55;
+}
+
+.nova-business-button{
+  width:100%;
+  padding:12px 15px;
+  border:1px solid rgba(124,92,255,.35);
+  border-radius:12px;
+  background:rgba(124,92,255,.10);
+  color:var(--nova-text);
+  font-weight:700;
+}
+
+.nova-business-button:hover{
+  background:rgba(124,92,255,.2);
+  border-color:rgba(124,92,255,.65);
+}
+
+.nova-founder-section{
+  width:min(1100px,calc(100% - 28px));
+  margin:35px auto 65px;
+  padding:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:22px;
+  border:1px solid var(--nova-border);
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(124,92,255,.08),rgba(0,217,255,.035));
+  text-align:left;
+}
+
+.nova-founder-mark{
+  width:64px;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+  border-radius:18px;
+  background:linear-gradient(135deg,var(--nova-accent),var(--nova-accent2));
+  color:white;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1px;
+  box-shadow:0 12px 35px rgba(124,92,255,.25);
+}
+
+.nova-founder-section span{
+  font-size:10px;
+  letter-spacing:3px;
+  color:var(--nova-muted);
+}
+
+.nova-founder-section h2{
+  margin:4px 0 3px;
+  font-size:25px;
+}
+
+.nova-founder-section p{
+  margin:0;
+  color:var(--nova-muted);
+}
+
+@media(max-width:760px){
+  .nova-business-section{
+    padding:35px 16px;
+    margin-top:50px;
+  }
+
+  .nova-business-grid{
+    grid-template-columns:1fr;
+  }
+
+  .nova-business-card p{
+    min-height:auto;
+  }
+
+  .nova-founder-section{
+    margin-bottom:35px;
+    padding:22px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    transition:none!important;
+  }
+}
