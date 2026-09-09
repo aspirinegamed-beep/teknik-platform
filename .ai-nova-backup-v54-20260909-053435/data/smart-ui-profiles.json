@@ -1,0 +1,2999 @@
+{
+  "version": "5.3",
+  "generated": "2026-09-09T05:33:40.149664",
+  "total": 179,
+  "profiles": {
+    "ai-writer": {
+      "id": "ai-writer",
+      "name": "AI Writer",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "summarizer": {
+      "id": "summarizer",
+      "name": "Text Summarizer",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "rewriter": {
+      "id": "rewriter",
+      "name": "AI Rewriter",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "translator": {
+      "id": "translator",
+      "name": "AI Translator",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "idea-generator": {
+      "id": "idea-generator",
+      "name": "Idea Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "title-generator": {
+      "id": "title-generator",
+      "name": "Title Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "product-description": {
+      "id": "product-description",
+      "name": "Product Description Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "cv-builder": {
+      "id": "cv-builder",
+      "name": "CV Builder",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "cover-letter": {
+      "id": "cover-letter",
+      "name": "Cover Letter Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "social-post": {
+      "id": "social-post",
+      "name": "Social Media Post Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "email-writer": {
+      "id": "email-writer",
+      "name": "Email Writer",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "business-plan": {
+      "id": "business-plan",
+      "name": "Business Plan Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "company-name": {
+      "id": "company-name",
+      "name": "Company Name Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "product-name": {
+      "id": "product-name",
+      "name": "Product Name Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "prompt-generator": {
+      "id": "prompt-generator",
+      "name": "Prompt Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "seo-content": {
+      "id": "seo-content",
+      "name": "SEO Content Generator",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "faq-generator": {
+      "id": "faq-generator",
+      "name": "FAQ Generator",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "meta-generator": {
+      "id": "meta-generator",
+      "name": "Meta Description Generator",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "keyword-generator": {
+      "id": "keyword-generator",
+      "name": "Keyword Generator",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "thumbnail-maker": {
+      "id": "thumbnail-maker",
+      "name": "Thumbnail Maker",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "image-resizer": {
+      "id": "image-resizer",
+      "name": "Image Resizer",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "image-compressor": {
+      "id": "image-compressor",
+      "name": "Image Compressor",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "background-remover": {
+      "id": "background-remover",
+      "name": "Background Remover",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "image-converter": {
+      "id": "image-converter",
+      "name": "Image Converter",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "qr-generator": {
+      "id": "qr-generator",
+      "name": "QR Code Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "json-formatter": {
+      "id": "json-formatter",
+      "name": "JSON Formatter",
+      "family": "json",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "JSON / CSV Input",
+          "placeholder": "Paste JSON or CSV here...",
+          "required": true
+        }
+      ]
+    },
+    "html-formatter": {
+      "id": "html-formatter",
+      "name": "HTML Formatter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "css-formatter": {
+      "id": "css-formatter",
+      "name": "CSS Formatter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "js-formatter": {
+      "id": "js-formatter",
+      "name": "JavaScript Formatter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "regex-tester": {
+      "id": "regex-tester",
+      "name": "Regex Tester",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter text to test...",
+          "required": true
+        },
+        {
+          "id": "pattern",
+          "type": "text",
+          "label": "Regex Pattern",
+          "placeholder": "\\b[A-Z][a-z]+\\b",
+          "required": true
+        },
+        {
+          "id": "flags",
+          "type": "text",
+          "label": "Flags",
+          "placeholder": "gim",
+          "default": "g"
+        }
+      ]
+    },
+    "uuid-generator": {
+      "id": "uuid-generator",
+      "name": "UUID Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "hash-generator": {
+      "id": "hash-generator",
+      "name": "Hash Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "base64-tool": {
+      "id": "base64-tool",
+      "name": "Base64 Encoder",
+      "family": "encoding",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter text to encode/decode...",
+          "required": true
+        }
+      ]
+    },
+    "timestamp": {
+      "id": "timestamp",
+      "name": "Timestamp Converter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "color-converter": {
+      "id": "color-converter",
+      "name": "Color Converter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "markdown-tool": {
+      "id": "markdown-tool",
+      "name": "Markdown Converter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "sql-formatter": {
+      "id": "sql-formatter",
+      "name": "SQL Formatter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "invoice-generator": {
+      "id": "invoice-generator",
+      "name": "Invoice Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "receipt-generator": {
+      "id": "receipt-generator",
+      "name": "Receipt Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "profit-calculator": {
+      "id": "profit-calculator",
+      "name": "Profit Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "margin-calculator": {
+      "id": "margin-calculator",
+      "name": "Margin Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "vat-calculator": {
+      "id": "vat-calculator",
+      "name": "VAT Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "salary-calculator": {
+      "id": "salary-calculator",
+      "name": "Salary Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "loan-calculator": {
+      "id": "loan-calculator",
+      "name": "Loan Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "roi-calculator": {
+      "id": "roi-calculator",
+      "name": "ROI Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "break-even": {
+      "id": "break-even",
+      "name": "Break-even Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "currency-tool": {
+      "id": "currency-tool",
+      "name": "Currency Tool",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "prompt-packs": {
+      "id": "prompt-packs",
+      "name": "Prompt Packs",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "cv-templates": {
+      "id": "cv-templates",
+      "name": "CV Templates",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "business-templates": {
+      "id": "business-templates",
+      "name": "Business Templates",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "social-packs": {
+      "id": "social-packs",
+      "name": "Social Media Packs",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "ebook-library": {
+      "id": "ebook-library",
+      "name": "eBook Library",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "notion-templates": {
+      "id": "notion-templates",
+      "name": "Notion Templates",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "excel-templates": {
+      "id": "excel-templates",
+      "name": "Excel Templates",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "ai-directory": {
+      "id": "ai-directory",
+      "name": "AI Tools Directory",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "saas-directory": {
+      "id": "saas-directory",
+      "name": "SaaS Directory",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "deals": {
+      "id": "deals",
+      "name": "Deals & Offers",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "jobs": {
+      "id": "jobs",
+      "name": "AI Jobs",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "newsletter": {
+      "id": "newsletter",
+      "name": "AI Nova Newsletter",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "premium": {
+      "id": "premium",
+      "name": "AI Nova Premium",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "api": {
+      "id": "api",
+      "name": "AI Nova API",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "text-counter": {
+      "id": "text-counter",
+      "name": "Text Counter",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "case-converter": {
+      "id": "case-converter",
+      "name": "Case Converter",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "text-cleaner": {
+      "id": "text-cleaner",
+      "name": "Text Cleaner",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "duplicate-remover": {
+      "id": "duplicate-remover",
+      "name": "Duplicate Line Remover",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "sort-lines": {
+      "id": "sort-lines",
+      "name": "Sort Lines",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "reverse-text": {
+      "id": "reverse-text",
+      "name": "Reverse Text",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "slug-generator": {
+      "id": "slug-generator",
+      "name": "Slug Generator",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "url-encoder": {
+      "id": "url-encoder",
+      "name": "URL Encoder",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "url-decoder": {
+      "id": "url-decoder",
+      "name": "URL Decoder",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "html-entities": {
+      "id": "html-entities",
+      "name": "HTML Entities",
+      "family": "encoding",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter text to encode/decode...",
+          "required": true
+        }
+      ]
+    },
+    "unicode-converter": {
+      "id": "unicode-converter",
+      "name": "Unicode Converter",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "ascii-converter": {
+      "id": "ascii-converter",
+      "name": "ASCII Converter",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "binary-converter": {
+      "id": "binary-converter",
+      "name": "Binary Converter",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "hex-converter": {
+      "id": "hex-converter",
+      "name": "Hex Converter",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "octal-converter": {
+      "id": "octal-converter",
+      "name": "Octal Converter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "number-base": {
+      "id": "number-base",
+      "name": "Number Base Converter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "percentage-calculator": {
+      "id": "percentage-calculator",
+      "name": "Percentage Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "discount-calculator": {
+      "id": "discount-calculator",
+      "name": "Discount Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "tip-calculator": {
+      "id": "tip-calculator",
+      "name": "Tip Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "compound-interest": {
+      "id": "compound-interest",
+      "name": "Compound Interest Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "simple-interest": {
+      "id": "simple-interest",
+      "name": "Simple Interest Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "savings-calculator": {
+      "id": "savings-calculator",
+      "name": "Savings Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "markup-calculator": {
+      "id": "markup-calculator",
+      "name": "Markup Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "commission-calculator": {
+      "id": "commission-calculator",
+      "name": "Commission Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "conversion-length": {
+      "id": "conversion-length",
+      "name": "Length Converter",
+      "family": "converter",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "conversion-weight": {
+      "id": "conversion-weight",
+      "name": "Weight Converter",
+      "family": "converter",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "conversion-temperature": {
+      "id": "conversion-temperature",
+      "name": "Temperature Converter",
+      "family": "converter",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "conversion-area": {
+      "id": "conversion-area",
+      "name": "Area Converter",
+      "family": "converter",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "conversion-volume": {
+      "id": "conversion-volume",
+      "name": "Volume Converter",
+      "family": "converter",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "conversion-speed": {
+      "id": "conversion-speed",
+      "name": "Speed Converter",
+      "family": "converter",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "conversion-time": {
+      "id": "conversion-time",
+      "name": "Time Converter",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "date-difference": {
+      "id": "date-difference",
+      "name": "Date Difference",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "age-calculator": {
+      "id": "age-calculator",
+      "name": "Age Calculator",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "days-calculator": {
+      "id": "days-calculator",
+      "name": "Days Calculator",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "password-generator": {
+      "id": "password-generator",
+      "name": "Password Generator",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "random-number": {
+      "id": "random-number",
+      "name": "Random Number Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "random-string": {
+      "id": "random-string",
+      "name": "Random String Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "color-generator": {
+      "id": "color-generator",
+      "name": "Random Color Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "ip-regex": {
+      "id": "ip-regex",
+      "name": "IP Regex Tester",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter text to test...",
+          "required": true
+        },
+        {
+          "id": "pattern",
+          "type": "text",
+          "label": "Regex Pattern",
+          "placeholder": "\\b[A-Z][a-z]+\\b",
+          "required": true
+        },
+        {
+          "id": "flags",
+          "type": "text",
+          "label": "Flags",
+          "placeholder": "gim",
+          "default": "g"
+        }
+      ]
+    },
+    "json-to-csv": {
+      "id": "json-to-csv",
+      "name": "JSON to CSV",
+      "family": "json",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "JSON / CSV Input",
+          "placeholder": "Paste JSON or CSV here...",
+          "required": true
+        }
+      ]
+    },
+    "csv-to-json": {
+      "id": "csv-to-json",
+      "name": "CSV to JSON",
+      "family": "json",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "JSON / CSV Input",
+          "placeholder": "Paste JSON or CSV here...",
+          "required": true
+        }
+      ]
+    },
+    "xml-formatter": {
+      "id": "xml-formatter",
+      "name": "XML Formatter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "yaml-validator": {
+      "id": "yaml-validator",
+      "name": "YAML Helper",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "diff-checker": {
+      "id": "diff-checker",
+      "name": "Text Diff Checker",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "word-frequency": {
+      "id": "word-frequency",
+      "name": "Word Frequency",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "reading-time": {
+      "id": "reading-time",
+      "name": "Reading Time Calculator",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "lorem-generator": {
+      "id": "lorem-generator",
+      "name": "Lorem Ipsum Generator",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "character-frequency": {
+      "id": "character-frequency",
+      "name": "Character Frequency",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "sentence-counter": {
+      "id": "sentence-counter",
+      "name": "Sentence Counter",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "paragraph-counter": {
+      "id": "paragraph-counter",
+      "name": "Paragraph Counter",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "meta-preview": {
+      "id": "meta-preview",
+      "name": "SEO Meta Preview",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "keyword-density": {
+      "id": "keyword-density",
+      "name": "Keyword Density",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "robots-generator": {
+      "id": "robots-generator",
+      "name": "Robots.txt Generator",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "sitemap-generator": {
+      "id": "sitemap-generator",
+      "name": "Sitemap Helper",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "canonical-generator": {
+      "id": "canonical-generator",
+      "name": "Canonical URL Generator",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "schema-generator": {
+      "id": "schema-generator",
+      "name": "Schema Markup Helper",
+      "family": "json",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "JSON / CSV Input",
+          "placeholder": "Paste JSON or CSV here...",
+          "required": true
+        }
+      ]
+    },
+    "open-graph-generator": {
+      "id": "open-graph-generator",
+      "name": "Open Graph Generator",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "twitter-card-generator": {
+      "id": "twitter-card-generator",
+      "name": "Twitter Card Generator",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "utm-builder": {
+      "id": "utm-builder",
+      "name": "UTM Builder",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "affiliate-link-builder": {
+      "id": "affiliate-link-builder",
+      "name": "Affiliate Link Builder",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "invoice-number-generator": {
+      "id": "invoice-number-generator",
+      "name": "Invoice Number Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "business-email": {
+      "id": "business-email",
+      "name": "Business Email Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "meeting-agenda": {
+      "id": "meeting-agenda",
+      "name": "Meeting Agenda Generator",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "meeting-notes": {
+      "id": "meeting-notes",
+      "name": "Meeting Notes Template",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "project-estimator": {
+      "id": "project-estimator",
+      "name": "Project Estimator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "hourly-rate": {
+      "id": "hourly-rate",
+      "name": "Hourly Rate Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "freelance-profit": {
+      "id": "freelance-profit",
+      "name": "Freelance Profit Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "pricing-calculator": {
+      "id": "pricing-calculator",
+      "name": "Pricing Calculator",
+      "family": "finance",
+      "fields": [
+        {
+          "id": "value",
+          "type": "number",
+          "label": "Amount",
+          "placeholder": "100"
+        },
+        {
+          "id": "percent",
+          "type": "number",
+          "label": "Percentage",
+          "placeholder": "10"
+        },
+        {
+          "id": "total",
+          "type": "number",
+          "label": "Total",
+          "placeholder": "Optional"
+        }
+      ]
+    },
+    "subscription-calculator": {
+      "id": "subscription-calculator",
+      "name": "Subscription Revenue Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "mrr-calculator": {
+      "id": "mrr-calculator",
+      "name": "MRR Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "arr-calculator": {
+      "id": "arr-calculator",
+      "name": "ARR Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "churn-calculator": {
+      "id": "churn-calculator",
+      "name": "Churn Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "conversion-rate": {
+      "id": "conversion-rate",
+      "name": "Conversion Rate Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "cpm-calculator": {
+      "id": "cpm-calculator",
+      "name": "CPM Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "cpc-calculator": {
+      "id": "cpc-calculator",
+      "name": "CPC Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "ctr-calculator": {
+      "id": "ctr-calculator",
+      "name": "CTR Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "ad-revenue-calculator": {
+      "id": "ad-revenue-calculator",
+      "name": "Ad Revenue Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "break-even-revenue": {
+      "id": "break-even-revenue",
+      "name": "Break-even Revenue Calculator",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "email-subject-generator": {
+      "id": "email-subject-generator",
+      "name": "Email Subject Generator",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "bio-generator": {
+      "id": "bio-generator",
+      "name": "Bio Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "tagline-generator": {
+      "id": "tagline-generator",
+      "name": "Tagline Generator",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "slogan-generator": {
+      "id": "slogan-generator",
+      "name": "Slogan Generator",
+      "family": "generator",
+      "fields": [
+        {
+          "id": "project",
+          "type": "text",
+          "label": "Project Name",
+          "placeholder": "My Project"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Additional Input",
+          "placeholder": "Optional..."
+        }
+      ]
+    },
+    "brand-voice": {
+      "id": "brand-voice",
+      "name": "Brand Voice Helper",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "faq-schema": {
+      "id": "faq-schema",
+      "name": "FAQ Schema Generator",
+      "family": "seo",
+      "fields": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Page Title",
+          "placeholder": "My Website"
+        },
+        {
+          "id": "description",
+          "type": "textarea",
+          "label": "Meta Description",
+          "placeholder": "Describe the page..."
+        },
+        {
+          "id": "url",
+          "type": "url",
+          "label": "Canonical URL",
+          "placeholder": "https://example.com"
+        },
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "URLs / Extra Input",
+          "placeholder": "One URL per line..."
+        }
+      ]
+    },
+    "breadcrumb-schema": {
+      "id": "breadcrumb-schema",
+      "name": "Breadcrumb Schema Generator",
+      "family": "json",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "JSON / CSV Input",
+          "placeholder": "Paste JSON or CSV here...",
+          "required": true
+        }
+      ]
+    },
+    "redirect-generator": {
+      "id": "redirect-generator",
+      "name": "Redirect Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "nginx-config": {
+      "id": "nginx-config",
+      "name": "Nginx Config Helper",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "apache-htaccess": {
+      "id": "apache-htaccess",
+      "name": "HTAccess Helper",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "gitignore-generator": {
+      "id": "gitignore-generator",
+      "name": "Gitignore Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "license-generator": {
+      "id": "license-generator",
+      "name": "License Header Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "readme-generator": {
+      "id": "readme-generator",
+      "name": "README Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "api-request-builder": {
+      "id": "api-request-builder",
+      "name": "API Request Builder",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "curl-generator": {
+      "id": "curl-generator",
+      "name": "cURL Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "jwt-decoder": {
+      "id": "jwt-decoder",
+      "name": "JWT Decoder",
+      "family": "encoding",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter text to encode/decode...",
+          "required": true
+        }
+      ]
+    },
+    "query-string-parser": {
+      "id": "query-string-parser",
+      "name": "Query String Parser",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "json-path-helper": {
+      "id": "json-path-helper",
+      "name": "JSON Path Helper",
+      "family": "json",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "JSON / CSV Input",
+          "placeholder": "Paste JSON or CSV here...",
+          "required": true
+        }
+      ]
+    },
+    "password-strength": {
+      "id": "password-strength",
+      "name": "Password Strength Checker",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "hash-checker": {
+      "id": "hash-checker",
+      "name": "Hash Checker",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "text-to-html": {
+      "id": "text-to-html",
+      "name": "Text to HTML",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "html-to-text": {
+      "id": "html-to-text",
+      "name": "HTML to Text",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "markdown-to-html": {
+      "id": "markdown-to-html",
+      "name": "Markdown to HTML",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "code-counter": {
+      "id": "code-counter",
+      "name": "Code Line Counter",
+      "family": "text",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Text",
+          "placeholder": "Enter your text here...",
+          "required": true
+        }
+      ]
+    },
+    "css-gradient": {
+      "id": "css-gradient",
+      "name": "CSS Gradient Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "box-shadow": {
+      "id": "box-shadow",
+      "name": "Box Shadow Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "border-radius": {
+      "id": "border-radius",
+      "name": "Border Radius Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "flexbox-generator": {
+      "id": "flexbox-generator",
+      "name": "Flexbox Helper",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "grid-generator": {
+      "id": "grid-generator",
+      "name": "CSS Grid Helper",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "favicon-generator": {
+      "id": "favicon-generator",
+      "name": "Favicon Helper",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "color-palette": {
+      "id": "color-palette",
+      "name": "Color Palette Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "contrast-checker": {
+      "id": "contrast-checker",
+      "name": "Contrast Checker",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "aspect-ratio": {
+      "id": "aspect-ratio",
+      "name": "Aspect Ratio Calculator",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "image-dimensions": {
+      "id": "image-dimensions",
+      "name": "Image Dimension Checker",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "data-uri-generator": {
+      "id": "data-uri-generator",
+      "name": "Data URI Generator",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "file-size-converter": {
+      "id": "file-size-converter",
+      "name": "File Size Converter",
+      "family": "developer",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    },
+    "time-zone-helper": {
+      "id": "time-zone-helper",
+      "name": "Time Zone Helper",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "pomodoro-timer": {
+      "id": "pomodoro-timer",
+      "name": "Pomodoro Timer",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "countdown-timer": {
+      "id": "countdown-timer",
+      "name": "Countdown Timer",
+      "family": "date",
+      "fields": [
+        {
+          "id": "input",
+          "type": "date",
+          "label": "Date"
+        },
+        {
+          "id": "input2",
+          "type": "date",
+          "label": "Second Date"
+        }
+      ]
+    },
+    "stopwatch": {
+      "id": "stopwatch",
+      "name": "Stopwatch",
+      "family": "general",
+      "fields": [
+        {
+          "id": "input",
+          "type": "textarea",
+          "label": "Input",
+          "placeholder": "Enter your input here...",
+          "required": true
+        }
+      ]
+    }
+  }
+}

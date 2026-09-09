@@ -1,0 +1,1255 @@
+[
+  {
+    "id": "ai-writer",
+    "name": "AI Writer",
+    "category": "AI",
+    "description": "Generate high-quality content with AI",
+    "premium": false
+  },
+  {
+    "id": "summarizer",
+    "name": "Text Summarizer",
+    "category": "AI",
+    "description": "Summarize long text instantly",
+    "premium": false
+  },
+  {
+    "id": "rewriter",
+    "name": "AI Rewriter",
+    "category": "AI",
+    "description": "Rewrite and improve your text",
+    "premium": false
+  },
+  {
+    "id": "translator",
+    "name": "AI Translator",
+    "category": "AI",
+    "description": "Translate text between languages",
+    "premium": false
+  },
+  {
+    "id": "idea-generator",
+    "name": "Idea Generator",
+    "category": "AI",
+    "description": "Generate creative ideas",
+    "premium": false
+  },
+  {
+    "id": "title-generator",
+    "name": "Title Generator",
+    "category": "AI",
+    "description": "Create powerful titles",
+    "premium": false
+  },
+  {
+    "id": "product-description",
+    "name": "Product Description Generator",
+    "category": "AI",
+    "description": "Create product descriptions",
+    "premium": false
+  },
+  {
+    "id": "cv-builder",
+    "name": "CV Builder",
+    "category": "AI",
+    "description": "Create a professional CV",
+    "premium": false
+  },
+  {
+    "id": "cover-letter",
+    "name": "Cover Letter Generator",
+    "category": "AI",
+    "description": "Create job applications",
+    "premium": false
+  },
+  {
+    "id": "social-post",
+    "name": "Social Media Post Generator",
+    "category": "AI",
+    "description": "Create social media content",
+    "premium": false
+  },
+  {
+    "id": "email-writer",
+    "name": "Email Writer",
+    "category": "AI",
+    "description": "Write professional emails",
+    "premium": false
+  },
+  {
+    "id": "business-plan",
+    "name": "Business Plan Generator",
+    "category": "Business",
+    "description": "Generate a business plan",
+    "premium": false
+  },
+  {
+    "id": "company-name",
+    "name": "Company Name Generator",
+    "category": "Business",
+    "description": "Find business name ideas",
+    "premium": false
+  },
+  {
+    "id": "product-name",
+    "name": "Product Name Generator",
+    "category": "Business",
+    "description": "Generate product names",
+    "premium": false
+  },
+  {
+    "id": "prompt-generator",
+    "name": "Prompt Generator",
+    "category": "AI",
+    "description": "Create better AI prompts",
+    "premium": false
+  },
+  {
+    "id": "seo-content",
+    "name": "SEO Content Generator",
+    "category": "SEO",
+    "description": "Generate SEO-friendly content",
+    "premium": false
+  },
+  {
+    "id": "faq-generator",
+    "name": "FAQ Generator",
+    "category": "SEO",
+    "description": "Generate useful FAQ sections",
+    "premium": false
+  },
+  {
+    "id": "meta-generator",
+    "name": "Meta Description Generator",
+    "category": "SEO",
+    "description": "Create SEO meta descriptions",
+    "premium": false
+  },
+  {
+    "id": "keyword-generator",
+    "name": "Keyword Generator",
+    "category": "SEO",
+    "description": "Generate keyword ideas",
+    "premium": false
+  },
+  {
+    "id": "thumbnail-maker",
+    "name": "Thumbnail Maker",
+    "category": "Image",
+    "description": "Create thumbnail concepts",
+    "premium": false
+  },
+  {
+    "id": "image-resizer",
+    "name": "Image Resizer",
+    "category": "Image",
+    "description": "Resize images in your browser",
+    "premium": false
+  },
+  {
+    "id": "image-compressor",
+    "name": "Image Compressor",
+    "category": "Image",
+    "description": "Compress images locally",
+    "premium": false
+  },
+  {
+    "id": "background-remover",
+    "name": "Background Remover",
+    "category": "Image",
+    "description": "Prepare images for background removal",
+    "premium": false
+  },
+  {
+    "id": "image-converter",
+    "name": "Image Converter",
+    "category": "Image",
+    "description": "Convert image formats",
+    "premium": false
+  },
+  {
+    "id": "qr-generator",
+    "name": "QR Code Generator",
+    "category": "Tools",
+    "description": "Generate QR codes",
+    "premium": false
+  },
+  {
+    "id": "json-formatter",
+    "name": "JSON Formatter",
+    "category": "Developer",
+    "description": "Format and validate JSON",
+    "premium": false
+  },
+  {
+    "id": "html-formatter",
+    "name": "HTML Formatter",
+    "category": "Developer",
+    "description": "Format HTML code",
+    "premium": false
+  },
+  {
+    "id": "css-formatter",
+    "name": "CSS Formatter",
+    "category": "Developer",
+    "description": "Format CSS code",
+    "premium": false
+  },
+  {
+    "id": "js-formatter",
+    "name": "JavaScript Formatter",
+    "category": "Developer",
+    "description": "Format JavaScript",
+    "premium": false
+  },
+  {
+    "id": "regex-tester",
+    "name": "Regex Tester",
+    "category": "Developer",
+    "description": "Test regular expressions",
+    "premium": false
+  },
+  {
+    "id": "uuid-generator",
+    "name": "UUID Generator",
+    "category": "Developer",
+    "description": "Generate UUID identifiers",
+    "premium": false
+  },
+  {
+    "id": "hash-generator",
+    "name": "Hash Generator",
+    "category": "Developer",
+    "description": "Generate hashes locally",
+    "premium": false
+  },
+  {
+    "id": "base64-tool",
+    "name": "Base64 Encoder",
+    "category": "Developer",
+    "description": "Encode and decode Base64",
+    "premium": false
+  },
+  {
+    "id": "timestamp",
+    "name": "Timestamp Converter",
+    "category": "Developer",
+    "description": "Convert Unix timestamps",
+    "premium": false
+  },
+  {
+    "id": "color-converter",
+    "name": "Color Converter",
+    "category": "Developer",
+    "description": "Convert color formats",
+    "premium": false
+  },
+  {
+    "id": "markdown-tool",
+    "name": "Markdown Converter",
+    "category": "Developer",
+    "description": "Work with Markdown",
+    "premium": false
+  },
+  {
+    "id": "sql-formatter",
+    "name": "SQL Formatter",
+    "category": "Developer",
+    "description": "Format SQL queries",
+    "premium": false
+  },
+  {
+    "id": "invoice-generator",
+    "name": "Invoice Generator",
+    "category": "Business",
+    "description": "Create simple invoices",
+    "premium": false
+  },
+  {
+    "id": "receipt-generator",
+    "name": "Receipt Generator",
+    "category": "Business",
+    "description": "Create receipts",
+    "premium": false
+  },
+  {
+    "id": "profit-calculator",
+    "name": "Profit Calculator",
+    "category": "Finance",
+    "description": "Calculate profit",
+    "premium": false
+  },
+  {
+    "id": "margin-calculator",
+    "name": "Margin Calculator",
+    "category": "Finance",
+    "description": "Calculate profit margins",
+    "premium": false
+  },
+  {
+    "id": "vat-calculator",
+    "name": "VAT Calculator",
+    "category": "Finance",
+    "description": "Calculate VAT",
+    "premium": false
+  },
+  {
+    "id": "salary-calculator",
+    "name": "Salary Calculator",
+    "category": "Finance",
+    "description": "Estimate salary figures",
+    "premium": false
+  },
+  {
+    "id": "loan-calculator",
+    "name": "Loan Calculator",
+    "category": "Finance",
+    "description": "Estimate loan payments",
+    "premium": false
+  },
+  {
+    "id": "roi-calculator",
+    "name": "ROI Calculator",
+    "category": "Finance",
+    "description": "Calculate return on investment",
+    "premium": false
+  },
+  {
+    "id": "break-even",
+    "name": "Break-even Calculator",
+    "category": "Finance",
+    "description": "Calculate break-even point",
+    "premium": false
+  },
+  {
+    "id": "currency-tool",
+    "name": "Currency Tool",
+    "category": "Finance",
+    "description": "Currency conversion interface",
+    "premium": false
+  },
+  {
+    "id": "prompt-packs",
+    "name": "Prompt Packs",
+    "category": "Digital",
+    "description": "Premium prompt collections",
+    "premium": false
+  },
+  {
+    "id": "cv-templates",
+    "name": "CV Templates",
+    "category": "Digital",
+    "description": "Professional CV templates",
+    "premium": false
+  },
+  {
+    "id": "business-templates",
+    "name": "Business Templates",
+    "category": "Digital",
+    "description": "Business document templates",
+    "premium": false
+  },
+  {
+    "id": "social-packs",
+    "name": "Social Media Packs",
+    "category": "Digital",
+    "description": "Ready-to-use social content",
+    "premium": false
+  },
+  {
+    "id": "ebook-library",
+    "name": "eBook Library",
+    "category": "Digital",
+    "description": "Digital guides and resources",
+    "premium": false
+  },
+  {
+    "id": "notion-templates",
+    "name": "Notion Templates",
+    "category": "Digital",
+    "description": "Productivity templates",
+    "premium": false
+  },
+  {
+    "id": "excel-templates",
+    "name": "Excel Templates",
+    "category": "Digital",
+    "description": "Useful spreadsheet templates",
+    "premium": false
+  },
+  {
+    "id": "ai-directory",
+    "name": "AI Tools Directory",
+    "category": "Directory",
+    "description": "Discover useful AI tools",
+    "premium": false
+  },
+  {
+    "id": "saas-directory",
+    "name": "SaaS Directory",
+    "category": "Directory",
+    "description": "Discover SaaS services",
+    "premium": false
+  },
+  {
+    "id": "deals",
+    "name": "Deals & Offers",
+    "category": "Deals",
+    "description": "Curated software offers",
+    "premium": false
+  },
+  {
+    "id": "jobs",
+    "name": "AI Jobs",
+    "category": "Jobs",
+    "description": "Discover AI-related opportunities",
+    "premium": false
+  },
+  {
+    "id": "newsletter",
+    "name": "AI Nova Newsletter",
+    "category": "Community",
+    "description": "Weekly AI resources",
+    "premium": false
+  },
+  {
+    "id": "premium",
+    "name": "AI Nova Premium",
+    "category": "Premium",
+    "description": "Advanced features and resources",
+    "premium": false
+  },
+  {
+    "id": "api",
+    "name": "AI Nova API",
+    "category": "Premium",
+    "description": "Developer API platform",
+    "premium": false
+  },
+  {
+    "id": "text-counter",
+    "name": "Text Counter",
+    "description": "Count words, characters, sentences and paragraphs.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "case-converter",
+    "name": "Case Converter",
+    "description": "Convert text to upper, lower, title and sentence case.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "text-cleaner",
+    "name": "Text Cleaner",
+    "description": "Remove extra spaces, empty lines and unwanted characters.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "duplicate-remover",
+    "name": "Duplicate Line Remover",
+    "description": "Remove duplicate lines from text.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "sort-lines",
+    "name": "Sort Lines",
+    "description": "Sort lines alphabetically or numerically.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "reverse-text",
+    "name": "Reverse Text",
+    "description": "Reverse text instantly in your browser.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "slug-generator",
+    "name": "Slug Generator",
+    "description": "Create clean SEO-friendly URL slugs.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "url-encoder",
+    "name": "URL Encoder",
+    "description": "Encode text for safe use in URLs.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "url-decoder",
+    "name": "URL Decoder",
+    "description": "Decode URL-encoded text.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "html-entities",
+    "name": "HTML Entities",
+    "description": "Encode and decode HTML entities.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "unicode-converter",
+    "name": "Unicode Converter",
+    "description": "Convert text to Unicode escape sequences.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "ascii-converter",
+    "name": "ASCII Converter",
+    "description": "Convert text and ASCII codes.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "binary-converter",
+    "name": "Binary Converter",
+    "description": "Convert text to binary and binary to text.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "hex-converter",
+    "name": "Hex Converter",
+    "description": "Convert text to hexadecimal.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "octal-converter",
+    "name": "Octal Converter",
+    "description": "Convert numbers between octal and decimal.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "number-base",
+    "name": "Number Base Converter",
+    "description": "Convert numbers between common bases.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "percentage-calculator",
+    "name": "Percentage Calculator",
+    "description": "Calculate percentages quickly.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "discount-calculator",
+    "name": "Discount Calculator",
+    "description": "Calculate discounts and final prices.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "tip-calculator",
+    "name": "Tip Calculator",
+    "description": "Calculate tips and split bills.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "compound-interest",
+    "name": "Compound Interest Calculator",
+    "description": "Calculate compound interest growth.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "simple-interest",
+    "name": "Simple Interest Calculator",
+    "description": "Calculate simple interest.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "savings-calculator",
+    "name": "Savings Calculator",
+    "description": "Estimate savings growth over time.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "markup-calculator",
+    "name": "Markup Calculator",
+    "description": "Calculate product markup and selling price.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "commission-calculator",
+    "name": "Commission Calculator",
+    "description": "Calculate sales commissions.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "conversion-length",
+    "name": "Length Converter",
+    "description": "Convert common length units.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "conversion-weight",
+    "name": "Weight Converter",
+    "description": "Convert common weight units.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "conversion-temperature",
+    "name": "Temperature Converter",
+    "description": "Convert Celsius, Fahrenheit and Kelvin.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "conversion-area",
+    "name": "Area Converter",
+    "description": "Convert common area units.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "conversion-volume",
+    "name": "Volume Converter",
+    "description": "Convert common volume units.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "conversion-speed",
+    "name": "Speed Converter",
+    "description": "Convert common speed units.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "conversion-time",
+    "name": "Time Converter",
+    "description": "Convert time units.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "date-difference",
+    "name": "Date Difference",
+    "description": "Calculate the difference between two dates.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "age-calculator",
+    "name": "Age Calculator",
+    "description": "Calculate age from a birth date.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "days-calculator",
+    "name": "Days Calculator",
+    "description": "Add or subtract days from a date.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "password-generator",
+    "name": "Password Generator",
+    "description": "Generate strong random passwords locally.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "random-number",
+    "name": "Random Number Generator",
+    "description": "Generate random numbers in a chosen range.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "random-string",
+    "name": "Random String Generator",
+    "description": "Generate random strings locally.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "color-generator",
+    "name": "Random Color Generator",
+    "description": "Generate random HEX colors.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "ip-regex",
+    "name": "IP Regex Tester",
+    "description": "Test IPv4 and IPv6 patterns.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "json-to-csv",
+    "name": "JSON to CSV",
+    "description": "Convert simple JSON arrays to CSV.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "csv-to-json",
+    "name": "CSV to JSON",
+    "description": "Convert CSV data to JSON.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "xml-formatter",
+    "name": "XML Formatter",
+    "description": "Format XML documents.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "yaml-validator",
+    "name": "YAML Helper",
+    "description": "Inspect YAML-like configuration text.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "diff-checker",
+    "name": "Text Diff Checker",
+    "description": "Compare two blocks of text.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "word-frequency",
+    "name": "Word Frequency",
+    "description": "Analyze the frequency of words.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "reading-time",
+    "name": "Reading Time Calculator",
+    "description": "Estimate reading time from text.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "lorem-generator",
+    "name": "Lorem Ipsum Generator",
+    "description": "Generate placeholder text.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "character-frequency",
+    "name": "Character Frequency",
+    "description": "Analyze character frequency in text.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "sentence-counter",
+    "name": "Sentence Counter",
+    "description": "Count sentences and estimate reading metrics.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "paragraph-counter",
+    "name": "Paragraph Counter",
+    "description": "Count paragraphs in text.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "meta-preview",
+    "name": "SEO Meta Preview",
+    "description": "Preview title and description length.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "keyword-density",
+    "name": "Keyword Density",
+    "description": "Analyze keyword frequency and density.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "robots-generator",
+    "name": "Robots.txt Generator",
+    "description": "Generate a basic robots.txt file.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "sitemap-generator",
+    "name": "Sitemap Helper",
+    "description": "Generate sitemap XML from URLs.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "canonical-generator",
+    "name": "Canonical URL Generator",
+    "description": "Create canonical link markup.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "schema-generator",
+    "name": "Schema Markup Helper",
+    "description": "Create basic JSON-LD templates.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "open-graph-generator",
+    "name": "Open Graph Generator",
+    "description": "Generate Open Graph meta tags.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "twitter-card-generator",
+    "name": "Twitter Card Generator",
+    "description": "Generate social card meta tags.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "utm-builder",
+    "name": "UTM Builder",
+    "description": "Build campaign tracking URLs.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "affiliate-link-builder",
+    "name": "Affiliate Link Builder",
+    "description": "Create structured affiliate tracking links.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "invoice-number-generator",
+    "name": "Invoice Number Generator",
+    "description": "Generate invoice numbers.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "business-email",
+    "name": "Business Email Generator",
+    "description": "Generate professional business email drafts.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "meeting-agenda",
+    "name": "Meeting Agenda Generator",
+    "description": "Create structured meeting agendas.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "meeting-notes",
+    "name": "Meeting Notes Template",
+    "description": "Create reusable meeting notes.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "project-estimator",
+    "name": "Project Estimator",
+    "description": "Estimate project effort and cost.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "hourly-rate",
+    "name": "Hourly Rate Calculator",
+    "description": "Calculate an hourly rate from income goals.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "freelance-profit",
+    "name": "Freelance Profit Calculator",
+    "description": "Estimate freelance project profit.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "pricing-calculator",
+    "name": "Pricing Calculator",
+    "description": "Estimate prices using costs and target margin.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "subscription-calculator",
+    "name": "Subscription Revenue Calculator",
+    "description": "Estimate recurring subscription revenue.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "mrr-calculator",
+    "name": "MRR Calculator",
+    "description": "Calculate monthly recurring revenue.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "arr-calculator",
+    "name": "ARR Calculator",
+    "description": "Calculate annual recurring revenue.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "churn-calculator",
+    "name": "Churn Calculator",
+    "description": "Calculate customer churn rate.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "conversion-rate",
+    "name": "Conversion Rate Calculator",
+    "description": "Calculate website conversion rate.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "cpm-calculator",
+    "name": "CPM Calculator",
+    "description": "Calculate advertising CPM.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "cpc-calculator",
+    "name": "CPC Calculator",
+    "description": "Calculate cost per click.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "ctr-calculator",
+    "name": "CTR Calculator",
+    "description": "Calculate click-through rate.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "ad-revenue-calculator",
+    "name": "Ad Revenue Calculator",
+    "description": "Estimate advertising revenue.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "break-even-revenue",
+    "name": "Break-even Revenue Calculator",
+    "description": "Calculate revenue needed to break even.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "email-subject-generator",
+    "name": "Email Subject Generator",
+    "description": "Generate subject-line ideas.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "bio-generator",
+    "name": "Bio Generator",
+    "description": "Create short professional bios.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "tagline-generator",
+    "name": "Tagline Generator",
+    "description": "Generate brand tagline ideas.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "slogan-generator",
+    "name": "Slogan Generator",
+    "description": "Generate marketing slogan ideas.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "brand-voice",
+    "name": "Brand Voice Helper",
+    "description": "Create a basic brand voice profile.",
+    "category": "AI",
+    "premium": false
+  },
+  {
+    "id": "faq-schema",
+    "name": "FAQ Schema Generator",
+    "description": "Generate FAQ structured-data templates.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "breadcrumb-schema",
+    "name": "Breadcrumb Schema Generator",
+    "description": "Generate breadcrumb JSON-LD.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "redirect-generator",
+    "name": "Redirect Generator",
+    "description": "Generate common redirect rules.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "nginx-config",
+    "name": "Nginx Config Helper",
+    "description": "Generate basic Nginx configuration snippets.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "apache-htaccess",
+    "name": "HTAccess Helper",
+    "description": "Generate basic Apache rewrite snippets.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "gitignore-generator",
+    "name": "Gitignore Generator",
+    "description": "Create a starter .gitignore file.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "license-generator",
+    "name": "License Header Generator",
+    "description": "Create project license notices.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "readme-generator",
+    "name": "README Generator",
+    "description": "Generate a structured README template.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "api-request-builder",
+    "name": "API Request Builder",
+    "description": "Build basic HTTP request examples.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "curl-generator",
+    "name": "cURL Generator",
+    "description": "Generate cURL commands from request data.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "jwt-decoder",
+    "name": "JWT Decoder",
+    "description": "Decode JWT header and payload locally.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "query-string-parser",
+    "name": "Query String Parser",
+    "description": "Parse URL query parameters.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "json-path-helper",
+    "name": "JSON Path Helper",
+    "description": "Inspect simple JSON paths.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "password-strength",
+    "name": "Password Strength Checker",
+    "description": "Estimate password strength locally.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "hash-checker",
+    "name": "Hash Checker",
+    "description": "Compare hashes locally.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "text-to-html",
+    "name": "Text to HTML",
+    "description": "Convert plain text into basic HTML.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "html-to-text",
+    "name": "HTML to Text",
+    "description": "Extract readable text from HTML.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "markdown-to-html",
+    "name": "Markdown to HTML",
+    "description": "Convert basic Markdown to HTML.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "code-counter",
+    "name": "Code Line Counter",
+    "description": "Count code lines, blanks and comments.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "css-gradient",
+    "name": "CSS Gradient Generator",
+    "description": "Generate CSS gradients.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "box-shadow",
+    "name": "Box Shadow Generator",
+    "description": "Generate CSS box-shadow values.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "border-radius",
+    "name": "Border Radius Generator",
+    "description": "Generate CSS border-radius snippets.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "flexbox-generator",
+    "name": "Flexbox Helper",
+    "description": "Generate basic Flexbox CSS.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "grid-generator",
+    "name": "CSS Grid Helper",
+    "description": "Generate basic CSS Grid layouts.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "favicon-generator",
+    "name": "Favicon Helper",
+    "description": "Generate favicon HTML references.",
+    "category": "SEO",
+    "premium": false
+  },
+  {
+    "id": "color-palette",
+    "name": "Color Palette Generator",
+    "description": "Generate simple color palettes.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "contrast-checker",
+    "name": "Contrast Checker",
+    "description": "Check basic foreground/background contrast.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "aspect-ratio",
+    "name": "Aspect Ratio Calculator",
+    "description": "Calculate proportional dimensions.",
+    "category": "Image",
+    "premium": false
+  },
+  {
+    "id": "image-dimensions",
+    "name": "Image Dimension Checker",
+    "description": "Inspect image dimensions in browser.",
+    "category": "Image",
+    "premium": false
+  },
+  {
+    "id": "data-uri-generator",
+    "name": "Data URI Generator",
+    "description": "Convert small files into Data URI markup.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "file-size-converter",
+    "name": "File Size Converter",
+    "description": "Convert bytes, KB, MB and GB.",
+    "category": "Developer",
+    "premium": false
+  },
+  {
+    "id": "time-zone-helper",
+    "name": "Time Zone Helper",
+    "description": "Convert times between UTC offsets.",
+    "category": "Finance",
+    "premium": false
+  },
+  {
+    "id": "pomodoro-timer",
+    "name": "Pomodoro Timer",
+    "description": "Run a simple productivity timer.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "countdown-timer",
+    "name": "Countdown Timer",
+    "description": "Create a countdown timer.",
+    "category": "Business",
+    "premium": false
+  },
+  {
+    "id": "stopwatch",
+    "name": "Stopwatch",
+    "description": "Run a browser stopwatch.",
+    "category": "Business",
+    "premium": false
+  }
+]
