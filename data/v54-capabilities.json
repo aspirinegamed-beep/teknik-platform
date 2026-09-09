@@ -1,0 +1,20 @@
+{
+  "version": "5.4",
+  "generated": "2026-09-09T05:34:35.547834",
+  "local_processing": true,
+  "supported_files": [
+    "TXT",
+    "CSV",
+    "JSON"
+  ],
+  "features": [
+    "file upload",
+    "local text reading",
+    "JSON parsing",
+    "CSV parsing",
+    "JSON export",
+    "CSV export",
+    "TXT export"
+  ],
+  "privacy": "Files are processed locally in the browser."
+}
