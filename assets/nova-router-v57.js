@@ -22,6 +22,7 @@
 
   function engineCandidates() {
     return [
+      window.AINovaV59,
       window.AINovaV56,
       window.AINovaV55,
       window.AINovaV54,
@@ -86,3 +87,43 @@
 
   window.AINovaUnified = window.AINovaV57;
 })();
+
+
+/* AI NOVA V5.9.1 V59 BRIDGE */
+(function () {
+  const previousRun =
+    window.AINovaUnified &&
+    typeof window.AINovaUnified.run === "function"
+      ? window.AINovaUnified.run.bind(window.AINovaUnified)
+      : null;
+
+  window.AINovaUnified = window.AINovaUnified || {};
+
+  window.AINovaUnified.run = async function (toolId, input, options) {
+    if (
+      window.AINovaV59 &&
+      typeof window.AINovaV59.run === "function"
+    ) {
+      try {
+        const result = await window.AINovaV59.run(
+          toolId,
+          input,
+          options || {}
+        );
+
+        if (result !== undefined && result !== null) {
+          return result;
+        }
+      } catch (error) {
+        console.warn("V5.9 engine fallback:", error);
+      }
+    }
+
+    if (previousRun) {
+      return previousRun(toolId, input, options || {});
+    }
+
+    throw new Error("No AI Nova tool engine available.");
+  };
+})();
+
