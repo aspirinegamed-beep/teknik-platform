@@ -3,42 +3,2178 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>AI Nova — 179 Tools</title>
-<meta name="description" content="AI Nova — 179 browser-first digital tools in one professional workspace.">
-<meta name="theme-color" content="#050812">
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="assets/nova-v4.css">
-</head>
-<body>
-<div id="ai-nova-v4">Loading AI Nova...</div>
-<script src="assets/nova-v4.js" defer></script>
-<script src="assets/nova-v51.js"></script>
 
-<script>
-(() => {
-"use strict";
+<title>AI Nova — 179 AI & Digital Tools</title>
 
-function resolveToolId(el) {
-  return el.dataset.toolId ||
-         el.dataset.id ||
-         el.getAttribute("data-tool") ||
-         el.getAttribute("data-tool-id");
+<meta name="description"
+content="AI Nova — 179 practical AI, developer, SEO, finance, business and digital tools.">
+
+<meta name="theme-color" content="#070b14">
+
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="assets/hub.css">
+<link rel="stylesheet" href="assets/nova-ui.css">
+
+<style>
+:root{
+ --bg:#070b14;
+ --card:#0d1422;
+ --card2:#111b2d;
+ --line:#1d2a40;
+ --text:#edf3ff;
+ --muted:#8e9bb1;
+ --accent:#6ea8ff;
 }
 
-document.querySelectorAll(
-  "[data-id],[data-tool],[data-tool-id],[data-tool-id]"
-).forEach(el => {
+*{box-sizing:border-box}
 
-  const id = resolveToolId(el);
-  if (!id) return;
+body{
+ margin:0;
+ background:
+ radial-gradient(circle at 50% -10%,#16284d 0,transparent 42%),
+ var(--bg);
+ color:var(--text);
+ font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
 
-  el.style.cursor = "pointer";
+a{color:inherit}
 
-  if (!el.hasAttribute("data-tool-id"))
-    el.setAttribute("data-tool-id", id);
+.header{
+ position:sticky;
+ top:0;
+ z-index:20;
+ backdrop-filter:blur(18px);
+ background:rgba(7,11,20,.82);
+ border-bottom:1px solid var(--line);
+}
 
+.nav{
+ max-width:1200px;
+ margin:auto;
+ padding:14px 18px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:15px;
+}
+
+.brand{
+ font-size:21px;
+ font-weight:900;
+ text-decoration:none;
+ letter-spacing:.3px;
+}
+
+.brand span{color:var(--accent)}
+
+.navlinks{
+ display:flex;
+ gap:8px;
+ flex-wrap:wrap;
+}
+
+.navlinks a{
+ text-decoration:none;
+ color:var(--muted);
+ padding:8px 11px;
+ border-radius:10px;
+}
+
+.navlinks a:hover{
+ background:var(--card);
+ color:var(--text);
+}
+
+.hero{
+ max-width:1200px;
+ margin:auto;
+ padding:65px 18px 35px;
+ text-align:center;
+}
+
+.badge{
+ display:inline-block;
+ padding:7px 12px;
+ border:1px solid var(--line);
+ border-radius:999px;
+ color:#9dbbff;
+ background:rgba(110,168,255,.08);
+ font-size:12px;
+ font-weight:800;
+}
+
+.hero h1{
+ font-size:clamp(38px,7vw,72px);
+ line-height:.98;
+ margin:20px auto 18px;
+ max-width:850px;
+ letter-spacing:-2px;
+}
+
+.hero p{
+ max-width:700px;
+ margin:auto;
+ color:var(--muted);
+ font-size:17px;
+ line-height:1.65;
+}
+
+.stats{
+ display:flex;
+ justify-content:center;
+ gap:12px;
+ flex-wrap:wrap;
+ margin-top:28px;
+}
+
+.stat{
+ background:var(--card);
+ border:1px solid var(--line);
+ border-radius:15px;
+ padding:13px 20px;
+}
+
+.stat strong{display:block;font-size:21px}
+.stat span{color:var(--muted);font-size:12px}
+
+.controls{
+ max-width:1200px;
+ margin:15px auto 0;
+ padding:0 18px;
+}
+
+.search{
+ width:100%;
+ background:var(--card);
+ color:var(--text);
+ border:1px solid var(--line);
+ border-radius:15px;
+ padding:15px 17px;
+ outline:none;
+ font-size:15px;
+}
+
+.filters{
+ display:flex;
+ gap:8px;
+ overflow-x:auto;
+ padding:12px 0 4px;
+ scrollbar-width:none;
+}
+
+.filters button{
+ flex:0 0 auto;
+ border:1px solid var(--line);
+ background:var(--card);
+ color:var(--muted);
+ padding:9px 13px;
+ border-radius:999px;
+ cursor:pointer;
+}
+
+.filters button.active{
+ background:var(--accent);
+ color:#07101e;
+ border-color:var(--accent);
+}
+
+.tools{
+ max-width:1200px;
+ margin:25px auto 70px;
+ padding:0 18px;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fill,minmax(245px,1fr));
+ gap:13px;
+}
+
+.tool-card{
+ background:linear-gradient(145deg,var(--card),var(--card2));
+ border:1px solid var(--line);
+ border-radius:19px;
+ padding:17px;
+ min-height:190px;
+ display:flex;
+ flex-direction:column;
+ transition:.18s ease;
+}
+
+.tool-card:hover{
+ transform:translateY(-3px);
+ border-color:#334b70;
+}
+
+.tool-icon{
+ width:38px;
+ height:38px;
+ border-radius:12px;
+ display:grid;
+ place-items:center;
+ background:rgba(110,168,255,.1);
+ color:var(--accent);
+ font-weight:900;
+}
+
+.tool-body{
+ display:flex;
+ flex-direction:column;
+ flex:1;
+}
+
+.tool-category{
+ margin-top:12px;
+ font-size:10px;
+ text-transform:uppercase;
+ letter-spacing:1px;
+ color:#7590ba;
+ font-weight:800;
+}
+
+.tool-card h3{
+ margin:5px 0;
+ font-size:17px;
+}
+
+.tool-card p{
+ margin:0;
+ color:var(--muted);
+ font-size:13px;
+ line-height:1.5;
+}
+
+.tool-open{
+ margin-top:auto;
+ padding-top:15px;
+ color:#9ec1ff;
+ text-decoration:none;
+ font-size:13px;
+ font-weight:800;
+}
+
+.empty{
+ display:none;
+ text-align:center;
+ color:var(--muted);
+ padding:40px;
+}
+
+.footer{
+ border-top:1px solid var(--line);
+ padding:35px 18px;
+ text-align:center;
+ color:var(--muted);
+}
+
+@media(max-width:650px){
+ .navlinks a:nth-child(n+3){display:none}
+ .hero{padding-top:45px}
+ .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+ <nav class="nav">
+  <a class="brand" href="index.html">AI <span>NOVA</span></a>
+  <div class="navlinks">
+   <a href="#tools">Tools</a>
+   <a href="premium.html">Premium</a>
+   <a href="marketplace.html">Marketplace</a>
+   <a href="about.html">About</a>
+  </div>
+ </nav>
+</header>
+
+<section class="hero">
+ <span class="badge">AI NOVA • PROFESSIONAL TOOL PLATFORM</span>
+
+ <h1>One platform.<br>179 possibilities.</h1>
+
+ <p>
+ Free browser-based AI, developer, SEO, finance, business and
+ digital utilities — designed to work directly on your device.
+ </p>
+
+ <div class="stats">
+  <div class="stat"><strong>179</strong><span>Tools</span></div>
+  <div class="stat"><strong>Local</strong><span>Browser execution</span></div>
+  <div class="stat"><strong>Free</strong><span>No required API key</span></div>
+  <div class="stat"><strong>Mobile</strong><span>Android ready</span></div>
+ </div>
+</section>
+
+<section class="controls" id="tools">
+ <input id="search" class="search" placeholder="Search 179 tools..." autocomplete="off">
+
+ <div class="filters">
+  <button class="active" data-filter="all">All</button>
+  <button data-filter="ai">AI</button>
+  <button data-filter="business">Business</button>
+  <button data-filter="developer">Developer</button>
+  <button data-filter="seo">SEO</button>
+  <button data-filter="image">Image</button>
+  <button data-filter="finance">Finance</button>
+  <button data-filter="digital">Digital</button>
+ </div>
+</section>
+
+<section class="tools">
+ <div class="grid" id="grid">
+ 
+<article class="tool-card" data-id="ai-writer" data-name="ai writer" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>AI Writer</h3>
+    <p>Generate high-quality content with AI</p>
+    <a class="tool-open" href="tool.html?id=ai-writer">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="summarizer" data-name="text summarizer" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Text Summarizer</h3>
+    <p>Summarize long text instantly</p>
+    <a class="tool-open" href="tool.html?id=summarizer">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="rewriter" data-name="ai rewriter" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>AI Rewriter</h3>
+    <p>Rewrite and improve your text</p>
+    <a class="tool-open" href="tool.html?id=rewriter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="translator" data-name="ai translator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>AI Translator</h3>
+    <p>Translate text between languages</p>
+    <a class="tool-open" href="tool.html?id=translator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="idea-generator" data-name="idea generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Idea Generator</h3>
+    <p>Generate creative ideas</p>
+    <a class="tool-open" href="tool.html?id=idea-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="title-generator" data-name="title generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Title Generator</h3>
+    <p>Create powerful titles</p>
+    <a class="tool-open" href="tool.html?id=title-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="product-description" data-name="product description generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Product Description Generator</h3>
+    <p>Create product descriptions</p>
+    <a class="tool-open" href="tool.html?id=product-description">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="cv-builder" data-name="cv builder" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>CV Builder</h3>
+    <p>Create a professional CV</p>
+    <a class="tool-open" href="tool.html?id=cv-builder">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="cover-letter" data-name="cover letter generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Cover Letter Generator</h3>
+    <p>Create job applications</p>
+    <a class="tool-open" href="tool.html?id=cover-letter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="social-post" data-name="social media post generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Social Media Post Generator</h3>
+    <p>Create social media content</p>
+    <a class="tool-open" href="tool.html?id=social-post">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="email-writer" data-name="email writer" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Email Writer</h3>
+    <p>Write professional emails</p>
+    <a class="tool-open" href="tool.html?id=email-writer">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="business-plan" data-name="business plan generator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Business Plan Generator</h3>
+    <p>Generate a business plan</p>
+    <a class="tool-open" href="tool.html?id=business-plan">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="company-name" data-name="company name generator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Company Name Generator</h3>
+    <p>Find business name ideas</p>
+    <a class="tool-open" href="tool.html?id=company-name">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="product-name" data-name="product name generator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Product Name Generator</h3>
+    <p>Generate product names</p>
+    <a class="tool-open" href="tool.html?id=product-name">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="prompt-generator" data-name="prompt generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Prompt Generator</h3>
+    <p>Create better AI prompts</p>
+    <a class="tool-open" href="tool.html?id=prompt-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="seo-content" data-name="seo content generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>SEO Content Generator</h3>
+    <p>Generate SEO-friendly content</p>
+    <a class="tool-open" href="tool.html?id=seo-content">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="faq-generator" data-name="faq generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>FAQ Generator</h3>
+    <p>Generate useful FAQ sections</p>
+    <a class="tool-open" href="tool.html?id=faq-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="meta-generator" data-name="meta description generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Meta Description Generator</h3>
+    <p>Create SEO meta descriptions</p>
+    <a class="tool-open" href="tool.html?id=meta-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="keyword-generator" data-name="keyword generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Keyword Generator</h3>
+    <p>Generate keyword ideas</p>
+    <a class="tool-open" href="tool.html?id=keyword-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="thumbnail-maker" data-name="thumbnail maker" data-category="image">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Image</div>
+    <h3>Thumbnail Maker</h3>
+    <p>Create thumbnail concepts</p>
+    <a class="tool-open" href="tool.html?id=thumbnail-maker">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="image-resizer" data-name="image resizer" data-category="image">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Image</div>
+    <h3>Image Resizer</h3>
+    <p>Resize images in your browser</p>
+    <a class="tool-open" href="tool.html?id=image-resizer">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="image-compressor" data-name="image compressor" data-category="image">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Image</div>
+    <h3>Image Compressor</h3>
+    <p>Compress images locally</p>
+    <a class="tool-open" href="tool.html?id=image-compressor">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="background-remover" data-name="background remover" data-category="image">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Image</div>
+    <h3>Background Remover</h3>
+    <p>Prepare images for background removal</p>
+    <a class="tool-open" href="tool.html?id=background-remover">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="image-converter" data-name="image converter" data-category="image">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Image</div>
+    <h3>Image Converter</h3>
+    <p>Convert image formats</p>
+    <a class="tool-open" href="tool.html?id=image-converter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="qr-generator" data-name="qr code generator" data-category="tools">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Tools</div>
+    <h3>QR Code Generator</h3>
+    <p>Generate QR codes</p>
+    <a class="tool-open" href="tool.html?id=qr-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="json-formatter" data-name="json formatter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>JSON Formatter</h3>
+    <p>Format and validate JSON</p>
+    <a class="tool-open" href="tool.html?id=json-formatter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="html-formatter" data-name="html formatter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>HTML Formatter</h3>
+    <p>Format HTML code</p>
+    <a class="tool-open" href="tool.html?id=html-formatter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="css-formatter" data-name="css formatter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>CSS Formatter</h3>
+    <p>Format CSS code</p>
+    <a class="tool-open" href="tool.html?id=css-formatter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="js-formatter" data-name="javascript formatter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>JavaScript Formatter</h3>
+    <p>Format JavaScript</p>
+    <a class="tool-open" href="tool.html?id=js-formatter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="regex-tester" data-name="regex tester" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Regex Tester</h3>
+    <p>Test regular expressions</p>
+    <a class="tool-open" href="tool.html?id=regex-tester">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="uuid-generator" data-name="uuid generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>UUID Generator</h3>
+    <p>Generate UUID identifiers</p>
+    <a class="tool-open" href="tool.html?id=uuid-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="hash-generator" data-name="hash generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Hash Generator</h3>
+    <p>Generate hashes locally</p>
+    <a class="tool-open" href="tool.html?id=hash-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="base64-tool" data-name="base64 encoder" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Base64 Encoder</h3>
+    <p>Encode and decode Base64</p>
+    <a class="tool-open" href="tool.html?id=base64-tool">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="timestamp" data-name="timestamp converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Timestamp Converter</h3>
+    <p>Convert Unix timestamps</p>
+    <a class="tool-open" href="tool.html?id=timestamp">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="color-converter" data-name="color converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Color Converter</h3>
+    <p>Convert color formats</p>
+    <a class="tool-open" href="tool.html?id=color-converter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="markdown-tool" data-name="markdown converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Markdown Converter</h3>
+    <p>Work with Markdown</p>
+    <a class="tool-open" href="tool.html?id=markdown-tool">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="sql-formatter" data-name="sql formatter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>SQL Formatter</h3>
+    <p>Format SQL queries</p>
+    <a class="tool-open" href="tool.html?id=sql-formatter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="invoice-generator" data-name="invoice generator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Invoice Generator</h3>
+    <p>Create simple invoices</p>
+    <a class="tool-open" href="tool.html?id=invoice-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="receipt-generator" data-name="receipt generator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Receipt Generator</h3>
+    <p>Create receipts</p>
+    <a class="tool-open" href="tool.html?id=receipt-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="profit-calculator" data-name="profit calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Profit Calculator</h3>
+    <p>Calculate profit</p>
+    <a class="tool-open" href="tool.html?id=profit-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="margin-calculator" data-name="margin calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Margin Calculator</h3>
+    <p>Calculate profit margins</p>
+    <a class="tool-open" href="tool.html?id=margin-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="vat-calculator" data-name="vat calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>VAT Calculator</h3>
+    <p>Calculate VAT</p>
+    <a class="tool-open" href="tool.html?id=vat-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="salary-calculator" data-name="salary calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Salary Calculator</h3>
+    <p>Estimate salary figures</p>
+    <a class="tool-open" href="tool.html?id=salary-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="loan-calculator" data-name="loan calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Loan Calculator</h3>
+    <p>Estimate loan payments</p>
+    <a class="tool-open" href="tool.html?id=loan-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="roi-calculator" data-name="roi calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>ROI Calculator</h3>
+    <p>Calculate return on investment</p>
+    <a class="tool-open" href="tool.html?id=roi-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="break-even" data-name="break-even calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Break-even Calculator</h3>
+    <p>Calculate break-even point</p>
+    <a class="tool-open" href="tool.html?id=break-even">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="currency-tool" data-name="currency tool" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Currency Tool</h3>
+    <p>Currency conversion interface</p>
+    <a class="tool-open" href="tool.html?id=currency-tool">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="prompt-packs" data-name="prompt packs" data-category="digital">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Digital</div>
+    <h3>Prompt Packs</h3>
+    <p>Premium prompt collections</p>
+    <a class="tool-open" href="tool.html?id=prompt-packs">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="cv-templates" data-name="cv templates" data-category="digital">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Digital</div>
+    <h3>CV Templates</h3>
+    <p>Professional CV templates</p>
+    <a class="tool-open" href="tool.html?id=cv-templates">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="business-templates" data-name="business templates" data-category="digital">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Digital</div>
+    <h3>Business Templates</h3>
+    <p>Business document templates</p>
+    <a class="tool-open" href="tool.html?id=business-templates">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="social-packs" data-name="social media packs" data-category="digital">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Digital</div>
+    <h3>Social Media Packs</h3>
+    <p>Ready-to-use social content</p>
+    <a class="tool-open" href="tool.html?id=social-packs">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="ebook-library" data-name="ebook library" data-category="digital">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Digital</div>
+    <h3>eBook Library</h3>
+    <p>Digital guides and resources</p>
+    <a class="tool-open" href="tool.html?id=ebook-library">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="notion-templates" data-name="notion templates" data-category="digital">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Digital</div>
+    <h3>Notion Templates</h3>
+    <p>Productivity templates</p>
+    <a class="tool-open" href="tool.html?id=notion-templates">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="excel-templates" data-name="excel templates" data-category="digital">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Digital</div>
+    <h3>Excel Templates</h3>
+    <p>Useful spreadsheet templates</p>
+    <a class="tool-open" href="tool.html?id=excel-templates">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="ai-directory" data-name="ai tools directory" data-category="directory">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Directory</div>
+    <h3>AI Tools Directory</h3>
+    <p>Discover useful AI tools</p>
+    <a class="tool-open" href="tool.html?id=ai-directory">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="saas-directory" data-name="saas directory" data-category="directory">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Directory</div>
+    <h3>SaaS Directory</h3>
+    <p>Discover SaaS services</p>
+    <a class="tool-open" href="tool.html?id=saas-directory">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="deals" data-name="deals & offers" data-category="deals">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Deals</div>
+    <h3>Deals & Offers</h3>
+    <p>Curated software offers</p>
+    <a class="tool-open" href="tool.html?id=deals">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="jobs" data-name="ai jobs" data-category="jobs">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Jobs</div>
+    <h3>AI Jobs</h3>
+    <p>Discover AI-related opportunities</p>
+    <a class="tool-open" href="tool.html?id=jobs">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="newsletter" data-name="ai nova newsletter" data-category="community">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Community</div>
+    <h3>AI Nova Newsletter</h3>
+    <p>Weekly AI resources</p>
+    <a class="tool-open" href="tool.html?id=newsletter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="premium" data-name="ai nova premium" data-category="premium">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Premium</div>
+    <h3>AI Nova Premium</h3>
+    <p>Advanced features and resources</p>
+    <a class="tool-open" href="tool.html?id=premium">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="api" data-name="ai nova api" data-category="premium">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Premium</div>
+    <h3>AI Nova API</h3>
+    <p>Developer API platform</p>
+    <a class="tool-open" href="tool.html?id=api">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="text-counter" data-name="text counter" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Text Counter</h3>
+    <p>Count words, characters, sentences and paragraphs.</p>
+    <a class="tool-open" href="tool.html?id=text-counter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="case-converter" data-name="case converter" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Case Converter</h3>
+    <p>Convert text to upper, lower, title and sentence case.</p>
+    <a class="tool-open" href="tool.html?id=case-converter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="text-cleaner" data-name="text cleaner" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Text Cleaner</h3>
+    <p>Remove extra spaces, empty lines and unwanted characters.</p>
+    <a class="tool-open" href="tool.html?id=text-cleaner">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="duplicate-remover" data-name="duplicate line remover" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Duplicate Line Remover</h3>
+    <p>Remove duplicate lines from text.</p>
+    <a class="tool-open" href="tool.html?id=duplicate-remover">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="sort-lines" data-name="sort lines" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Sort Lines</h3>
+    <p>Sort lines alphabetically or numerically.</p>
+    <a class="tool-open" href="tool.html?id=sort-lines">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="reverse-text" data-name="reverse text" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Reverse Text</h3>
+    <p>Reverse text instantly in your browser.</p>
+    <a class="tool-open" href="tool.html?id=reverse-text">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="slug-generator" data-name="slug generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Slug Generator</h3>
+    <p>Create clean SEO-friendly URL slugs.</p>
+    <a class="tool-open" href="tool.html?id=slug-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="url-encoder" data-name="url encoder" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>URL Encoder</h3>
+    <p>Encode text for safe use in URLs.</p>
+    <a class="tool-open" href="tool.html?id=url-encoder">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="url-decoder" data-name="url decoder" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>URL Decoder</h3>
+    <p>Decode URL-encoded text.</p>
+    <a class="tool-open" href="tool.html?id=url-decoder">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="html-entities" data-name="html entities" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>HTML Entities</h3>
+    <p>Encode and decode HTML entities.</p>
+    <a class="tool-open" href="tool.html?id=html-entities">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="unicode-converter" data-name="unicode converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Unicode Converter</h3>
+    <p>Convert text to Unicode escape sequences.</p>
+    <a class="tool-open" href="tool.html?id=unicode-converter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="ascii-converter" data-name="ascii converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>ASCII Converter</h3>
+    <p>Convert text and ASCII codes.</p>
+    <a class="tool-open" href="tool.html?id=ascii-converter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="binary-converter" data-name="binary converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Binary Converter</h3>
+    <p>Convert text to binary and binary to text.</p>
+    <a class="tool-open" href="tool.html?id=binary-converter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="hex-converter" data-name="hex converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Hex Converter</h3>
+    <p>Convert text to hexadecimal.</p>
+    <a class="tool-open" href="tool.html?id=hex-converter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="octal-converter" data-name="octal converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Octal Converter</h3>
+    <p>Convert numbers between octal and decimal.</p>
+    <a class="tool-open" href="tool.html?id=octal-converter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="number-base" data-name="number base converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Number Base Converter</h3>
+    <p>Convert numbers between common bases.</p>
+    <a class="tool-open" href="tool.html?id=number-base">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="percentage-calculator" data-name="percentage calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Percentage Calculator</h3>
+    <p>Calculate percentages quickly.</p>
+    <a class="tool-open" href="tool.html?id=percentage-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="discount-calculator" data-name="discount calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Discount Calculator</h3>
+    <p>Calculate discounts and final prices.</p>
+    <a class="tool-open" href="tool.html?id=discount-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="tip-calculator" data-name="tip calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Tip Calculator</h3>
+    <p>Calculate tips and split bills.</p>
+    <a class="tool-open" href="tool.html?id=tip-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="compound-interest" data-name="compound interest calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Compound Interest Calculator</h3>
+    <p>Calculate compound interest growth.</p>
+    <a class="tool-open" href="tool.html?id=compound-interest">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="simple-interest" data-name="simple interest calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Simple Interest Calculator</h3>
+    <p>Calculate simple interest.</p>
+    <a class="tool-open" href="tool.html?id=simple-interest">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="savings-calculator" data-name="savings calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Savings Calculator</h3>
+    <p>Estimate savings growth over time.</p>
+    <a class="tool-open" href="tool.html?id=savings-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="markup-calculator" data-name="markup calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Markup Calculator</h3>
+    <p>Calculate product markup and selling price.</p>
+    <a class="tool-open" href="tool.html?id=markup-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="commission-calculator" data-name="commission calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Commission Calculator</h3>
+    <p>Calculate sales commissions.</p>
+    <a class="tool-open" href="tool.html?id=commission-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="conversion-length" data-name="length converter" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Length Converter</h3>
+    <p>Convert common length units.</p>
+    <a class="tool-open" href="tool.html?id=conversion-length">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="conversion-weight" data-name="weight converter" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Weight Converter</h3>
+    <p>Convert common weight units.</p>
+    <a class="tool-open" href="tool.html?id=conversion-weight">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="conversion-temperature" data-name="temperature converter" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Temperature Converter</h3>
+    <p>Convert Celsius, Fahrenheit and Kelvin.</p>
+    <a class="tool-open" href="tool.html?id=conversion-temperature">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="conversion-area" data-name="area converter" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Area Converter</h3>
+    <p>Convert common area units.</p>
+    <a class="tool-open" href="tool.html?id=conversion-area">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="conversion-volume" data-name="volume converter" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Volume Converter</h3>
+    <p>Convert common volume units.</p>
+    <a class="tool-open" href="tool.html?id=conversion-volume">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="conversion-speed" data-name="speed converter" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Speed Converter</h3>
+    <p>Convert common speed units.</p>
+    <a class="tool-open" href="tool.html?id=conversion-speed">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="conversion-time" data-name="time converter" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Time Converter</h3>
+    <p>Convert time units.</p>
+    <a class="tool-open" href="tool.html?id=conversion-time">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="date-difference" data-name="date difference" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Date Difference</h3>
+    <p>Calculate the difference between two dates.</p>
+    <a class="tool-open" href="tool.html?id=date-difference">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="age-calculator" data-name="age calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Age Calculator</h3>
+    <p>Calculate age from a birth date.</p>
+    <a class="tool-open" href="tool.html?id=age-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="days-calculator" data-name="days calculator" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Days Calculator</h3>
+    <p>Add or subtract days from a date.</p>
+    <a class="tool-open" href="tool.html?id=days-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="password-generator" data-name="password generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Password Generator</h3>
+    <p>Generate strong random passwords locally.</p>
+    <a class="tool-open" href="tool.html?id=password-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="random-number" data-name="random number generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Random Number Generator</h3>
+    <p>Generate random numbers in a chosen range.</p>
+    <a class="tool-open" href="tool.html?id=random-number">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="random-string" data-name="random string generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Random String Generator</h3>
+    <p>Generate random strings locally.</p>
+    <a class="tool-open" href="tool.html?id=random-string">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="color-generator" data-name="random color generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Random Color Generator</h3>
+    <p>Generate random HEX colors.</p>
+    <a class="tool-open" href="tool.html?id=color-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="ip-regex" data-name="ip regex tester" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>IP Regex Tester</h3>
+    <p>Test IPv4 and IPv6 patterns.</p>
+    <a class="tool-open" href="tool.html?id=ip-regex">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="json-to-csv" data-name="json to csv" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>JSON to CSV</h3>
+    <p>Convert simple JSON arrays to CSV.</p>
+    <a class="tool-open" href="tool.html?id=json-to-csv">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="csv-to-json" data-name="csv to json" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>CSV to JSON</h3>
+    <p>Convert CSV data to JSON.</p>
+    <a class="tool-open" href="tool.html?id=csv-to-json">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="xml-formatter" data-name="xml formatter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>XML Formatter</h3>
+    <p>Format XML documents.</p>
+    <a class="tool-open" href="tool.html?id=xml-formatter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="yaml-validator" data-name="yaml helper" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>YAML Helper</h3>
+    <p>Inspect YAML-like configuration text.</p>
+    <a class="tool-open" href="tool.html?id=yaml-validator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="diff-checker" data-name="text diff checker" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Text Diff Checker</h3>
+    <p>Compare two blocks of text.</p>
+    <a class="tool-open" href="tool.html?id=diff-checker">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="word-frequency" data-name="word frequency" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Word Frequency</h3>
+    <p>Analyze the frequency of words.</p>
+    <a class="tool-open" href="tool.html?id=word-frequency">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="reading-time" data-name="reading time calculator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Reading Time Calculator</h3>
+    <p>Estimate reading time from text.</p>
+    <a class="tool-open" href="tool.html?id=reading-time">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="lorem-generator" data-name="lorem ipsum generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Lorem Ipsum Generator</h3>
+    <p>Generate placeholder text.</p>
+    <a class="tool-open" href="tool.html?id=lorem-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="character-frequency" data-name="character frequency" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Character Frequency</h3>
+    <p>Analyze character frequency in text.</p>
+    <a class="tool-open" href="tool.html?id=character-frequency">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="sentence-counter" data-name="sentence counter" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Sentence Counter</h3>
+    <p>Count sentences and estimate reading metrics.</p>
+    <a class="tool-open" href="tool.html?id=sentence-counter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="paragraph-counter" data-name="paragraph counter" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Paragraph Counter</h3>
+    <p>Count paragraphs in text.</p>
+    <a class="tool-open" href="tool.html?id=paragraph-counter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="meta-preview" data-name="seo meta preview" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>SEO Meta Preview</h3>
+    <p>Preview title and description length.</p>
+    <a class="tool-open" href="tool.html?id=meta-preview">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="keyword-density" data-name="keyword density" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Keyword Density</h3>
+    <p>Analyze keyword frequency and density.</p>
+    <a class="tool-open" href="tool.html?id=keyword-density">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="robots-generator" data-name="robots.txt generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Robots.txt Generator</h3>
+    <p>Generate a basic robots.txt file.</p>
+    <a class="tool-open" href="tool.html?id=robots-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="sitemap-generator" data-name="sitemap helper" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Sitemap Helper</h3>
+    <p>Generate sitemap XML from URLs.</p>
+    <a class="tool-open" href="tool.html?id=sitemap-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="canonical-generator" data-name="canonical url generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Canonical URL Generator</h3>
+    <p>Create canonical link markup.</p>
+    <a class="tool-open" href="tool.html?id=canonical-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="schema-generator" data-name="schema markup helper" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Schema Markup Helper</h3>
+    <p>Create basic JSON-LD templates.</p>
+    <a class="tool-open" href="tool.html?id=schema-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="open-graph-generator" data-name="open graph generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Open Graph Generator</h3>
+    <p>Generate Open Graph meta tags.</p>
+    <a class="tool-open" href="tool.html?id=open-graph-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="twitter-card-generator" data-name="twitter card generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Twitter Card Generator</h3>
+    <p>Generate social card meta tags.</p>
+    <a class="tool-open" href="tool.html?id=twitter-card-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="utm-builder" data-name="utm builder" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>UTM Builder</h3>
+    <p>Build campaign tracking URLs.</p>
+    <a class="tool-open" href="tool.html?id=utm-builder">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="affiliate-link-builder" data-name="affiliate link builder" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Affiliate Link Builder</h3>
+    <p>Create structured affiliate tracking links.</p>
+    <a class="tool-open" href="tool.html?id=affiliate-link-builder">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="invoice-number-generator" data-name="invoice number generator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Invoice Number Generator</h3>
+    <p>Generate invoice numbers.</p>
+    <a class="tool-open" href="tool.html?id=invoice-number-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="business-email" data-name="business email generator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Business Email Generator</h3>
+    <p>Generate professional business email drafts.</p>
+    <a class="tool-open" href="tool.html?id=business-email">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="meeting-agenda" data-name="meeting agenda generator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Meeting Agenda Generator</h3>
+    <p>Create structured meeting agendas.</p>
+    <a class="tool-open" href="tool.html?id=meeting-agenda">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="meeting-notes" data-name="meeting notes template" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Meeting Notes Template</h3>
+    <p>Create reusable meeting notes.</p>
+    <a class="tool-open" href="tool.html?id=meeting-notes">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="project-estimator" data-name="project estimator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Project Estimator</h3>
+    <p>Estimate project effort and cost.</p>
+    <a class="tool-open" href="tool.html?id=project-estimator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="hourly-rate" data-name="hourly rate calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Hourly Rate Calculator</h3>
+    <p>Calculate an hourly rate from income goals.</p>
+    <a class="tool-open" href="tool.html?id=hourly-rate">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="freelance-profit" data-name="freelance profit calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Freelance Profit Calculator</h3>
+    <p>Estimate freelance project profit.</p>
+    <a class="tool-open" href="tool.html?id=freelance-profit">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="pricing-calculator" data-name="pricing calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Pricing Calculator</h3>
+    <p>Estimate prices using costs and target margin.</p>
+    <a class="tool-open" href="tool.html?id=pricing-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="subscription-calculator" data-name="subscription revenue calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Subscription Revenue Calculator</h3>
+    <p>Estimate recurring subscription revenue.</p>
+    <a class="tool-open" href="tool.html?id=subscription-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="mrr-calculator" data-name="mrr calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>MRR Calculator</h3>
+    <p>Calculate monthly recurring revenue.</p>
+    <a class="tool-open" href="tool.html?id=mrr-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="arr-calculator" data-name="arr calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>ARR Calculator</h3>
+    <p>Calculate annual recurring revenue.</p>
+    <a class="tool-open" href="tool.html?id=arr-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="churn-calculator" data-name="churn calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Churn Calculator</h3>
+    <p>Calculate customer churn rate.</p>
+    <a class="tool-open" href="tool.html?id=churn-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="conversion-rate" data-name="conversion rate calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Conversion Rate Calculator</h3>
+    <p>Calculate website conversion rate.</p>
+    <a class="tool-open" href="tool.html?id=conversion-rate">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="cpm-calculator" data-name="cpm calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>CPM Calculator</h3>
+    <p>Calculate advertising CPM.</p>
+    <a class="tool-open" href="tool.html?id=cpm-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="cpc-calculator" data-name="cpc calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>CPC Calculator</h3>
+    <p>Calculate cost per click.</p>
+    <a class="tool-open" href="tool.html?id=cpc-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="ctr-calculator" data-name="ctr calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>CTR Calculator</h3>
+    <p>Calculate click-through rate.</p>
+    <a class="tool-open" href="tool.html?id=ctr-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="ad-revenue-calculator" data-name="ad revenue calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Ad Revenue Calculator</h3>
+    <p>Estimate advertising revenue.</p>
+    <a class="tool-open" href="tool.html?id=ad-revenue-calculator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="break-even-revenue" data-name="break-even revenue calculator" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Break-even Revenue Calculator</h3>
+    <p>Calculate revenue needed to break even.</p>
+    <a class="tool-open" href="tool.html?id=break-even-revenue">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="email-subject-generator" data-name="email subject generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Email Subject Generator</h3>
+    <p>Generate subject-line ideas.</p>
+    <a class="tool-open" href="tool.html?id=email-subject-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="bio-generator" data-name="bio generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Bio Generator</h3>
+    <p>Create short professional bios.</p>
+    <a class="tool-open" href="tool.html?id=bio-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="tagline-generator" data-name="tagline generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Tagline Generator</h3>
+    <p>Generate brand tagline ideas.</p>
+    <a class="tool-open" href="tool.html?id=tagline-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="slogan-generator" data-name="slogan generator" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Slogan Generator</h3>
+    <p>Generate marketing slogan ideas.</p>
+    <a class="tool-open" href="tool.html?id=slogan-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="brand-voice" data-name="brand voice helper" data-category="ai">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">AI</div>
+    <h3>Brand Voice Helper</h3>
+    <p>Create a basic brand voice profile.</p>
+    <a class="tool-open" href="tool.html?id=brand-voice">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="faq-schema" data-name="faq schema generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>FAQ Schema Generator</h3>
+    <p>Generate FAQ structured-data templates.</p>
+    <a class="tool-open" href="tool.html?id=faq-schema">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="breadcrumb-schema" data-name="breadcrumb schema generator" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Breadcrumb Schema Generator</h3>
+    <p>Generate breadcrumb JSON-LD.</p>
+    <a class="tool-open" href="tool.html?id=breadcrumb-schema">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="redirect-generator" data-name="redirect generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Redirect Generator</h3>
+    <p>Generate common redirect rules.</p>
+    <a class="tool-open" href="tool.html?id=redirect-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="nginx-config" data-name="nginx config helper" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Nginx Config Helper</h3>
+    <p>Generate basic Nginx configuration snippets.</p>
+    <a class="tool-open" href="tool.html?id=nginx-config">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="apache-htaccess" data-name="htaccess helper" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>HTAccess Helper</h3>
+    <p>Generate basic Apache rewrite snippets.</p>
+    <a class="tool-open" href="tool.html?id=apache-htaccess">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="gitignore-generator" data-name="gitignore generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Gitignore Generator</h3>
+    <p>Create a starter .gitignore file.</p>
+    <a class="tool-open" href="tool.html?id=gitignore-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="license-generator" data-name="license header generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>License Header Generator</h3>
+    <p>Create project license notices.</p>
+    <a class="tool-open" href="tool.html?id=license-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="readme-generator" data-name="readme generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>README Generator</h3>
+    <p>Generate a structured README template.</p>
+    <a class="tool-open" href="tool.html?id=readme-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="api-request-builder" data-name="api request builder" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>API Request Builder</h3>
+    <p>Build basic HTTP request examples.</p>
+    <a class="tool-open" href="tool.html?id=api-request-builder">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="curl-generator" data-name="curl generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>cURL Generator</h3>
+    <p>Generate cURL commands from request data.</p>
+    <a class="tool-open" href="tool.html?id=curl-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="jwt-decoder" data-name="jwt decoder" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>JWT Decoder</h3>
+    <p>Decode JWT header and payload locally.</p>
+    <a class="tool-open" href="tool.html?id=jwt-decoder">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="query-string-parser" data-name="query string parser" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Query String Parser</h3>
+    <p>Parse URL query parameters.</p>
+    <a class="tool-open" href="tool.html?id=query-string-parser">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="json-path-helper" data-name="json path helper" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>JSON Path Helper</h3>
+    <p>Inspect simple JSON paths.</p>
+    <a class="tool-open" href="tool.html?id=json-path-helper">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="password-strength" data-name="password strength checker" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Password Strength Checker</h3>
+    <p>Estimate password strength locally.</p>
+    <a class="tool-open" href="tool.html?id=password-strength">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="hash-checker" data-name="hash checker" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Hash Checker</h3>
+    <p>Compare hashes locally.</p>
+    <a class="tool-open" href="tool.html?id=hash-checker">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="text-to-html" data-name="text to html" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Text to HTML</h3>
+    <p>Convert plain text into basic HTML.</p>
+    <a class="tool-open" href="tool.html?id=text-to-html">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="html-to-text" data-name="html to text" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>HTML to Text</h3>
+    <p>Extract readable text from HTML.</p>
+    <a class="tool-open" href="tool.html?id=html-to-text">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="markdown-to-html" data-name="markdown to html" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Markdown to HTML</h3>
+    <p>Convert basic Markdown to HTML.</p>
+    <a class="tool-open" href="tool.html?id=markdown-to-html">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="code-counter" data-name="code line counter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Code Line Counter</h3>
+    <p>Count code lines, blanks and comments.</p>
+    <a class="tool-open" href="tool.html?id=code-counter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="css-gradient" data-name="css gradient generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>CSS Gradient Generator</h3>
+    <p>Generate CSS gradients.</p>
+    <a class="tool-open" href="tool.html?id=css-gradient">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="box-shadow" data-name="box shadow generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Box Shadow Generator</h3>
+    <p>Generate CSS box-shadow values.</p>
+    <a class="tool-open" href="tool.html?id=box-shadow">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="border-radius" data-name="border radius generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Border Radius Generator</h3>
+    <p>Generate CSS border-radius snippets.</p>
+    <a class="tool-open" href="tool.html?id=border-radius">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="flexbox-generator" data-name="flexbox helper" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Flexbox Helper</h3>
+    <p>Generate basic Flexbox CSS.</p>
+    <a class="tool-open" href="tool.html?id=flexbox-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="grid-generator" data-name="css grid helper" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>CSS Grid Helper</h3>
+    <p>Generate basic CSS Grid layouts.</p>
+    <a class="tool-open" href="tool.html?id=grid-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="favicon-generator" data-name="favicon helper" data-category="seo">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">SEO</div>
+    <h3>Favicon Helper</h3>
+    <p>Generate favicon HTML references.</p>
+    <a class="tool-open" href="tool.html?id=favicon-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="color-palette" data-name="color palette generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Color Palette Generator</h3>
+    <p>Generate simple color palettes.</p>
+    <a class="tool-open" href="tool.html?id=color-palette">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="contrast-checker" data-name="contrast checker" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Contrast Checker</h3>
+    <p>Check basic foreground/background contrast.</p>
+    <a class="tool-open" href="tool.html?id=contrast-checker">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="aspect-ratio" data-name="aspect ratio calculator" data-category="image">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Image</div>
+    <h3>Aspect Ratio Calculator</h3>
+    <p>Calculate proportional dimensions.</p>
+    <a class="tool-open" href="tool.html?id=aspect-ratio">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="image-dimensions" data-name="image dimension checker" data-category="image">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Image</div>
+    <h3>Image Dimension Checker</h3>
+    <p>Inspect image dimensions in browser.</p>
+    <a class="tool-open" href="tool.html?id=image-dimensions">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="data-uri-generator" data-name="data uri generator" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>Data URI Generator</h3>
+    <p>Convert small files into Data URI markup.</p>
+    <a class="tool-open" href="tool.html?id=data-uri-generator">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="file-size-converter" data-name="file size converter" data-category="developer">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Developer</div>
+    <h3>File Size Converter</h3>
+    <p>Convert bytes, KB, MB and GB.</p>
+    <a class="tool-open" href="tool.html?id=file-size-converter">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="time-zone-helper" data-name="time zone helper" data-category="finance">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Finance</div>
+    <h3>Time Zone Helper</h3>
+    <p>Convert times between UTC offsets.</p>
+    <a class="tool-open" href="tool.html?id=time-zone-helper">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="pomodoro-timer" data-name="pomodoro timer" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Pomodoro Timer</h3>
+    <p>Run a simple productivity timer.</p>
+    <a class="tool-open" href="tool.html?id=pomodoro-timer">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="countdown-timer" data-name="countdown timer" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Countdown Timer</h3>
+    <p>Create a countdown timer.</p>
+    <a class="tool-open" href="tool.html?id=countdown-timer">Open Tool →</a>
+  </div>
+</article>
+
+<article class="tool-card" data-id="stopwatch" data-name="stopwatch" data-category="business">
+  <div class="tool-icon">✦</div>
+  <div class="tool-body">
+    <div class="tool-category">Business</div>
+    <h3>Stopwatch</h3>
+    <p>Run a browser stopwatch.</p>
+    <a class="tool-open" href="tool.html?id=stopwatch">Open Tool →</a>
+  </div>
+</article>
+
+ </div>
+
+ <div class="empty" id="empty">
+  No tools match your search.
+ </div>
+</section>
+
+<footer class="footer">
+ <strong>AI NOVA</strong>
+ <p>179 tools • Built for the modern web</p>
+ <p>Azzouz Ahmed — Founder & Creator</p>
+ <p>
+  <a href="privacy.html">Privacy</a> ·
+  <a href="terms.html">Terms</a> ·
+  <a href="contact.html">Contact</a>
+ </p>
+</footer>
+
+<script>
+const cards=[...document.querySelectorAll(".tool-card")];
+const search=document.getElementById("search");
+const empty=document.getElementById("empty");
+let filter="all";
+
+function render(){
+ const q=search.value.toLowerCase().trim();
+ let visible=0;
+
+ cards.forEach(card=>{
+   const name=card.dataset.name||"";
+   const cat=card.dataset.category||"";
+
+   const okSearch=!q || name.includes(q) ||
+     card.innerText.toLowerCase().includes(q);
+
+   const okFilter=filter==="all" || cat.includes(filter);
+
+   const show=okSearch && okFilter;
+
+   card.style.display=show?"flex":"none";
+   if(show)visible++;
+ });
+
+ empty.style.display=visible?"none":"block";
+}
+
+search.addEventListener("input",render);
+
+document.querySelectorAll(".filters button").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+   document.querySelectorAll(".filters button")
+     .forEach(x=>x.classList.remove("active"));
+
+   btn.classList.add("active");
+   filter=btn.dataset.filter;
+   render();
+ });
 });
-})();
+
+render();
 </script>
 
 </body>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI Nova — 179 Tools</title>
+<meta name="description" content="AI Nova — 179 browser-first digital tools in one professional workspace.">
+<meta name="theme-color" content="#050812">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="assets/nova-v4.css">
+</head>
+<body>
+<div id="ai-nova-v4">Loading AI Nova...</div>
+<script src="assets/nova-v4.js" defer></script>
+<script src="assets/nova-v51.js"></script>
+
+<script>
+(() => {
+"use strict";
+
+function resolveToolId(el) {
+  return el.dataset.toolId ||
+         el.dataset.id ||
+         el.getAttribute("data-tool") ||
+         el.getAttribute("data-tool-id");
+}
+
+document.querySelectorAll(
+  "[data-id],[data-tool],[data-tool-id],[data-tool-id]"
+).forEach(el => {
+
+  const id = resolveToolId(el);
+  if (!id) return;
+
+  el.style.cursor = "pointer";
+
+  if (!el.hasAttribute("data-tool-id"))
+    el.setAttribute("data-tool-id", id);
+
+});
+})();
+</script>
+
+</body>
+</html>
