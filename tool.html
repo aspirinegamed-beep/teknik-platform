@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI Nova free online tools">
+<title>AI Nova Tool</title>
+<link rel="stylesheet" href="assets/hub.css">
+<style>
+.toolbox{max-width:950px;margin:30px auto;padding:20px}
+.panel{background:#0b1220;border:1px solid #263247;border-radius:16px;padding:20px}
+textarea,input,select{width:100%;box-sizing:border-box;margin:8px 0;padding:13px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff}
+textarea{min-height:180px;resize:vertical}
+button{padding:11px 18px;margin:6px 5px 6px 0;border:0;border-radius:10px;cursor:pointer;font-weight:700}
+.actions{margin-top:12px}
+.result{white-space:pre-wrap;background:#020617;border:1px solid #334155;border-radius:12px;padding:16px;margin-top:15px;min-height:100px;overflow:auto}
+label{display:block;margin-top:12px;font-weight:700}
+.small{opacity:.7;font-size:.9rem}
+.ok{margin-top:10px}
+</style>
+</head>
+
+<body>
+<div class="toolbox">
+<a href="../../">← AI Nova Home</a>
+
+<div class="panel">
+<h1 id="title">AI Nova Tool</h1>
+<p id="desc"></p>
+<p class="small">Runs locally in your browser whenever possible.</p>
+
+<div id="form"></div>
+
+<div class="actions">
+<button onclick="runTool()">Run Tool</button>
+<button onclick="copyResult()">Copy</button>
+<button onclick="downloadResult()">Download</button>
+<button onclick="clearTool()">Clear</button>
+</div>
+
+<div id="result" class="result">Ready.</div>
+</div>
+</div>
+
+<script>
+let tool=null;
+
+const $=id=>document.getElementById(id);
+const val=id=>$(id)?$(id).value:"";
+const num=id=>parseFloat(val(id))||0;
+
+function out(x){
+ $("result").textContent=String(x);
+}
+
+async function loadTool(){
+ try{
+  const id=new URLSearchParams(location.search).get("id");
+  const data=await fetch("../data/tools.json").then(r=>r.json());
+  tool=data.find(x=>x.id===id)||data[0];
+
+  document.title=tool.name+" — AI Nova";
+  $("title").textContent=tool.name;
+  $("desc").textContent=tool.description||"Free AI Nova online tool.";
+
+  buildForm(tool.id);
+ }catch(e){
+  out("Unable to load tool: "+e.message);
+ }
+}
+
+function input(id,label,type="text",placeholder=""){
+ return `<label>${label}</label><input id="${id}" type="${type}" placeholder="${placeholder}">`;
+}
+
+function area(id,label,placeholder=""){
+ return `<label>${label}</label><textarea id="${id}" placeholder="${placeholder}"></textarea>`;
+}
+
+function buildForm(id){
+ let f="";
+
+ const textTools=[
+  "text-counter","case-converter","text-cleaner","duplicate-remover",
+  "sort-lines","reverse-text","slug-generator","word-frequency",
+  "reading-time","lorem-generator","character-frequency",
+  "sentence-counter","paragraph-counter","text-to-html","html-to-text",
+  "code-counter"
+ ];
+
+ if(textTools.includes(id)){
+   f=area("input","Input","Enter or paste text here...");
+ }
+
+ else if(["json-formatter","json-path-helper","json-to-csv"].includes(id)){
+   f=area("input","JSON","Paste JSON here...");
+ }
+
+ else if(id==="csv-to-json"){
+   f=area("input","CSV","name,age\nAlice,25");
+ }
+
+ else if(["html-formatter","css-formatter","js-formatter","xml-formatter","sql-formatter","markdown-to-html"].includes(id)){
+   f=area("input","Input","Paste code or text here...");
+ }
+
+ else if(["url-encoder","url-decoder","base64-tool","binary-converter","hex-converter","ascii-converter","unicode-converter"].includes(id)){
+   f=area("input","Input","Enter text...");
+ }
+
+ else if(id==="uuid-generator"){
+   f="<p>Generate a secure UUID locally.</p>";
+ }
+
+ else if(id==="timestamp"){
+   f="<p>Generate the current Unix timestamp.</p>";
+ }
+
+ else if(id==="password-generator"){
+   f=input("length","Password Length","number","20");
+ }
+
+ else if(id==="random-number"){
+   f=input("min","Minimum","number","1")+input("max","Maximum","number","100");
+ }
+
+ else if(id==="random-string"){
+   f=input("length","Length","number","20");
+ }
+
+ else if(id==="color-generator"){
+   f="<p>Generate a random HEX color.</p>";
+ }
+
+ else if(id==="regex-tester"){
+   f=input("pattern","Regular Expression","text","^[a-z]+$")
+    +area("input","Test Text");
+ }
+
+ else if(id==="hash-generator"){
+   f=area("input","Text")
+    +`<label>Algorithm</label><select id="algorithm">
+    <option>SHA-256</option><option>SHA-384</option><option>SHA-512</option>
+    </select>`;
+ }
+
+ else if(id==="color-converter"){
+   f=input("color","HEX or RGB","text","#ff0000");
+ }
+
+ else if(["percentage-calculator","discount-calculator","tip-calculator",
+          "markup-calculator","commission-calculator"].includes(id)){
+   f=input("amount","Amount")
+    +input("percent","Percentage");
+ }
+
+ else if(id==="vat-calculator"){
+   f=input("price","Price")+input("vat","VAT %");
+ }
+
+ else if(["profit-calculator","margin-calculator"].includes(id)){
+   f=input("cost","Cost")+input("revenue","Revenue");
+ }
+
+ else if(id==="roi-calculator"){
+   f=input("investment","Investment")+input("return","Return");
+ }
+
+ else if(id==="break-even"){
+   f=input("fixed","Fixed Costs")
+    +input("price","Selling Price")
+    +input("variable","Variable Cost");
+ }
+
+ else if(id==="loan-calculator"){
+   f=input("amount","Loan Amount")
+    +input("rate","Annual Interest %")
+    +input("months","Months");
+ }
+
+ else if(id==="compound-interest"){
+   f=input("principal","Principal")
+    +input("rate","Annual Rate %")
+    +input("years","Years")
+    +input("frequency","Compounds / Year","number","12");
+ }
+
+ else if(id==="simple-interest"){
+   f=input("principal","Principal")
+    +input("rate","Annual Rate %")
+    +input("years","Years");
+ }
+
+ else if(id==="conversion-temperature"){
+   f=input("value","Value")
+    +`<label>From</label><select id="from"><option>C</option><option>F</option><option>K</option></select>`
+    +`<label>To</label><select id="to"><option>C</option><option>F</option><option>K</option></select>`;
+ }
+
+ else if(id==="conversion-length"){
+   f=input("value","Value")
+    +`<label>From</label><select id="from"><option>m</option><option>km</option><option>cm</option><option>mm</option><option>mi</option><option>ft</option><option>in</option></select>`
+    +`<label>To</label><select id="to"><option>m</option><option>km</option><option>cm</option><option>mm</option><option>mi</option><option>ft</option><option>in</option></select>`;
+ }
+
+ else if(id==="file-size-converter"){
+   f=input("value","Value")+`<label>From</label><select id="from"><option>B</option><option>KB</option><option>MB</option><option>GB</option></select>`
+   +`<label>To</label><select id="to"><option>B</option><option>KB</option><option>MB</option><option>GB</option></select>`;
+ }
+
+ else if(id==="aspect-ratio"){
+   f=input("width","Width")+input("height","Height");
+ }
+
+ else if(id==="date-difference"){
+   f=input("date1","Start Date","date")+input("date2","End Date","date");
+ }
+
+ else if(id==="age-calculator"){
+   f=input("birth","Birth Date","date");
+ }
+
+ else if(id==="days-calculator"){
+   f=input("date","Date","date")+input("days","Days","number","30");
+ }
+
+ else if(id==="mrr-calculator"){
+   f=input("customers","Customers")+input("price","Monthly Price");
+ }
+
+ else if(id==="arr-calculator"){
+   f=input("mrr","Monthly Recurring Revenue");
+ }
+
+ else if(id==="churn-calculator"){
+   f=input("lost","Customers Lost")+input("start","Customers at Start");
+ }
+
+ else if(["conversion-rate","ctr-calculator"].includes(id)){
+   f=input("conversions","Conversions / Clicks")+input("visitors","Visitors / Impressions");
+ }
+
+ else if(id==="cpc-calculator"){
+   f=input("cost","Ad Cost")+input("clicks","Clicks");
+ }
+
+ else if(id==="cpm-calculator"){
+   f=input("cost","Ad Cost")+input("impressions","Impressions");
+ }
+
+ else if(id==="ad-revenue-calculator"){
+   f=input("impressions","Impressions")+input("rpm","Revenue per 1000 Views");
+ }
+
+ else if(id==="utm-builder"){
+   f=input("url","URL","text","https://example.com")
+    +input("source","Source","text","google")
+    +input("medium","Medium","text","cpc")
+    +input("campaign","Campaign","text","summer");
+ }
+
+ else if(id==="query-string-parser"){
+   f=input("url","URL","text","https://example.com/?name=alice&age=25");
+ }
+
+ else if(id==="jwt-decoder"){
+   f=area("input","JWT","Paste JWT token...");
+ }
+
+ else if(id==="sitemap-generator"){
+   f=area("input","URLs","One URL per line");
+ }
+
+ else if(id==="robots-generator"){
+   f=input("site","Website","text","https://example.com");
+ }
+
+ else if(id==="canonical-generator"){
+   f=input("url","Canonical URL");
+ }
+
+ else if(id==="open-graph-generator"){
+   f=input("title","Title")+input("description","Description")+input("url","URL");
+ }
+
+ else if(id==="redirect-generator"){
+   f=input("from","From Path","text","/old")
+    +input("to","To Path","text","/new");
+ }
+
+ else if(id==="gitignore-generator"){
+   f=input("project","Project Type","text","Node");
+ }
+
+ else if(id==="css-gradient"){
+   f=input("color1","Color 1","text","#ff0000")
+    +input("color2","Color 2","text","#0000ff")
+    +input("angle","Angle","number","90");
+ }
+
+ else if(id==="box-shadow"){
+   f=input("x","X","number","0")
+    +input("y","Y","number","10")
+    +input("blur","Blur","number","20")
+    +input("spread","Spread","number","0")
+    +input("color","Color","text","rgba(0,0,0,.25)");
+ }
+
+ else if(id==="border-radius"){
+   f=input("radius","Radius","text","12px");
+ }
+
+ else if(id==="flexbox-generator"){
+   f=`<label>Direction</label><select id="direction"><option>row</option><option>column</option></select>
+      <label>Justify</label><select id="justify"><option>center</option><option>space-between</option><option>flex-start</option><option>flex-end</option></select>
+      <label>Align</label><select id="align"><option>center</option><option>stretch</option><option>flex-start</option><option>flex-end</option></select>`;
+ }
+
+ else if(id==="grid-generator"){
+   f=input("columns","Columns","number","3")+input("gap","Gap","text","10px");
+ }
+
+ else if(id==="data-uri-generator"){
+   f=area("input","Text","Enter text to encode...");
+ }
+
+ else if(id==="time-zone-helper"){
+   f=input("hour","Hour","number","12")+input("offset1","UTC Offset From","number","0")+input("offset2","UTC Offset To","number","1");
+ }
+
+ else if(id==="pomodoro-timer"){
+   f=input("minutes","Minutes","number","25");
+ }
+
+ else if(id==="countdown-timer"){
+   f=input("seconds","Seconds","number","60");
+ }
+
+ else if(id==="stopwatch"){
+   f="<p>Press Run Tool to start the stopwatch.</p>";
+ }
+
+ else{
+   f=area("input","Input","This tool's dedicated module will be added next.");
+ }
+
+ $("form").innerHTML=f;
+}
+
+async function runTool(){
+ const id=tool?.id||new URLSearchParams(location.search).get("id")||"";
+
+ try{
+  if(window.NovaTools){
+   if(id==="json-formatter"){
+    out(NovaTools.formatJSON(val("input")));
+    return;
+   }
+
+   if(id==="uuid-generator"){
+    out(NovaTools.uuid());
+    return;
+   }
+
+   if(id==="base64-tool"){
+    const mode=val("mode")||"encode";
+    out(mode==="decode"
+      ? NovaTools.base64Decode(val("input"))
+      : NovaTools.base64Encode(val("input")));
+    return;
+   }
+
+   if(id==="timestamp"){
+    out(JSON.stringify(NovaTools.timestamp(),null,2));
+    return;
+   }
+
+   if(id==="regex-tester"){
+    out(NovaTools.regexTest());
+    return;
+   }
+
+   if(id==="hash-generator"){
+    NovaTools.sha256(val("input"))
+      .then(out)
+      .catch(e=>out("Error: "+e.message));
+    return;
+   }
+
+   const calculated=NovaTools.calculate(id);
+   if(calculated!==null && calculated!==undefined){
+    out(calculated);
+    return;
+   }
+  }
+
+  out("Tool engine is ready. This tool will use the built-in AI Nova engine.");
+ }catch(e){
+  out("Error: "+e.message);
+ }
+}
+
+let timerInterval=null;
+
+function startTimer(seconds){
+ clearInterval(timerInterval);
+ let s=Math.max(0,Math.floor(seconds));
+ timerInterval=setInterval(()=>{
+   out(`Time remaining: ${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`);
+   if(s<=0)clearInterval(timerInterval);
+   s--;
+ },1000);
+}
+
+let swStart=0;
+
+function startStopwatch(){
+ swStart=Date.now();
+ clearInterval(timerInterval);
+ timerInterval=setInterval(()=>{
+   const s=Math.floor((Date.now()-swStart)/1000);
+   out(`Stopwatch: ${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`);
+ },1000);
+}
+
+async function copyResult(){
+ try{
+  await navigator.clipboard.writeText($("result").textContent);
+  out($("result").textContent+"\n\n✓ Copied");
+ }catch(e){}
+}
+
+function downloadResult(){
+ const blob=new Blob([$("result").textContent],{type:"text/plain"});
+ const a=document.createElement("a");
+ a.href=URL.createObjectURL(blob);
+ a.download=(tool?.id||"ai-nova-tool")+"-result.txt";
+ a.click();
+ URL.revokeObjectURL(a.href);
+}
+
+function clearTool(){
+ clearInterval(timerInterval);
+ document.querySelectorAll("input,textarea").forEach(x=>x.value="");
+ $("result").textContent="Ready.";
+}
+
+loadTool();
+</script>
+<script src="assets/tool-engine.js"></script>
+
+<!-- AI NOVA DYNAMIC FORM ENGINE -->
+<script>
+(function(){
+  "use strict";
+
+  const FORM_HINTS = {
+    "ai-writer":["text"],
+    "summarizer":["text"],
+    "rewriter":["text"],
+    "translator":["text","language"],
+    "idea-generator":["topic"],
+    "title-generator":["topic"],
+    "product-description":["product"],
+    "cv-builder":["text"],
+    "cover-letter":["text"],
+    "social-post":["text"],
+    "email-writer":["text"],
+    "business-plan":["text"],
+    "company-name":["topic"],
+    "product-name":["topic"],
+    "prompt-generator":["topic"],
+    "seo-content":["text"],
+    "faq-generator":["text"],
+    "meta-generator":["title","description","url"],
+    "keyword-generator":["topic"],
+    "thumbnail-maker":["text"],
+    "image-resizer":["width","height"],
+    "image-compressor":["quality"],
+    "background-remover":["text"],
+    "image-converter":["text"],
+    "qr-generator":["text"],
+    "markdown-tool":["text"],
+    "invoice-generator":["text"],
+    "receipt-generator":["text"],
+    "salary-calculator":["value","rate"],
+    "loan-calculator":["principal","rate","years"],
+    "currency-tool":["value","from","to"],
+
+    "html-entities":["input"],
+    "octal-converter":["input"],
+    "number-base":["value","from","to"],
+    "savings-calculator":["initial","monthly","rate","months"],
+    "conversion-weight":["value","from","to"],
+    "conversion-area":["value","from","to"],
+    "conversion-volume":["value","from","to"],
+    "conversion-speed":["value","from","to"],
+    "conversion-time":["value","from","to"],
+    "ip-regex":["input"],
+    "yaml-validator":["input"],
+    "diff-checker":["input"],
+    "meta-preview":["title","description"],
+    "keyword-density":["input","keyword"],
+    "schema-generator":["title","description","url"],
+    "twitter-card-generator":["title","description","image"],
+    "affiliate-link-builder":["url"],
+    "invoice-number-generator":["text"],
+    "business-email":["text"],
+    "meeting-agenda":["text"],
+    "meeting-notes":["text"],
+    "project-estimator":["value"],
+    "hourly-rate":["value"],
+    "freelance-profit":["value"],
+    "pricing-calculator":["value"],
+    "subscription-calculator":["value"],
+    "break-even-revenue":["revenue","cost"],
+    "email-subject-generator":["text"],
+    "bio-generator":["text"],
+    "tagline-generator":["text"],
+    "slogan-generator":["text"],
+    "brand-voice":["text"],
+    "faq-schema":["text"],
+    "breadcrumb-schema":["text"],
+    "nginx-config":["text"],
+    "apache-htaccess":["text"],
+    "license-generator":["text"],
+    "readme-generator":["text"],
+    "api-request-builder":["url"],
+    "curl-generator":["url"],
+    "hash-checker":["input"],
+    "favicon-generator":["text"],
+    "contrast-checker":["color1","color2"],
+    "image-dimensions":["width","height"],
+    "data-uri-generator":["input"],
+    "time-zone-helper":["value","from","to"]
+  };
+
+  function field(id,label,type="text",placeholder=""){
+    return `
+      <label class="nova-dynamic-field">
+        <span>${label}</span>
+        <input id="${id}" name="${id}" type="${type}" placeholder="${placeholder}" autocomplete="off">
+      </label>`;
+  }
+
+  function area(id,label,placeholder=""){
+    return `
+      <label class="nova-dynamic-field">
+        <span>${label}</span>
+        <textarea id="${id}" name="${id}" rows="9" placeholder="${placeholder}"></textarea>
+      </label>`;
+  }
+
+  function buildDynamicForm(tool){
+    const id=tool.id;
+    const hints=FORM_HINTS[id] || ["input"];
+
+    let html="";
+
+    for(const h of hints){
+      if(h==="text" || h==="input"){
+        html+=area("input","Input","Enter or paste text here...");
+      }else if(h==="topic"){
+        html+=field("topic","Topic","text","Enter a topic...");
+      }else if(h==="product"){
+        html+=area("product","Product","Describe the product...");
+      }else if(h==="title"){
+        html+=field("title","Title","text","Page or content title");
+      }else if(h==="description"){
+        html+=area("description","Description","Enter a description...");
+      }else if(h==="url"){
+        html+=field("url","URL","url","https://example.com");
+      }else if(h==="image"){
+        html+=field("image","Image URL","url","https://example.com/image.jpg");
+      }else if(h==="language"){
+        html+=field("language","Language","text","English");
+      }else if(h==="width" || h==="height"){
+        html+=field(h,h.charAt(0).toUpperCase()+h.slice(1),"number","0");
+      }else if(h==="quality"){
+        html+=field("quality","Quality","number","80");
+      }else if(h==="value" || h==="initial" || h==="monthly" || h==="months" ||
+               h==="rate" || h==="principal" || h==="years" ||
+               h==="revenue" || h==="cost"){
+        html+=field(h,h.charAt(0).toUpperCase()+h.slice(1),"number","0");
+      }else if(h==="from" || h==="to"){
+        html+=field(h,h.charAt(0).toUpperCase()+h.slice(1),"text","");
+      }else if(h==="keyword"){
+        html+=field("keyword","Keyword","text","Enter keyword...");
+      }
+    }
+
+    return html;
+  }
+
+  window.NovaDynamicForms={
+    build:buildDynamicForm,
+    hints:FORM_HINTS
+  };
+
+  console.log("AI NOVA DYNAMIC FORM ENGINE: READY");
+})();
+</script>
+
+
+<script>
+/* AI NOVA DYNAMIC FORM ROUTER */
+(function(){
+  "use strict";
+
+  const originalBuildForm = window.buildForm;
+
+  if(typeof originalBuildForm !== "function"){
+    console.warn("AI NOVA: buildForm not found");
+    return;
+  }
+
+  window.buildForm = function(id){
+    let existing = "";
+
+    try {
+      existing = originalBuildForm(id) || "";
+    } catch(e) {
+      console.warn("AI NOVA: original buildForm error", e);
+    }
+
+    /*
+     * Keep existing specialized forms.
+     * Use the dynamic engine only when the old form
+     * does not provide a useful input.
+     */
+    if(existing && /<(input|textarea|select)\b/i.test(existing)){
+      return existing;
+    }
+
+    const tool = {
+      id: id,
+      name: id
+    };
+
+    if(window.NovaDynamicForms &&
+       typeof window.NovaDynamicForms.build === "function"){
+      return NovaDynamicForms.build(tool);
+    }
+
+    return existing;
+  };
+
+  console.log("AI NOVA DYNAMIC FORM ROUTER: READY");
+
+  // Re-render the current tool after the dynamic router is installed.
+  try {
+    const params = new URLSearchParams(location.search);
+    const currentId = params.get("id");
+    if (currentId && typeof window.loadTool === "function") {
+      window.loadTool();
+    }
+  } catch (e) {
+    console.warn("AI NOVA: dynamic form re-render skipped", e);
+  }
+})();
+</script>
+
+</body>
+</html>
