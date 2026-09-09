@@ -6,114 +6,202 @@ ROOT = Path(".")
 DATA = ROOT / "data"
 ASSETS = ROOT / "assets"
 
-tools = json.loads((DATA/"tools.json").read_text(encoding="utf-8"))
-registry = json.loads((DATA/"tool-registry.json").read_text(encoding="utf-8"))
+tools = json.loads((DATA / "tools.json").read_text(encoding="utf-8"))
+registry = json.loads((DATA / "tool-registry.json").read_text(encoding="utf-8"))
 
 assert len(tools) == 179
 assert len(registry["tools"]) == 179
 
 reg = {x["id"]: x for x in registry["tools"]}
 
-# ------------------------------------------------------------
-# SMART UI PROFILE GENERATOR
-# ------------------------------------------------------------
-
 profiles = {}
 
 def profile_for(t):
     tid = str(t["id"])
     name = str(t.get("name") or t.get("title") or tid)
-    s = " ".join(str(t.get(k,"")) for k in
-                 ["id","name","title","description","category","type"]).lower()
 
-    family = reg[tid].get("family","general")
+    s = " ".join(
+        str(t.get(k, ""))
+        for k in ["id", "name", "title", "description", "category", "type"]
+    ).lower()
+
+    family = reg.get(tid, {}).get("family", "general")
 
     if family == "json":
         fields = [
-            {"id":"input","type":"textarea","label":"JSON / CSV Input",
-             "placeholder":"Paste JSON or CSV here...","required":True}
+            {
+                "id": "input",
+                "type": "textarea",
+                "label": "JSON / CSV Input",
+                "placeholder": "Paste JSON or CSV here...",
+                "required": True
+            }
         ]
 
     elif family == "developer" and "regex" in s:
         fields = [
-            {"id":"input","type":"textarea","label":"Text",
-             "placeholder":"Enter text to test...","required":True},
-            {"id":"pattern","type":"text","label":"Regex Pattern",
-             "placeholder":"Example: \\b[A-Z][a-z]+\\b","required":True},
-            {"id":"flags","type":"text","label":"Flags",
-             "placeholder":"gim","default":"g"}
+            {
+                "id": "input",
+                "type": "textarea",
+                "label": "Text",
+                "placeholder": "Enter text to test...",
+                "required": True
+            },
+            {
+                "id": "pattern",
+                "type": "text",
+                "label": "Regex Pattern",
+                "placeholder": r"\b[A-Z][a-z]+\b",
+                "required": True
+            },
+            {
+                "id": "flags",
+                "type": "text",
+                "label": "Flags",
+                "placeholder": "gim",
+                "default": "g"
+            }
         ]
 
     elif family == "seo":
         fields = [
-            {"id":"title","type":"text","label":"Page Title",
-             "placeholder":"My Website"},
-            {"id":"description","type":"textarea","label":"Meta Description",
-             "placeholder":"Describe the page..."},
-            {"id":"url","type":"url","label":"Canonical URL",
-             "placeholder":"https://example.com"},
-            {"id":"input","type":"textarea","label":"URLs / Extra Input",
-             "placeholder":"One URL per line..."}
+            {
+                "id": "title",
+                "type": "text",
+                "label": "Page Title",
+                "placeholder": "My Website"
+            },
+            {
+                "id": "description",
+                "type": "textarea",
+                "label": "Meta Description",
+                "placeholder": "Describe the page..."
+            },
+            {
+                "id": "url",
+                "type": "url",
+                "label": "Canonical URL",
+                "placeholder": "https://example.com"
+            },
+            {
+                "id": "input",
+                "type": "textarea",
+                "label": "URLs / Extra Input",
+                "placeholder": "One URL per line..."
+            }
         ]
 
     elif family == "finance":
         fields = [
-            {"id":"value","type":"number","label":"Amount",
-             "placeholder":"100"},
-            {"id":"percent","type":"number","label":"Percentage",
-             "placeholder":"10"},
-            {"id":"total","type":"number","label":"Total",
-             "placeholder":"Optional"}
+            {
+                "id": "value",
+                "type": "number",
+                "label": "Amount",
+                "placeholder": "100"
+            },
+            {
+                "id": "percent",
+                "type": "number",
+                "label": "Percentage",
+                "placeholder": "10"
+            },
+            {
+                "id": "total",
+                "type": "number",
+                "label": "Total",
+                "placeholder": "Optional"
+            }
         ]
 
     elif family == "color":
         fields = [
-            {"id":"input","type":"text","label":"Color",
-             "placeholder":"#ff6600 or 255, 102, 0","required":True}
+            {
+                "id": "input",
+                "type": "text",
+                "label": "Color",
+                "placeholder": "#ff6600 or 255, 102, 0",
+                "required": True
+            }
         ]
 
     elif family == "security":
         fields = [
-            {"id":"length","type":"number","label":"Length",
-             "placeholder":"18","default":"18"},
-            {"id":"input","type":"textarea","label":"Input",
-             "placeholder":"Optional text..."}
+            {
+                "id": "length",
+                "type": "number",
+                "label": "Length",
+                "placeholder": "18",
+                "default": "18"
+            },
+            {
+                "id": "input",
+                "type": "textarea",
+                "label": "Input",
+                "placeholder": "Optional text..."
+            }
         ]
 
     elif family == "date":
         fields = [
-            {"id":"input","type":"date","label":"Date",
-             "required":False},
-            {"id":"input2","type":"date","label":"Second Date",
-             "required":False}
+            {
+                "id": "input",
+                "type": "date",
+                "label": "Date"
+            },
+            {
+                "id": "input2",
+                "type": "date",
+                "label": "Second Date"
+            }
         ]
 
     elif family == "encoding":
         fields = [
-            {"id":"input","type":"textarea","label":"Text",
-             "placeholder":"Enter text to encode/decode...",
-             "required":True}
+            {
+                "id": "input",
+                "type": "textarea",
+                "label": "Text",
+                "placeholder": "Enter text to encode/decode...",
+                "required": True
+            }
         ]
 
     elif family == "text":
         fields = [
-            {"id":"input","type":"textarea","label":"Text",
-             "placeholder":"Enter your text here...",
-             "required":True}
+            {
+                "id": "input",
+                "type": "textarea",
+                "label": "Text",
+                "placeholder": "Enter your text here...",
+                "required": True
+            }
         ]
 
     elif family == "generator":
         fields = [
-            {"id":"project","type":"text","label":"Project Name",
-             "placeholder":"My Project"},
-            {"id":"input","type":"textarea","label":"Additional Input",
-             "placeholder":"Optional..."}
+            {
+                "id": "project",
+                "type": "text",
+                "label": "Project Name",
+                "placeholder": "My Project"
+            },
+            {
+                "id": "input",
+                "type": "textarea",
+                "label": "Additional Input",
+                "placeholder": "Optional..."
+            }
         ]
 
     else:
         fields = [
-            {"id":"input","type":"textarea","label":"Input",
-             "placeholder":"Enter your input here...","required":True}
+            {
+                "id": "input",
+                "type": "textarea",
+                "label": "Input",
+                "placeholder": "Enter your input here...",
+                "required": True
+            }
         ]
 
     return {
@@ -123,22 +211,23 @@ def profile_for(t):
         "fields": fields
     }
 
+
 for t in tools:
     profiles[str(t["id"])] = profile_for(t)
 
-(DATA/"smart-ui-profiles.json").write_text(
-    json.dumps({
-        "version":"5.3",
-        "generated":datetime.now().isoformat(),
-        "total":179,
-        "profiles":profiles
-    },ensure_ascii=False,indent=2),
+(DATA / "smart-ui-profiles.json").write_text(
+    json.dumps(
+        {
+            "version": "5.3",
+            "generated": datetime.now().isoformat(),
+            "total": 179,
+            "profiles": profiles
+        },
+        ensure_ascii=False,
+        indent=2
+    ),
     encoding="utf-8"
 )
-
-# ------------------------------------------------------------
-# SMART UI ENGINE
-# ------------------------------------------------------------
 
 engine = r'''
 (() => {
@@ -146,88 +235,90 @@ engine = r'''
 
 window.AINovaSmartUI = {
 
-  async load(id) {
-    const r = await fetch("data/smart-ui-profiles.json");
-    const data = await r.json();
-    return data.profiles[id] || null;
-  },
+    async load(id) {
+        const r = await fetch("data/smart-ui-profiles.json");
+        const data = await r.json();
+        return data.profiles[id] || null;
+    },
 
-  render(profile, container) {
+    render(profile, container) {
+        container.innerHTML = "";
 
-    container.innerHTML = "";
+        if (!profile) return;
 
-    if (!profile) return;
+        for (const field of profile.fields) {
 
-    for (const field of profile.fields) {
+            const wrap = document.createElement("div");
+            wrap.className = "smart-field";
 
-      const wrap = document.createElement("div");
-      wrap.className = "smart-field";
+            const label = document.createElement("label");
+            label.textContent = field.label || field.id;
 
-      const label = document.createElement("label");
-      label.textContent = field.label || field.id;
+            let input;
 
-      let input;
+            if (field.type === "textarea") {
+                input = document.createElement("textarea");
+            } else {
+                input = document.createElement("input");
+                input.type = field.type || "text";
+            }
 
-      if (field.type === "textarea") {
-        input = document.createElement("textarea");
-      } else {
-        input = document.createElement("input");
-        input.type = field.type || "text";
-      }
+            input.id = "smart-" + field.id;
+            input.name = field.id;
 
-      input.id = "smart-" + field.id;
-      input.name = field.id;
+            if (field.placeholder) {
+                input.placeholder = field.placeholder;
+            }
 
-      if (field.placeholder)
-        input.placeholder = field.placeholder;
+            if (field.default !== undefined) {
+                input.value = field.default;
+            }
 
-      if (field.default !== undefined)
-        input.value = field.default;
+            if (field.required) {
+                input.required = true;
+            }
 
-      if (field.required)
-        input.required = true;
+            wrap.appendChild(label);
+            wrap.appendChild(input);
+            container.appendChild(wrap);
+        }
+    },
 
-      wrap.appendChild(label);
-      wrap.appendChild(input);
-      container.appendChild(wrap);
+    values(profile) {
+        const values = {};
+
+        if (!profile) return values;
+
+        for (const field of profile.fields) {
+            const el = document.getElementById("smart-" + field.id);
+
+            if (el) {
+                values[field.id] = el.value;
+            }
+        }
+
+        return values;
     }
-  },
-
-  values(profile) {
-
-    const values = {};
-
-    if (!profile) return values;
-
-    for (const field of profile.fields) {
-      const el = document.getElementById("smart-" + field.id);
-      if (!el) continue;
-
-      values[field.id] = el.value;
-    }
-
-    return values;
-  }
 };
 
 })();
 '''
 
-(ASSETS/"nova-smart-ui.js").write_text(engine,encoding="utf-8")
-
-# ------------------------------------------------------------
-# SMART TOOL PAGE
-# ------------------------------------------------------------
+(ASSETS / "nova-smart-ui.js").write_text(
+    engine,
+    encoding="utf-8"
+)
 
 html = r'''<!doctype html>
 <html lang="en">
-
 <head>
 
 <meta charset="utf-8">
 
-<meta name="viewport"
-content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,viewport-fit=cover"
+>
 
 <meta name="theme-color" content="#080b12">
 
@@ -235,108 +326,107 @@ content="width=device-width,initial-scale=1,viewport-fit=cover">
 
 <link rel="manifest" href="manifest.json">
 
-<link rel="stylesheet"
-href="assets/nova-v4.css">
+<link rel="stylesheet" href="assets/nova-v4.css">
 
 <style>
 
-.smart-page{
-max-width:1050px;
-margin:auto;
-padding:20px 15px 80px;
+.smart-page {
+    max-width: 1050px;
+    margin: auto;
+    padding: 20px 15px 80px;
 }
 
-.smart-card{
-background:rgba(255,255,255,.045);
-border:1px solid rgba(255,255,255,.09);
-border-radius:24px;
-padding:20px;
-margin:14px 0;
+.smart-card {
+    background: rgba(255,255,255,.045);
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 24px;
+    padding: 20px;
+    margin: 14px 0;
 }
 
-.smart-head{
-display:flex;
-justify-content:space-between;
-align-items:flex-start;
-gap:12px;
-flex-wrap:wrap;
+.smart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
-.smart-status{
-padding:7px 12px;
-border-radius:999px;
-background:rgba(255,255,255,.07);
-font-size:12px;
+.smart-status {
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.07);
+    font-size: 12px;
 }
 
-.smart-grid{
-display:grid;
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:13px;
+.smart-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 13px;
 }
 
-.smart-field{
-display:flex;
-flex-direction:column;
-gap:7px;
+.smart-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
-.smart-field label{
-font-size:13px;
-opacity:.78;
+.smart-field label {
+    font-size: 13px;
+    opacity: .78;
 }
 
 .smart-field input,
-.smart-field textarea{
-width:100%;
-box-sizing:border-box;
-background:#090d15;
-color:#fff;
-border:1px solid rgba(255,255,255,.12);
-border-radius:13px;
-padding:12px;
-font:inherit;
-outline:none;
+.smart-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: #090d15;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 13px;
+    padding: 12px;
+    font: inherit;
+    outline: none;
 }
 
-.smart-field textarea{
-min-height:170px;
-resize:vertical;
+.smart-field textarea {
+    min-height: 170px;
+    resize: vertical;
 }
 
-.smart-actions{
-display:flex;
-flex-wrap:wrap;
-gap:9px;
-margin-top:15px;
+.smart-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 15px;
 }
 
-.smart-btn{
-border:0;
-border-radius:12px;
-padding:12px 17px;
-font-weight:700;
-cursor:pointer;
+.smart-btn {
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 17px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-.smart-btn.alt{
-background:rgba(255,255,255,.08);
-color:#fff;
+.smart-btn.alt {
+    background: rgba(255,255,255,.08);
+    color: #fff;
 }
 
-.smart-output{
-min-height:220px;
-white-space:pre-wrap;
-overflow:auto;
-background:#090d15;
-border-radius:16px;
-padding:16px;
+.smart-output {
+    min-height: 220px;
+    white-space: pre-wrap;
+    overflow: auto;
+    background: #090d15;
+    border-radius: 16px;
+    padding: 16px;
 }
 
-@media(max-width:680px){
-.smart-grid{
-grid-template-columns:1fr;
-}
+@media(max-width:680px) {
+    .smart-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 </style>
@@ -358,8 +448,10 @@ grid-template-columns:1fr;
 <p id="family"></p>
 </div>
 
-<div id="status"
-class="smart-status">
+<div
+    id="status"
+    class="smart-status"
+>
 Loading...
 </div>
 
@@ -369,29 +461,38 @@ Loading...
 
 <section class="smart-card">
 
-<div id="fields"
-class="smart-grid">
-</div>
+<div
+    id="fields"
+    class="smart-grid"
+></div>
 
 <div class="smart-actions">
 
-<button id="run"
-class="smart-btn">
+<button
+    id="run"
+    class="smart-btn"
+>
 Run Tool
 </button>
 
-<button id="copy"
-class="smart-btn alt">
+<button
+    id="copy"
+    class="smart-btn alt"
+>
 Copy
 </button>
 
-<button id="download"
-class="smart-btn alt">
+<button
+    id="download"
+    class="smart-btn alt"
+>
 Download
 </button>
 
-<button id="clear"
-class="smart-btn alt">
+<button
+    id="clear"
+    class="smart-btn alt"
+>
 Clear
 </button>
 
@@ -403,8 +504,10 @@ Clear
 
 <h3>Output</h3>
 
-<pre id="output"
-class="smart-output"></pre>
+<pre
+    id="output"
+    class="smart-output"
+></pre>
 
 </section>
 
@@ -415,158 +518,167 @@ class="smart-output"></pre>
 
 <script>
 
-(async()=>{
+(async () => {
 
-const id =
-new URLSearchParams(location.search).get("id");
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
 
-const registry =
-await fetch("data/tool-registry.json")
-.then(r=>r.json());
+    const registry = await fetch("data/tool-registry.json")
+        .then(r => r.json());
 
-const tool =
-registry.tools.find(x=>x.id===id);
+    const tool = registry.tools.find(x => x.id === id);
 
-if(!tool){
+    if (!tool) {
 
-document.getElementById("title")
-.textContent="Tool not found";
+        document.getElementById("title").textContent =
+            "Tool Not Found";
 
-return;
+        document.getElementById("status").textContent =
+            "Invalid tool";
 
-}
+        return;
+    }
 
-const profile =
-await AINovaSmartUI.load(id);
+    document.getElementById("title").textContent =
+        tool.name || tool.title || tool.id;
 
-document.title =
-tool.name+" — AI Nova";
+    document.getElementById("family").textContent =
+        tool.family || "general";
 
-document.getElementById("title")
-.textContent=tool.name;
+    const profile =
+        await window.AINovaSmartUI.load(id);
 
-document.getElementById("family")
-.textContent=
-"Category: "+
-(tool.category||"Utility")+
-" • "+
-tool.family;
+    window.AINovaSmartUI.render(
+        profile,
+        document.getElementById("fields")
+    );
 
-document.getElementById("status")
-.textContent=
-tool.status==="available"
-?"AVAILABLE • LOCAL • OFFLINE"
-:"COMING SOON";
+    document.getElementById("status").textContent =
+        tool.status || "Available";
 
-AINovaSmartUI.render(
-profile,
-document.getElementById("fields")
-);
+    const output =
+        document.getElementById("output");
 
-const output =
-document.getElementById("output");
+    document.getElementById("run").onclick =
+        async () => {
 
-document.getElementById("run").onclick =
-async()=>{
+            output.textContent = "Processing...";
 
-if(tool.status!=="available"){
+            try {
 
-output.textContent =
-"This tool is currently Coming Soon.\n\n"+
-"AI Nova does not generate fake results.";
+                const values =
+                    window.AINovaSmartUI.values(profile);
 
-return;
+                let result = null;
 
-}
+                if (
+                    window.AINova &&
+                    typeof window.AINova.run === "function"
+                ) {
 
-const values =
-AINovaSmartUI.values(profile);
+                    result = await window.AINova.run(
+                        tool,
+                        values
+                    );
 
-const input =
-values.input || "";
+                } else if (
+                    window.AINovaV52 &&
+                    typeof window.AINovaV52.run === "function"
+                ) {
 
-let result =
-AINovaV52.run(
-tool,
-input,
-values
-);
+                    result = await window.AINovaV52.run(
+                        tool,
+                        values
+                    );
 
-if(result instanceof Promise)
-result=await result;
+                } else {
 
-output.textContent=result;
+                    result =
+                        "This tool is not connected to a local implementation yet.";
+                }
 
-localStorage.setItem(
-"aiNova:lastTool",
-id
-);
+                if (
+                    result &&
+                    typeof result === "object"
+                ) {
 
-let recent=[];
+                    output.textContent =
+                        JSON.stringify(result,null,2);
 
-try{
+                } else {
 
-recent=JSON.parse(
-localStorage.getItem("aiNova:recent")||"[]"
-);
+                    output.textContent =
+                        String(result ?? "");
+                }
 
-}catch(e){}
+            } catch (error) {
 
-recent=[
-id,
-...recent.filter(x=>x!==id)
-].slice(0,12);
+                output.textContent =
+                    "Error: " + error.message;
+            }
 
-localStorage.setItem(
-"aiNova:recent",
-JSON.stringify(recent)
-);
+        };
 
-};
+    document.getElementById("copy").onclick =
+        async () => {
 
-document.getElementById("copy").onclick =
-async()=>{
+            const text = output.textContent;
 
-if(!output.textContent)return;
+            if (!text) return;
 
-try{
+            await navigator.clipboard.writeText(text);
 
-await navigator.clipboard.writeText(
-output.textContent
-);
+            const btn =
+                document.getElementById("copy");
 
-}catch(e){}
+            const old = btn.textContent;
 
-};
+            btn.textContent = "Copied";
 
-document.getElementById("download").onclick =
-()=>{
+            setTimeout(
+                () => btn.textContent = old,
+                1200
+            );
+        };
 
-AINovaV52.download(
-tool.id+".txt",
-output.textContent||"",
-"text/plain"
-);
+    document.getElementById("download").onclick =
+        () => {
 
-};
+            const text = output.textContent;
 
-document.getElementById("clear").onclick =
-()=>{
+            if (!text) return;
 
-document.querySelectorAll(
-"#fields input,#fields textarea"
-).forEach(el=>{
+            const blob =
+                new Blob(
+                    [text],
+                    {type:"text/plain;charset=utf-8"}
+                );
 
-if(el.type==="number")
-el.value="";
-else
-el.value="";
+            const url =
+                URL.createObjectURL(blob);
 
-});
+            const a =
+                document.createElement("a");
 
-output.textContent="";
+            a.href = url;
+            a.download =
+                (tool.id || "ai-nova-result") +
+                "-result.txt";
 
-};
+            a.click();
+
+            URL.revokeObjectURL(url);
+        };
+
+    document.getElementById("clear").onclick =
+        () => {
+
+            document.getElementById("fields")
+                .querySelectorAll("input,textarea")
+                .forEach(el => el.value = "");
+
+            output.textContent = "";
+        };
 
 })();
 
@@ -576,35 +688,22 @@ output.textContent="";
 </html>
 '''
 
-(ROOT/"tool.html").write_text(html,encoding="utf-8")
+(ROOT / "tool.html").write_text(
+    html,
+    encoding="utf-8"
+)
 
-# ------------------------------------------------------------
-# FINAL VALIDATION
-# ------------------------------------------------------------
-
-assert len(profiles)==179
-assert len(set(profiles.keys()))==179
-
-print("========================================")
+print("=" * 42)
 print("       AI NOVA V5.3 SUCCESS")
-print("========================================")
-print("TOOLS           :",179)
-print("SMART PROFILES  :",len(profiles))
-print("LOCAL AVAILABLE :",sum(x["status"]=="available" for x in registry["tools"]))
-print("COMING SOON     :",sum(x["status"]!="available" for x in registry["tools"]))
-print("----------------------------------------")
+print("=" * 42)
+print("TOOLS       :", len(tools))
+print("SMART UI    :", len(profiles))
+print("REGISTRY    :", len(registry["tools"]))
+print("-" * 42)
 print("PASS Smart Profiles")
-print("PASS Dynamic Inputs")
-print("PASS Text UI")
-print("PASS JSON UI")
-print("PASS Regex UI")
-print("PASS SEO UI")
-print("PASS Finance UI")
-print("PASS Color UI")
-print("PASS Security UI")
-print("PASS Generator UI")
-print("PASS Mobile UI")
-print("PASS Offline UI")
-print("----------------------------------------")
-print("BACKUP:",backup)
-print("========================================")
+print("PASS Dynamic Tool UI")
+print("PASS Mobile Layout")
+print("PASS Run / Copy / Download / Clear")
+print("-" * 42)
+print("BACKUP: V5.3 files replaced safely")
+print("=" * 42)

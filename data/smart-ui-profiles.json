@@ -1,6 +1,6 @@
 {
   "version": "5.3",
-  "generated": "2026-09-09T05:32:28.450469",
+  "generated": "2026-09-09T05:33:40.149664",
   "total": 179,
   "profiles": {
     "ai-writer": {
@@ -378,14 +378,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -397,14 +395,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -416,14 +412,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -435,14 +429,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -454,14 +446,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -551,7 +541,7 @@
           "id": "pattern",
           "type": "text",
           "label": "Regex Pattern",
-          "placeholder": "Example: \\b[A-Z][a-z]+\\b",
+          "placeholder": "\\b[A-Z][a-z]+\\b",
           "required": true
         },
         {
@@ -1565,14 +1555,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -1584,14 +1572,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -1603,14 +1589,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -1622,14 +1606,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -1705,7 +1687,7 @@
           "id": "pattern",
           "type": "text",
           "label": "Regex Pattern",
-          "placeholder": "Example: \\b[A-Z][a-z]+\\b",
+          "placeholder": "\\b[A-Z][a-z]+\\b",
           "required": true
         },
         {
@@ -2176,14 +2158,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -2896,14 +2876,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -2915,14 +2893,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -2962,14 +2938,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -2981,14 +2955,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
@@ -3000,14 +2972,12 @@
         {
           "id": "input",
           "type": "date",
-          "label": "Date",
-          "required": false
+          "label": "Date"
         },
         {
           "id": "input2",
           "type": "date",
-          "label": "Second Date",
-          "required": false
+          "label": "Second Date"
         }
       ]
     },
