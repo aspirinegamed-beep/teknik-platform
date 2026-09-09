@@ -1,476 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#070b14">
-<meta name="description"
-      content="AI Nova — professional browser-based AI and productivity tools.">
-
 <title>AI Nova Tool</title>
-
-<link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="assets/hub.css">
 <link rel="stylesheet" href="assets/nova-ui.css">
-
 <style>
-:root{
-  --bg:#070b14;
-  --panel:#0d1422;
-  --panel2:#111b2d;
-  --border:#22304a;
-  --text:#f5f7ff;
-  --muted:#91a0ba;
-  --accent:#7c8cff;
-  --good:#42d392;
-  --warn:#ffcc66;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-a{color:inherit;text-decoration:none}
-.container{
-  width:min(1100px,92%);
-  margin:auto;
-}
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:20;
-  backdrop-filter:blur(18px);
-  background:rgba(7,11,20,.86);
-  border-bottom:1px solid var(--border);
-}
-.nav{
-  min-height:62px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-}
-.brand{
-  font-weight:900;
-  letter-spacing:.5px;
-}
-.brand span{color:var(--accent)}
-.back{
-  color:var(--muted);
-  font-size:14px;
-}
-main{padding:32px 0 70px}
-.hero{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  align-items:flex-start;
-  margin-bottom:24px;
-}
-h1{
-  font-size:clamp(27px,6vw,46px);
-  margin:0 0 8px;
-}
-.subtitle{
-  color:var(--muted);
-  line-height:1.6;
-}
-.badge{
-  display:inline-flex;
-  align-items:center;
-  border:1px solid var(--border);
-  border-radius:999px;
-  padding:7px 11px;
-  font-size:12px;
-  white-space:nowrap;
-}
-.available{
-  border-color:rgba(66,211,146,.4);
-  color:var(--good);
-}
-.coming{
-  border-color:rgba(255,204,102,.4);
-  color:var(--warn);
-}
-.card{
-  background:linear-gradient(145deg,var(--panel),var(--panel2));
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:20px;
-  margin-bottom:18px;
-  box-shadow:0 18px 60px rgba(0,0,0,.18);
-}
-label{
-  display:block;
-  color:var(--muted);
-  font-size:13px;
-  margin-bottom:8px;
-}
-textarea,input,select{
-  width:100%;
-  background:#080e19;
-  color:var(--text);
-  border:1px solid var(--border);
-  border-radius:13px;
-  padding:13px;
-  outline:none;
-  font:inherit;
-}
-textarea{min-height:180px;resize:vertical}
-textarea:focus,input:focus,select:focus{
-  border-color:var(--accent);
-}
-.field{margin-bottom:16px}
-.actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:9px;
-}
-button{
-  border:1px solid var(--border);
-  background:#121d30;
-  color:var(--text);
-  border-radius:12px;
-  padding:11px 15px;
-  font-weight:700;
-  cursor:pointer;
-}
-button.primary{
-  background:var(--accent);
-  border-color:var(--accent);
-  color:white;
-}
-button:disabled{
-  opacity:.45;
-  cursor:not-allowed;
-}
-#output{
-  white-space:pre-wrap;
-  word-break:break-word;
-  min-height:130px;
-  background:#080e19;
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:16px;
-  line-height:1.55;
-}
-.notice{
-  padding:14px;
-  border-radius:13px;
-  border:1px solid rgba(255,204,102,.3);
-  color:var(--warn);
-  background:rgba(255,204,102,.04);
-}
-.hidden{display:none!important}
-.meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:12px;
-}
-@media(max-width:650px){
-  .hero{display:block}
-  .hero .badge{margin-top:14px}
-  .actions button{flex:1 1 calc(50% - 9px)}
-}
+:root{--bg:#070b14;--card:#0d1422;--line:#1c2940;--txt:#edf3ff;--muted:#8d9bb3;--accent:#6ea8ff}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{max-width:1050px;margin:auto;padding:20px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+.logo{font-weight:800;font-size:22px}
+.back{color:var(--txt);text-decoration:none;border:1px solid var(--line);padding:9px 13px;border-radius:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px}
+h1{margin:0 0 7px;font-size:28px}
+.sub{color:var(--muted);margin-bottom:20px}
+textarea{width:100%;min-height:260px;box-sizing:border-box;background:#080e19;color:var(--txt);border:1px solid var(--line);border-radius:15px;padding:15px;font:15px ui-monospace,SFMono-Regular,monospace;resize:vertical}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+button{border:0;border-radius:12px;padding:11px 16px;background:#18253a;color:white;font-weight:700;cursor:pointer}
+button.primary{background:var(--accent);color:#07101f}
+.status{display:inline-block;padding:6px 10px;border-radius:99px;background:#12351f;color:#8dffb0;font-size:12px;font-weight:700}
+.result{white-space:pre-wrap;background:#080e19;border:1px solid var(--line);border-radius:15px;padding:15px;min-height:100px;overflow:auto}
+.error{color:#ff9c9c}
+.small{color:var(--muted);font-size:13px}
 </style>
 </head>
-
 <body>
+<div class="wrap">
+<div class="top">
+<div class="logo">AI NOVA</div>
+<a class="back" href="index.html">← All Tools</a>
+</div>
 
-<header class="topbar">
-  <div class="container nav">
-    <a class="brand" href="index.html">AI <span>Nova</span></a>
-    <a class="back" href="index.html">← All Tools</a>
-  </div>
-</header>
+<div class="card">
+<h1 id="title">AI Nova Tool</h1>
+<div class="sub"><span id="status" class="status">Loading</span> <span id="description"></span></div>
 
-<main class="container">
+<textarea id="input" placeholder="Enter your text, JSON, URL, numbers or other input here..."></textarea>
 
-  <section class="hero">
-    <div>
-      <h1 id="title">AI Nova Tool</h1>
-      <div class="subtitle" id="description">
-        Loading tool…
-      </div>
-      <div class="meta">
-        <span id="status" class="badge">Loading</span>
-        <span id="category" class="badge"></span>
-      </div>
-    </div>
-  </section>
+<div class="actions">
+<button class="primary" id="run">▶ Run Tool</button>
+<button id="copy">Copy Result</button>
+<button id="download">Download</button>
+<button id="clear">Clear</button>
+</div>
 
-  <section id="comingCard" class="card hidden">
-    <div class="notice">
-      This tool is currently <strong>Coming Soon</strong>.
-      AI Nova will not simulate or invent a result.
-    </div>
-  </section>
+<div class="small">Runs locally in your browser whenever a local implementation is available.</div>
+<br>
+<div id="result" class="result">Result will appear here.</div>
+</div>
+</div>
 
-  <section id="appCard" class="card">
-
-    <div id="fields"></div>
-
-    <div class="actions">
-      <button id="runBtn" class="primary">Run Tool</button>
-      <button id="copyBtn">Copy Result</button>
-      <button id="downloadBtn">Download</button>
-      <button id="clearBtn">Clear</button>
-    </div>
-
-  </section>
-
-  <section class="card">
-    <label>Result</label>
-    <div id="output">Ready.</div>
-  </section>
-
-</main>
-
-<script src="assets/nova-registry-v57.js"></script>
-<script src="assets/nova-engine-v52.js"></script>
 <script src="assets/nova-engine-v55.js"></script>
 <script src="assets/nova-engine-v56.js"></script>
 <script src="assets/nova-engine-v59.js"></script>
-<script src="assets/nova-router-v57.js"></script>
-<script src="assets/nova-smart-ui.js"></script>
-<script src="assets/nova-file-engine-v54.js"></script>
+<script src="assets/nova-engine-v60.js"></script>
+<script src="assets/nova-engine-v7.js"></script>
+<script src="assets/nova-map-v7.js"></script>
 
 <script>
-(function(){
-  "use strict";
+(async()=>{
+ const params=new URLSearchParams(location.search);
+ const id=params.get("id")||"";
+ let tools=[];
+ try{tools=await fetch("data/tools.json").then(r=>r.json())}catch(e){}
+ const tool=tools.find(x=>x.id===id)||{id,name:id||"AI Nova Tool"};
+ document.title=tool.name+" — AI Nova";
+ document.getElementById("title").textContent=tool.name;
+ document.getElementById("description").textContent="Local AI Nova browser tool";
 
-  const params = new URLSearchParams(location.search);
-  const toolId = params.get("id");
+ const status=document.getElementById("status");
+ const input=document.getElementById("input");
+ const result=document.getElementById("result");
 
-  const $ = id => document.getElementById(id);
+ if(window.AINovaV7 && window.AINovaV7.has(id)){
+   status.textContent="AVAILABLE";
+ }else{
+   status.textContent="COMING SOON";
+   status.style.background="#382d13";
+   status.style.color="#ffd978";
+ }
 
-  let tool = null;
-  let profile = null;
+ document.getElementById("run").onclick=async()=>{
+   result.classList.remove("error");
+   try{
+     if(!window.AINovaV7.has(id)) throw Error("This tool is not locally implemented yet.");
+     result.textContent="Running...";
+     result.textContent=String(await window.AINovaV7.run(id,input.value));
+   }catch(e){
+     result.classList.add("error");
+     result.textContent="Error: "+e.message;
+   }
+ };
 
-  function escapeText(v){
-    return String(v ?? "");
-  }
+ document.getElementById("copy").onclick=async()=>{
+   await navigator.clipboard.writeText(result.textContent);
+ };
 
-  function findTool(){
-    fetch("data/tools.json", {cache:"no-store"})
-      .then(r => r.json())
-      .then(data => {
-        const list = Array.isArray(data)
-          ? data
-          : (data.tools || []);
+ document.getElementById("download").onclick=()=>{
+   const blob=new Blob([result.textContent],{type:"text/plain;charset=utf-8"});
+   const a=document.createElement("a");
+   a.href=URL.createObjectURL(blob);
+   a.download=(id||"ai-nova-result")+".txt";
+   a.click();
+   URL.revokeObjectURL(a.href);
+ };
 
-        tool = list.find(x => String(x.id) === String(toolId));
-
-        if(!tool){
-          $("title").textContent = "Tool Not Found";
-          $("description").textContent =
-            "The requested AI Nova tool does not exist.";
-          $("appCard").classList.add("hidden");
-          return;
-        }
-
-        renderTool();
-      })
-      .catch(() => {
-        $("title").textContent = "Loading Error";
-        $("description").textContent =
-          "Unable to load the AI Nova tool catalog.";
-      });
-  }
-
-  function renderTool(){
-    $("title").textContent =
-      tool.name || tool.title || tool.id;
-
-    $("description").textContent =
-      tool.description ||
-      "Professional browser-based utility from AI Nova.";
-
-    $("category").textContent =
-      tool.category || "AI Nova";
-
-    const reg = (window.AINovaRegistry || {})[tool.id] || {};
-    const available =
-      reg.status === "Available" &&
-      reg.implemented === true;
-
-    $("status").textContent =
-      available ? "Available" : "Coming Soon";
-
-    $("status").classList.add(
-      available ? "available" : "coming"
-    );
-
-    if(!available){
-      $("comingCard").classList.remove("hidden");
-      $("runBtn").disabled = true;
-      $("appCard").classList.remove("hidden");
-    }
-
-    createFields();
-  }
-
-  function createFields(){
-    const box = $("fields");
-
-    let type = "text";
-
-    const id = tool.id.toLowerCase();
-
-    if(
-      id.includes("json") ||
-      id.includes("object")
-    ) type = "json";
-
-    if(
-      id.includes("html") ||
-      id.includes("css") ||
-      id.includes("javascript") ||
-      id.includes("code")
-    ) type = "code";
-
-    if(
-      id.includes("url") ||
-      id.includes("query")
-    ) type = "url";
-
-    if(
-      id.includes("password") ||
-      id.includes("uuid") ||
-      id.includes("random")
-    ) type = "generator";
-
-    const label = document.createElement("label");
-    label.textContent =
-      type === "json" ? "JSON Input" :
-      type === "code" ? "Code / Text Input" :
-      type === "url" ? "URL / Query Input" :
-      "Input";
-
-    const wrap = document.createElement("div");
-    wrap.className = "field";
-
-    const area = document.createElement("textarea");
-    area.id = "mainInput";
-    area.placeholder =
-      "Enter your input here…";
-
-    wrap.appendChild(label);
-    wrap.appendChild(area);
-    box.appendChild(wrap);
-  }
-
-  function values(){
-    return {
-      input: $("mainInput") ? $("mainInput").value : "",
-      text: $("mainInput") ? $("mainInput").value : "",
-      value: $("mainInput") ? $("mainInput").value : ""
-    };
-  }
-
-  async function run(){
-    if(!tool) return;
-
-    const registry =
-      (window.AINovaRegistry || {})[tool.id];
-
-    if(
-      !registry ||
-      registry.status !== "Available" ||
-      registry.implemented !== true
-    ){
-      $("output").textContent =
-        "Coming Soon — this tool is not implemented yet.";
-      return;
-    }
-
-    $("runBtn").disabled = true;
-    $("runBtn").textContent = "Running…";
-
-    try{
-      const result =
-        await window.AINovaUnified.run(
-          tool.id,
-          values()
-        );
-
-      if(result && result.ok){
-        const value =
-          result.result !== undefined
-            ? result.result
-            : result.output;
-
-        $("output").textContent =
-          typeof value === "string"
-            ? value
-            : JSON.stringify(value, null, 2);
-      }else{
-        $("output").textContent =
-          result && result.message
-            ? result.message
-            : "No result returned.";
-      }
-
-    }catch(error){
-      $("output").textContent =
-        "Tool execution failed safely: " +
-        error.message;
-    }finally{
-      $("runBtn").disabled = false;
-      $("runBtn").textContent = "Run Tool";
-    }
-  }
-
-  $("runBtn").addEventListener("click", run);
-
-  $("copyBtn").addEventListener("click", async ()=>{
-    const text = $("output").textContent;
-    try{
-      await navigator.clipboard.writeText(text);
-      $("copyBtn").textContent = "Copied!";
-      setTimeout(
-        ()=>$("copyBtn").textContent="Copy Result",
-        1200
-      );
-    }catch{
-      $("output").focus();
-    }
-  });
-
-  $("downloadBtn").addEventListener("click", ()=>{
-    const text = $("output").textContent;
-    const blob = new Blob([text], {
-      type:"text/plain;charset=utf-8"
-    });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download =
-      (toolId || "ai-nova-result") + ".txt";
-    a.click();
-    URL.revokeObjectURL(a.href);
-  });
-
-  $("clearBtn").addEventListener("click", ()=>{
-    if($("mainInput")) $("mainInput").value = "";
-    $("output").textContent = "Ready.";
-  });
-
-  document.addEventListener(
-    "ainova-registry-ready",
-    findTool,
-    {once:true}
-  );
-
-  if(window.AINovaRegistry){
-    findTool();
-  }
-
+ document.getElementById("clear").onclick=()=>{
+   input.value="";
+   result.textContent="Result will appear here.";
+ };
 })();
 </script>
-
 </body>
 </html>

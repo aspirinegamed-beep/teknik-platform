@@ -226,12 +226,15 @@
   },
   {
     "id": "json-formatter",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "JSON Formatter",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "jsonformat"
   },
   {
     "id": "html-formatter",
@@ -275,33 +278,39 @@
     "name": "UUID Generator",
     "category": "Developer",
     "availability": "local",
-    "engine": "AINovaV60",
+    "engine": "V7",
     "implementation_id": "uuid-generator",
     "implementation_sources": [
       "nova-engine-v59.js"
     ],
     "available": true,
     "implemented": true,
-    "implementation": "uuid-generator",
+    "implementation": "uuid",
     "execution": "local-browser"
   },
   {
     "id": "hash-generator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Hash Generator",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "hash"
   },
   {
     "id": "base64-tool",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Base64 Encoder",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "b64encode"
   },
   {
     "id": "timestamp",
@@ -311,12 +320,13 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "timestamp-converter",
+    "implementation": "timestamp",
     "aliases": [
       "timestamp-converter",
       "unix-timestamp"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "color-converter",
@@ -383,12 +393,15 @@
   },
   {
     "id": "vat-calculator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "VAT Calculator",
     "category": "Finance",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "vat"
   },
   {
     "id": "salary-calculator",
@@ -563,12 +576,15 @@
   },
   {
     "id": "text-counter",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Text Counter",
     "category": "AI",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "textcount"
   },
   {
     "id": "case-converter",
@@ -581,12 +597,15 @@
   },
   {
     "id": "text-cleaner",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Text Cleaner",
     "category": "AI",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "clean"
   },
   {
     "id": "duplicate-remover",
@@ -596,29 +615,36 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "remove-line-breaks",
+    "implementation": "dedupe",
     "aliases": [
       "remove-line-breaks"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "sort-lines",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Sort Lines",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "sortlines"
   },
   {
     "id": "reverse-text",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Reverse Text",
     "category": "AI",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "reverse"
   },
   {
     "id": "slug-generator",
@@ -626,33 +652,39 @@
     "name": "Slug Generator",
     "category": "SEO",
     "availability": "local",
-    "engine": "AINovaV60",
+    "engine": "V7",
     "implementation_id": "slug-generator",
     "implementation_sources": [
       "nova-engine-v59.js"
     ],
     "available": true,
     "implemented": true,
-    "implementation": "slug-generator",
+    "implementation": "slug",
     "execution": "local-browser"
   },
   {
     "id": "url-encoder",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "URL Encoder",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "urlencode"
   },
   {
     "id": "url-decoder",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "URL Decoder",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "urldecode"
   },
   {
     "id": "html-entities",
@@ -665,12 +697,15 @@
   },
   {
     "id": "unicode-converter",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Unicode Converter",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "unicode"
   },
   {
     "id": "ascii-converter",
@@ -689,12 +724,13 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "binary-to-decimal",
+    "implementation": "base",
     "aliases": [
       "binary-to-decimal",
       "decimal-to-binary"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "hex-converter",
@@ -704,14 +740,15 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "decimal-to-hex",
+    "implementation": "color",
     "aliases": [
       "decimal-to-hex",
       "hex-to-decimal",
       "hex-to-hsl",
       "hsl-to-hex"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "octal-converter",
@@ -724,12 +761,15 @@
   },
   {
     "id": "number-base",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Number Base Converter",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "base"
   },
   {
     "id": "percentage-calculator",
@@ -737,14 +777,14 @@
     "name": "Percentage Calculator",
     "category": "Finance",
     "availability": "local",
-    "engine": "AINovaV60",
+    "engine": "V7",
     "implementation_id": "percentage-calculator",
     "implementation_sources": [
       "nova-engine-v59.js"
     ],
     "available": true,
     "implemented": true,
-    "implementation": "percentage-change-calculator",
+    "implementation": "percentage",
     "execution": "local-browser",
     "aliases": [
       "percentage-change-calculator"
@@ -756,14 +796,14 @@
     "name": "Discount Calculator",
     "category": "Finance",
     "availability": "local",
-    "engine": "AINovaV60",
+    "engine": "V7",
     "implementation_id": "discount-calculator",
     "implementation_sources": [
       "nova-engine-v59.js"
     ],
     "available": true,
     "implemented": true,
-    "implementation": "discount-calculator",
+    "implementation": "discount",
     "execution": "local-browser"
   },
   {
@@ -772,14 +812,14 @@
     "name": "Tip Calculator",
     "category": "Finance",
     "availability": "local",
-    "engine": "AINovaV60",
+    "engine": "V7",
     "implementation_id": "tip-calculator",
     "implementation_sources": [
       "nova-engine-v59.js"
     ],
     "available": true,
     "implemented": true,
-    "implementation": "tip-calculator",
+    "implementation": "tip",
     "execution": "local-browser"
   },
   {
@@ -790,20 +830,24 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "compound-interest-calculator",
+    "implementation": "compound",
     "aliases": [
       "compound-interest-calculator"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "simple-interest",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Simple Interest Calculator",
     "category": "Finance",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "simpleinterest"
   },
   {
     "id": "savings-calculator",
@@ -897,21 +941,27 @@
   },
   {
     "id": "date-difference",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Date Difference",
     "category": "Finance",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "datediff"
   },
   {
     "id": "age-calculator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Age Calculator",
     "category": "Finance",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "age"
   },
   {
     "id": "days-calculator",
@@ -928,14 +978,14 @@
     "name": "Password Generator",
     "category": "Developer",
     "availability": "local",
-    "engine": "AINovaV60",
+    "engine": "V7",
     "implementation_id": "password-generator",
     "implementation_sources": [
       "nova-engine-v59.js"
     ],
     "available": true,
     "implemented": true,
-    "implementation": "password-generator",
+    "implementation": "password",
     "execution": "local-browser"
   },
   {
@@ -946,12 +996,13 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "extract-numbers",
+    "implementation": "randomnumber",
     "aliases": [
       "extract-numbers",
       "random-number-generator"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "random-string",
@@ -961,11 +1012,12 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "random-string-generator",
+    "implementation": "randomstring",
     "aliases": [
       "random-string-generator"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "color-generator",
@@ -987,21 +1039,27 @@
   },
   {
     "id": "json-to-csv",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "JSON to CSV",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "jsoncsv"
   },
   {
     "id": "csv-to-json",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "CSV to JSON",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "csvjson"
   },
   {
     "id": "xml-formatter",
@@ -1056,11 +1114,12 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "lorem-ipsum-generator",
+    "implementation": "lorem",
     "aliases": [
       "lorem-ipsum-generator"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "character-frequency",
@@ -1079,11 +1138,12 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "count-sentences",
+    "implementation": "sentences",
     "aliases": [
       "count-sentences"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "paragraph-counter",
@@ -1093,11 +1153,12 @@
     "availability": "planned",
     "available": true,
     "implemented": true,
-    "implementation": "count-paragraphs",
+    "implementation": "paragraphs",
     "aliases": [
       "count-paragraphs"
     ],
-    "execution": "local-browser"
+    "execution": "local-browser",
+    "engine": "V7"
   },
   {
     "id": "meta-preview",
@@ -1119,12 +1180,15 @@
   },
   {
     "id": "robots-generator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Robots.txt Generator",
     "category": "SEO",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "robots"
   },
   {
     "id": "sitemap-generator",
@@ -1137,21 +1201,27 @@
   },
   {
     "id": "canonical-generator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Canonical URL Generator",
     "category": "SEO",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "canonical"
   },
   {
     "id": "schema-generator",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Schema Markup Helper",
     "category": "SEO",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "schema"
   },
   {
     "id": "open-graph-generator",
@@ -1173,12 +1243,15 @@
   },
   {
     "id": "utm-builder",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "UTM Builder",
     "category": "SEO",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "utm"
   },
   {
     "id": "affiliate-link-builder",
@@ -1501,14 +1574,14 @@
     "name": "Query String Parser",
     "category": "Developer",
     "availability": "local",
-    "engine": "AINovaV60",
+    "engine": "V7",
     "implementation_id": "query-string-parser",
     "implementation_sources": [
       "nova-engine-v59.js"
     ],
     "available": true,
     "implemented": true,
-    "implementation": "query-string-builder",
+    "implementation": "queryparse",
     "execution": "local-browser",
     "aliases": [
       "query-string-builder"
@@ -1525,12 +1598,15 @@
   },
   {
     "id": "password-strength",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Password Strength Checker",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "passwordstrength"
   },
   {
     "id": "hash-checker",
@@ -1543,39 +1619,51 @@
   },
   {
     "id": "text-to-html",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Text to HTML",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "texthtml"
   },
   {
     "id": "html-to-text",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "HTML to Text",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "htmltext"
   },
   {
     "id": "markdown-to-html",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Markdown to HTML",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "markdownhtml"
   },
   {
     "id": "code-counter",
-    "status": "Coming Soon",
+    "status": "Available",
     "name": "Code Line Counter",
     "category": "Developer",
     "availability": "planned",
-    "available": false,
-    "implemented": false
+    "available": true,
+    "implemented": true,
+    "execution": "local-browser",
+    "engine": "V7",
+    "implementation": "lines"
   },
   {
     "id": "css-gradient",
