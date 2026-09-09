@@ -3,173 +3,302 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>AI Nova Tool</title>
 <meta name="theme-color" content="#080b12">
+<title>AI Nova Tool</title>
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="assets/nova-v4.css">
-<style>
-.v5-wrap{max-width:980px;margin:auto;padding:24px 16px 80px}
-.v5-card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:24px;padding:20px;margin:14px 0}
-.v5-input,.v5-output{width:100%;min-height:180px;box-sizing:border-box;background:#090d15;color:#f4f7ff;border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px;font:inherit;resize:vertical}
-.v5-output{min-height:220px;white-space:pre-wrap}
-.v5-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-.v5-btn{border:0;border-radius:12px;padding:12px 16px;background:#ffffff;color:#090d15;font-weight:700}
-.v5-btn.alt{background:rgba(255,255,255,.09);color:#fff}
-.v5-status{font-size:13px;opacity:.75}
 
 <style>
-.v51-top{
+.v52{
+max-width:1050px;
+margin:auto;
+padding:22px 16px 80px;
+}
+
+.v52-card{
+background:rgba(255,255,255,.045);
+border:1px solid rgba(255,255,255,.09);
+border-radius:22px;
+padding:20px;
+margin:14px 0;
+}
+
+.v52-head{
 display:flex;
 justify-content:space-between;
-align-items:center;
+align-items:flex-start;
 gap:12px;
 flex-wrap:wrap;
 }
-.v51-badge{
-display:inline-flex;
-align-items:center;
-gap:6px;
+
+.v52-status{
 padding:7px 11px;
 border-radius:999px;
 background:rgba(255,255,255,.07);
 font-size:12px;
 }
-.v51-fav{
-border:1px solid rgba(255,255,255,.12);
-background:rgba(255,255,255,.06);
+
+.v52-grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:12px;
+}
+
+.v52-field{
+display:flex;
+flex-direction:column;
+gap:7px;
+}
+
+.v52-field label{
+font-size:13px;
+opacity:.75;
+}
+
+.v52-field input{
+background:#090d15;
 color:#fff;
+border:1px solid rgba(255,255,255,.12);
 border-radius:12px;
-padding:10px 14px;
-font-size:18px;
+padding:12px;
+outline:none;
+}
+
+.v52-textarea{
+width:100%;
+box-sizing:border-box;
+min-height:240px;
+background:#090d15;
+color:#fff;
+border:1px solid rgba(255,255,255,.12);
+border-radius:16px;
+padding:15px;
+font:inherit;
+resize:vertical;
+}
+
+.v52-output{
+white-space:pre-wrap;
+min-height:220px;
+overflow:auto;
+}
+
+.v52-actions{
+display:flex;
+gap:9px;
+flex-wrap:wrap;
+margin-top:12px;
+}
+
+.v52-btn{
+border:0;
+border-radius:12px;
+padding:12px 16px;
+font-weight:700;
+cursor:pointer;
+}
+
+.v52-btn.alt{
+background:rgba(255,255,255,.08);
+color:#fff;
+}
+
+@media(max-width:650px){
+.v52-grid{grid-template-columns:1fr}
 }
 </style>
-
-</style>
 </head>
+
 <body>
-<div class="v5-wrap">
+
+<div class="v52">
+
 <a href="index.html">← AI Nova</a>
 
-<div class="v5-card">
-<div class="v51-top">
+<section class="v52-card">
+<div class="v52-head">
 <div>
 <h1 id="title">AI Nova Tool</h1>
-<p id="desc" class="v5-status"></p>
-<p id="status" class="v5-status"></p>
+<p id="family"></p>
 </div>
-<button class="v51-fav" id="favorite">☆</button>
+<div id="status" class="v52-status"></div>
 </div>
+</section>
+
+<section class="v52-card">
+
+<div class="v52-grid">
+
+<div class="v52-field">
+<label>Value / Amount</label>
+<input id="value" placeholder="Optional">
 </div>
 
-<div class="v5-card">
+<div class="v52-field">
+<label>Percent</label>
+<input id="percent" type="number" placeholder="Optional">
+</div>
+
+<div class="v52-field">
+<label>Pattern</label>
+<input id="pattern" placeholder="For Regex tools">
+</div>
+
+<div class="v52-field">
+<label>Length</label>
+<input id="length" type="number" value="18">
+</div>
+
+<div class="v52-field">
+<label>Total</label>
+<input id="total" type="number" placeholder="Optional">
+</div>
+
+<div class="v52-field">
+<label>URL</label>
+<input id="url" placeholder="https://example.com">
+</div>
+
+</div>
+
+<br>
+
 <label>Input</label>
-<textarea id="input" class="v5-input" placeholder="Enter your data here..."></textarea>
+<textarea id="input" class="v52-textarea"
+placeholder="Enter your data here..."></textarea>
 
-<div class="v5-row">
-<button class="v5-btn" id="run">Run Tool</button>
-<button class="v5-btn alt" id="copy">Copy</button>
-<button class="v5-btn alt" id="download">Download</button>
-<button class="v5-btn alt" id="clear">Clear</button>
-</div>
-</div>
-
-<div class="v5-card">
-<label>Output</label>
-<pre id="output" class="v5-output"></pre>
-</div>
+<div class="v52-actions">
+<button id="run" class="v52-btn">Run Tool</button>
+<button id="copy" class="v52-btn alt">Copy</button>
+<button id="download" class="v52-btn alt">Download</button>
+<button id="clear" class="v52-btn alt">Clear</button>
 </div>
 
-<script src="assets/nova-engine-v5.js"></script>
+</section>
+
+<section class="v52-card">
+<h3>Output</h3>
+<pre id="output" class="v52-output"></pre>
+</section>
+
+</div>
+
+<script src="assets/nova-engine-v52.js"></script>
+
 <script>
 (async()=>{
+
 const id=new URLSearchParams(location.search).get("id");
-const registry=await fetch("data/tool-registry.json").then(r=>r.json());
+
+const registry=await fetch("data/tool-registry.json")
+.then(r=>r.json());
+
 const tool=registry.tools.find(x=>x.id===id);
 
 if(!tool){
- document.getElementById("title").textContent="Tool not found";
- return;
+document.getElementById("title").textContent="Tool not found";
+return;
 }
 
 document.title=tool.name+" — AI Nova";
+
 document.getElementById("title").textContent=tool.name;
-document.getElementById("desc").textContent="Family: "+tool.family;
+
+document.getElementById("family").textContent=
+"Category: "+(tool.category||"Utility")+" • Family: "+tool.family;
+
 document.getElementById("status").textContent=
- tool.status==="available"
- ? "● Available locally — works offline"
- : "○ Coming Soon — execution not implemented yet";
+tool.status==="available"
+?"AVAILABLE • LOCAL • OFFLINE"
+:"COMING SOON";
 
 const input=document.getElementById("input");
 const output=document.getElementById("output");
 
-function run(){
- if(tool.status!=="available"){
-   output.textContent="This tool is currently marked Coming Soon.";
-   return;
- }
- output.textContent=AINovaV5.run(tool,input.value,{});
- localStorage.setItem("aiNova:lastTool",tool.id);
+function options(){
+
+return {
+value:document.getElementById("value").value,
+amount:document.getElementById("value").value,
+percent:document.getElementById("percent").value,
+pattern:document.getElementById("pattern").value,
+length:document.getElementById("length").value,
+total:document.getElementById("total").value,
+url:document.getElementById("url").value
+};
+
 }
 
-document.getElementById("run").onclick=run;
+document.getElementById("run").onclick=async()=>{
+
+if(tool.status!=="available"){
+output.textContent=
+"This tool is currently Coming Soon.\n\n"+
+"AI Nova does not generate fake results.";
+return;
+}
+
+let result=AINovaV52.run(tool,input.value,options());
+
+if(result instanceof Promise)
+result=await result;
+
+output.textContent=result;
+
+localStorage.setItem(
+"aiNova:lastTool",
+tool.id
+);
+
+let recent=[];
+
+try{
+recent=JSON.parse(
+localStorage.getItem("aiNova:recent")||"[]"
+);
+}catch(e){}
+
+recent=[
+tool.id,
+...recent.filter(x=>x!==tool.id)
+].slice(0,12);
+
+localStorage.setItem(
+"aiNova:recent",
+JSON.stringify(recent)
+);
+
+};
 
 document.getElementById("copy").onclick=async()=>{
- await navigator.clipboard.writeText(output.textContent);
+
+if(!output.textContent)return;
+
+try{
+await navigator.clipboard.writeText(
+output.textContent
+);
+}catch(e){}
+
 };
 
 document.getElementById("download").onclick=()=>{
- AINovaV5.download(
-   tool.id+".txt",
-   output.textContent || "",
-   "text/plain"
- );
+
+AINovaV52.download(
+tool.id+".txt",
+output.textContent||"",
+"text/plain"
+);
+
 };
 
 document.getElementById("clear").onclick=()=>{
- input.value="";
- output.textContent="";
+
+input.value="";
+output.textContent="";
+
 };
 
-input.addEventListener("keydown",e=>{
- if((e.ctrlKey||e.metaKey)&&e.key==="Enter") run();
-});
-})();
-</script>
-
-<script>
-(() => {
-const id = new URLSearchParams(location.search).get("id");
-const fav = document.getElementById("favorite");
-
-function getFavs(){
-  try {
-    return JSON.parse(localStorage.getItem("aiNova:favorites") || "[]");
-  } catch(e) {
-    return [];
-  }
-}
-
-function saveFavs(x){
-  localStorage.setItem("aiNova:favorites", JSON.stringify(x));
-}
-
-function render(){
-  fav.textContent = getFavs().includes(id) ? "★" : "☆";
-}
-
-fav.onclick = () => {
-  let list = getFavs();
-
-  if(list.includes(id))
-    list = list.filter(x => x !== id);
-  else
-    list.push(id);
-
-  saveFavs(list);
-  render();
-};
-
-render();
 })();
 </script>
 

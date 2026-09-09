@@ -1,0 +1,29 @@
+{
+  "version": "5.2",
+  "generated": "2026-09-09T05:31:34.708539",
+  "total": 179,
+  "available": 145,
+  "coming_soon": 34,
+  "families": {
+    "generator": 21,
+    "text": 32,
+    "general": 34,
+    "seo": 11,
+    "date": 15,
+    "developer": 40,
+    "json": 6,
+    "encoding": 3,
+    "finance": 11,
+    "converter": 6
+  },
+  "features": {
+    "local_execution": true,
+    "offline": true,
+    "download": true,
+    "copy": true,
+    "parameter_inputs": true,
+    "favorites_compatible": true,
+    "recent_tools": true,
+    "android": true
+  }
+}
